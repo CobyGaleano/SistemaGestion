@@ -1,0 +1,99 @@
+S:\UTN\Segundo año\Programación 3\Trabajos Practicos\Prog3-TP2\Prog3-TP2-main\TP2 (Gestion Articulos)\Negocio\bin\Debug\Negocio.dll
+S:\UTN\Segundo año\Programación 3\Trabajos Practicos\Prog3-TP2\Prog3-TP2-main\TP2 (Gestion Articulos)\Negocio\bin\Debug\Negocio.pdb
+S:\UTN\Segundo año\Programación 3\Trabajos Practicos\Prog3-TP2\Prog3-TP2-main\TP2 (Gestion Articulos)\Negocio\bin\Debug\Dominio.dll
+S:\UTN\Segundo año\Programación 3\Trabajos Practicos\Prog3-TP2\Prog3-TP2-main\TP2 (Gestion Articulos)\Negocio\bin\Debug\Dominio.pdb
+S:\UTN\Segundo año\Programación 3\Trabajos Practicos\Prog3-TP2\Prog3-TP2-main\TP2 (Gestion Articulos)\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+S:\UTN\Segundo año\Programación 3\Trabajos Practicos\Prog3-TP2\Prog3-TP2-main\TP2 (Gestion Articulos)\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+S:\UTN\Segundo año\Programación 3\Trabajos Practicos\Prog3-TP2\Prog3-TP2-main\TP2 (Gestion Articulos)\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+S:\UTN\Segundo año\Programación 3\Trabajos Practicos\Prog3-TP2\Prog3-TP2-main\TP2 (Gestion Articulos)\Negocio\obj\Debug\Negocio.dll
+S:\UTN\Segundo año\Programación 3\Trabajos Practicos\Prog3-TP2\Prog3-TP2-main\TP2 (Gestion Articulos)\Negocio\obj\Debug\Negocio.pdb
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\UTN\SEGUNDO AÑO\Primer Cuatrimestre\Prog. 3\Prog3-TP2\Prog3-TP2-main\TP2 (Gestion Articulos)\Negocio\bin\Debug\Negocio.dll
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\UTN\SEGUNDO AÑO\Primer Cuatrimestre\Prog. 3\Prog3-TP2\Prog3-TP2-main\TP2 (Gestion Articulos)\Negocio\bin\Debug\Negocio.pdb
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\UTN\SEGUNDO AÑO\Primer Cuatrimestre\Prog. 3\Prog3-TP2\Prog3-TP2-main\TP2 (Gestion Articulos)\Negocio\bin\Debug\Dominio.dll
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\UTN\SEGUNDO AÑO\Primer Cuatrimestre\Prog. 3\Prog3-TP2\Prog3-TP2-main\TP2 (Gestion Articulos)\Negocio\bin\Debug\Dominio.pdb
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\UTN\SEGUNDO AÑO\Primer Cuatrimestre\Prog. 3\Prog3-TP2\Prog3-TP2-main\TP2 (Gestion Articulos)\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\UTN\SEGUNDO AÑO\Primer Cuatrimestre\Prog. 3\Prog3-TP2\Prog3-TP2-main\TP2 (Gestion Articulos)\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\UTN\SEGUNDO AÑO\Primer Cuatrimestre\Prog. 3\Prog3-TP2\Prog3-TP2-main\TP2 (Gestion Articulos)\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\UTN\SEGUNDO AÑO\Primer Cuatrimestre\Prog. 3\Prog3-TP2\Prog3-TP2-main\TP2 (Gestion Articulos)\Negocio\obj\Debug\Negocio.dll
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\UTN\SEGUNDO AÑO\Primer Cuatrimestre\Prog. 3\Prog3-TP2\Prog3-TP2-main\TP2 (Gestion Articulos)\Negocio\obj\Debug\Negocio.pdb
+C:\UltimaVersiom\Prog3-TP2\Prog3-TP2-main\TP2 (Gestion Articulos)\Negocio\bin\Debug\Negocio.dll
+C:\UltimaVersiom\Prog3-TP2\Prog3-TP2-main\TP2 (Gestion Articulos)\Negocio\bin\Debug\Negocio.pdb
+C:\UltimaVersiom\Prog3-TP2\Prog3-TP2-main\TP2 (Gestion Articulos)\Negocio\bin\Debug\Dominio.dll
+C:\UltimaVersiom\Prog3-TP2\Prog3-TP2-main\TP2 (Gestion Articulos)\Negocio\bin\Debug\Dominio.pdb
+C:\UltimaVersiom\Prog3-TP2\Prog3-TP2-main\TP2 (Gestion Articulos)\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\UltimaVersiom\Prog3-TP2\Prog3-TP2-main\TP2 (Gestion Articulos)\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\UltimaVersiom\Prog3-TP2\Prog3-TP2-main\TP2 (Gestion Articulos)\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\UltimaVersiom\Prog3-TP2\Prog3-TP2-main\TP2 (Gestion Articulos)\Negocio\obj\Debug\Negocio.dll
+C:\UltimaVersiom\Prog3-TP2\Prog3-TP2-main\TP2 (Gestion Articulos)\Negocio\obj\Debug\Negocio.pdb
+C:\Tp-web-2\Carrito-Compras\Negocio\bin\Debug\Negocio.dll
+C:\Tp-web-2\Carrito-Compras\Negocio\bin\Debug\Negocio.pdb
+C:\Tp-web-2\Carrito-Compras\Negocio\bin\Debug\Dominio.dll
+C:\Tp-web-2\Carrito-Compras\Negocio\bin\Debug\Dominio.pdb
+C:\Tp-web-2\Carrito-Compras\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Tp-web-2\Carrito-Compras\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Tp-web-2\Carrito-Compras\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Tp-web-2\Carrito-Compras\Negocio\obj\Debug\Negocio.dll
+C:\Tp-web-2\Carrito-Compras\Negocio\obj\Debug\Negocio.pdb
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\UTN\SEGUNDO AÑO\Primer Cuatrimestre\Prog. 3\Carrito-Compras\Negocio\bin\Debug\Negocio.dll
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\UTN\SEGUNDO AÑO\Primer Cuatrimestre\Prog. 3\Carrito-Compras\Negocio\bin\Debug\Negocio.pdb
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\UTN\SEGUNDO AÑO\Primer Cuatrimestre\Prog. 3\Carrito-Compras\Negocio\bin\Debug\Dominio.dll
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\UTN\SEGUNDO AÑO\Primer Cuatrimestre\Prog. 3\Carrito-Compras\Negocio\bin\Debug\Dominio.pdb
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\UTN\SEGUNDO AÑO\Primer Cuatrimestre\Prog. 3\Carrito-Compras\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\UTN\SEGUNDO AÑO\Primer Cuatrimestre\Prog. 3\Carrito-Compras\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\UTN\SEGUNDO AÑO\Primer Cuatrimestre\Prog. 3\Carrito-Compras\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\UTN\SEGUNDO AÑO\Primer Cuatrimestre\Prog. 3\Carrito-Compras\Negocio\obj\Debug\Negocio.dll
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\UTN\SEGUNDO AÑO\Primer Cuatrimestre\Prog. 3\Carrito-Compras\Negocio\obj\Debug\Negocio.pdb
+C:\Tp-Web3\Carrito-Compras\Negocio\bin\Debug\Negocio.dll
+C:\Tp-Web3\Carrito-Compras\Negocio\bin\Debug\Negocio.pdb
+C:\Tp-Web3\Carrito-Compras\Negocio\bin\Debug\Dominio.dll
+C:\Tp-Web3\Carrito-Compras\Negocio\bin\Debug\Dominio.pdb
+C:\Tp-Web3\Carrito-Compras\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Tp-Web3\Carrito-Compras\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Tp-Web3\Carrito-Compras\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Tp-Web3\Carrito-Compras\Negocio\obj\Debug\Negocio.dll
+C:\Tp-Web3\Carrito-Compras\Negocio\obj\Debug\Negocio.pdb
+C:\tp-ult\Carrito-Compras\Negocio\bin\Debug\Negocio.dll
+C:\tp-ult\Carrito-Compras\Negocio\bin\Debug\Negocio.pdb
+C:\tp-ult\Carrito-Compras\Negocio\bin\Debug\Dominio.dll
+C:\tp-ult\Carrito-Compras\Negocio\bin\Debug\Dominio.pdb
+C:\tp-ult\Carrito-Compras\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\tp-ult\Carrito-Compras\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\tp-ult\Carrito-Compras\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\tp-ult\Carrito-Compras\Negocio\obj\Debug\Negocio.dll
+C:\tp-ult\Carrito-Compras\Negocio\obj\Debug\Negocio.pdb
+S:\UTN\Segundo año\Programación 3\Trabajos Practicos\Carrito-Compras\Negocio\bin\Debug\Negocio.dll
+S:\UTN\Segundo año\Programación 3\Trabajos Practicos\Carrito-Compras\Negocio\bin\Debug\Negocio.pdb
+S:\UTN\Segundo año\Programación 3\Trabajos Practicos\Carrito-Compras\Negocio\bin\Debug\Dominio.dll
+S:\UTN\Segundo año\Programación 3\Trabajos Practicos\Carrito-Compras\Negocio\bin\Debug\Dominio.pdb
+S:\UTN\Segundo año\Programación 3\Trabajos Practicos\Carrito-Compras\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+S:\UTN\Segundo año\Programación 3\Trabajos Practicos\Carrito-Compras\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+S:\UTN\Segundo año\Programación 3\Trabajos Practicos\Carrito-Compras\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+S:\UTN\Segundo año\Programación 3\Trabajos Practicos\Carrito-Compras\Negocio\obj\Debug\Negocio.dll
+S:\UTN\Segundo año\Programación 3\Trabajos Practicos\Carrito-Compras\Negocio\obj\Debug\Negocio.pdb
+C:\Tp-Ultima2\Carrito-Compras\Negocio\bin\Debug\Negocio.dll
+C:\Tp-Ultima2\Carrito-Compras\Negocio\bin\Debug\Negocio.pdb
+C:\Tp-Ultima2\Carrito-Compras\Negocio\bin\Debug\Dominio.dll
+C:\Tp-Ultima2\Carrito-Compras\Negocio\bin\Debug\Dominio.pdb
+C:\Tp-Ultima2\Carrito-Compras\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Tp-Ultima2\Carrito-Compras\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Tp-Ultima2\Carrito-Compras\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Tp-Ultima2\Carrito-Compras\Negocio\obj\Debug\Negocio.dll
+C:\Tp-Ultima2\Carrito-Compras\Negocio\obj\Debug\Negocio.pdb
+C:\TP-ult3\Tp-CarritoCompras-Equipo18\Negocio\bin\Debug\Negocio.dll
+C:\TP-ult3\Tp-CarritoCompras-Equipo18\Negocio\bin\Debug\Negocio.pdb
+C:\TP-ult3\Tp-CarritoCompras-Equipo18\Negocio\bin\Debug\Dominio.dll
+C:\TP-ult3\Tp-CarritoCompras-Equipo18\Negocio\bin\Debug\Dominio.pdb
+C:\TP-ult3\Tp-CarritoCompras-Equipo18\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\TP-ult3\Tp-CarritoCompras-Equipo18\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\TP-ult3\Tp-CarritoCompras-Equipo18\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\TP-ult3\Tp-CarritoCompras-Equipo18\Negocio\obj\Debug\Negocio.dll
+C:\TP-ult3\Tp-CarritoCompras-Equipo18\Negocio\obj\Debug\Negocio.pdb
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\Programas de Gestion\GestionNegocio\Negocio\bin\Debug\Negocio.dll
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\Programas de Gestion\GestionNegocio\Negocio\bin\Debug\Negocio.pdb
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\Programas de Gestion\GestionNegocio\Negocio\bin\Debug\Dominio.dll
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\Programas de Gestion\GestionNegocio\Negocio\bin\Debug\Dominio.pdb
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\Programas de Gestion\GestionNegocio\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\Programas de Gestion\GestionNegocio\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\Programas de Gestion\GestionNegocio\Negocio\obj\Debug\Negocio.dll
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\Programas de Gestion\GestionNegocio\Negocio\obj\Debug\Negocio.pdb
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\Programas de Gestion\GestionNegocio\Negocio\obj\Debug\Negocio.csproj.Up2Date
