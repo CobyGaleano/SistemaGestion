@@ -46,3 +46,9 @@ C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\Programas de Gestion\GestionNego
 C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\Programas de Gestion\GestionNegocio\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\Programas de Gestion\GestionNegocio\Dominio\obj\Debug\Dominio.dll
 C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\Programas de Gestion\GestionNegocio\Dominio\obj\Debug\Dominio.pdb
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\Dominio\bin\Debug\Dominio.dll
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\Dominio\bin\Debug\Dominio.pdb
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\Dominio\obj\Debug\Dominio.dll
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\Dominio\obj\Debug\Dominio.pdb
