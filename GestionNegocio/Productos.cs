@@ -202,9 +202,9 @@ namespace GestionNegocio
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmAltaProducto alta  = new frmAltaProducto();
+            /*frmAltaProducto alta  = new frmAltaProducto();
             alta.ShowDialog();
-            cargarLista();
+            cargarLista();*/
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -215,8 +215,8 @@ namespace GestionNegocio
             
 
 
-            frmAltaProducto modificar = new frmAltaProducto(seleccionado);
-            modificar.ShowDialog();
+            //frmAltaProducto modificar = new frmAltaProducto(seleccionado);
+            //modificar.ShowDialog();
             cargarLista();
         }
 

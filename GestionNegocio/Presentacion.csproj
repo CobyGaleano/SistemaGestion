@@ -60,17 +60,41 @@
     <Compile Include="Clientes.Designer.cs">
       <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAltaCliente.cs">
+    <Compile Include="frmConfiguraciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAltaCliente.Designer.cs">
-      <DependentUpon>frmAltaCliente.cs</DependentUpon>
+    <Compile Include="frmConfiguraciones.Designer.cs">
+      <DependentUpon>frmConfiguraciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAltaProducto.cs">
+    <Compile Include="frmMantCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAltaProducto.Designer.cs">
-      <DependentUpon>frmAltaProducto.cs</DependentUpon>
+    <Compile Include="frmMantCategorias.Designer.cs">
+      <DependentUpon>frmMantCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMantMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMantMarcas.Designer.cs">
+      <DependentUpon>frmMantMarcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMantNegocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMantNegocio.Designer.cs">
+      <DependentUpon>frmMantNegocio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMantProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMantProveedores.Designer.cs">
+      <DependentUpon>frmMantProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMantUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMantUsuario.Designer.cs">
+      <DependentUpon>frmMantUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Gastos.cs">
       <SubType>Form</SubType>
@@ -124,12 +148,6 @@
     </Compile>
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAltaCliente.resx">
-      <DependentUpon>frmAltaCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAltaProducto.resx">
-      <DependentUpon>frmAltaProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gastos.resx">
       <DependentUpon>Gastos.cs</DependentUpon>

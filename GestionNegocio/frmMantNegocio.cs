@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GestionNegocio
 {
-    public partial class frmAltaCliente : Form
+    public partial class frmMantNegocio : Form
     {
-        public frmAltaCliente()
+        public frmMantNegocio()
         {
             InitializeComponent();
         }

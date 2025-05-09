@@ -34,8 +34,6 @@ C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\bi
 C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\bin\Debug\Negocio.pdb
 C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\obj\Debug\Presentacion.csproj.AssemblyReference.cache
 C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\obj\Debug\GestionNegocio.Clientes.resources
-C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\obj\Debug\GestionNegocio.frmAltaCliente.resources
-C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\obj\Debug\GestionNegocio.frmAltaProducto.resources
 C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\obj\Debug\GestionNegocio.Gastos.resources
 C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\obj\Debug\GestionNegocio.Inicio.resources
 C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\obj\Debug\GestionNegocio.Login.resources

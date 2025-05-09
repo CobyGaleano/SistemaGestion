@@ -164,17 +164,41 @@ namespace GestionNegocio
             this.ContPrincipal.Tag = fh;
             fh.Show();
         }
-
-        private void btnManProductos_Click(object sender, EventArgs e)
+        private void btnManProveedores_Click(object sender, EventArgs e)
         {
-            SubMenuMantenimiento.Visible= false;
-            AbrirFormHija(new frmAltaProducto());
+            SubMenuMantenimiento.Visible = false;
+            AbrirFormHija(new frmMantProveedores());
         }
 
         private void btnManCategorias_Click(object sender, EventArgs e)
         {
             SubMenuMantenimiento.Visible = false;
-            AbrirFormHija(new frmAltaProducto());
+            AbrirFormHija(new frmMantCategorias());
+        }
+
+
+        private void btnManMarcas_Click(object sender, EventArgs e)
+        {
+            SubMenuMantenimiento.Visible = false;
+            AbrirFormHija(new frmMantMarcas());
+        }
+
+        private void btnManUsuarios_Click(object sender, EventArgs e)
+        {
+            SubMenuMantenimiento.Visible = false;
+            AbrirFormHija(new frmMantUsuario());
+        }
+
+        private void btnMantNegocio_Click(object sender, EventArgs e)
+        {
+            SubMenuMantenimiento.Visible = false;
+            AbrirFormHija(new frmMantNegocio());
+        }
+
+        private void btnConfiguracion_Click(object sender, EventArgs e)
+        {
+            SubMenuMantenimiento.Visible = false;
+            AbrirFormHija(new frmConfiguraciones());
         }
     }
 }
