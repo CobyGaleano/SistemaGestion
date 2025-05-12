@@ -70,8 +70,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnLogo = new System.Windows.Forms.PictureBox();
-            this.ContPrincipal = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.ContPrincipal = new System.Windows.Forms.Panel();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAmpliar)).BeginInit();
@@ -681,20 +681,20 @@
             // ContPrincipal
             // 
             this.ContPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(50)))), ((int)(((byte)(12)))));
-            this.ContPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ContPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ContPrincipal.Location = new System.Drawing.Point(213, 37);
             this.ContPrincipal.Name = "ContPrincipal";
             this.ContPrincipal.Size = new System.Drawing.Size(1087, 613);
-            this.ContPrincipal.TabIndex = 3;
+            this.ContPrincipal.TabIndex = 2;
             // 
             // WinMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 650);
+            this.Controls.Add(this.ContPrincipal);
             this.Controls.Add(this.BarraMenu);
             this.Controls.Add(this.BarraTitulo);
-            this.Controls.Add(this.ContPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "WinMenu";
             this.Text = "WinMenu";
@@ -721,7 +721,6 @@
         private System.Windows.Forms.PictureBox btnClose;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnAmpliar;
-        private System.Windows.Forms.Panel ContPrincipal;
         private System.Windows.Forms.PictureBox btnMaximizar;
         private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.PictureBox btnLogo;
@@ -760,5 +759,6 @@
         private System.Windows.Forms.Button btnMantNegocio;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel ContPrincipal;
     }
 }

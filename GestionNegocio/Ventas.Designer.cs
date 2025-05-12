@@ -87,6 +87,9 @@
             // 
             this.dgvVentas.AllowUserToAddRows = false;
             this.dgvVentas.AllowUserToDeleteRows = false;
+            this.dgvVentas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvVentas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVentas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -172,6 +175,7 @@
             // 
             // lblNumero
             // 
+            this.lblNumero.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNumero.AutoSize = true;
             this.lblNumero.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumero.Location = new System.Drawing.Point(849, 4);
@@ -182,6 +186,7 @@
             // 
             // lblDireccion
             // 
+            this.lblDireccion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Location = new System.Drawing.Point(17, 453);
             this.lblDireccion.Name = "lblDireccion";
@@ -191,6 +196,7 @@
             // 
             // lblTelefono
             // 
+            this.lblTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Location = new System.Drawing.Point(17, 481);
             this.lblTelefono.Name = "lblTelefono";
@@ -200,6 +206,7 @@
             // 
             // lblMail
             // 
+            this.lblMail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblMail.AutoSize = true;
             this.lblMail.Location = new System.Drawing.Point(17, 425);
             this.lblMail.Name = "lblMail";
@@ -220,6 +227,7 @@
             // lblEstadoCred
             // 
             this.lblEstadoCred.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.lblEstadoCred.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblEstadoCred.AutoSize = true;
             this.lblEstadoCred.Location = new System.Drawing.Point(20, 510);
             this.lblEstadoCred.Name = "lblEstadoCred";
@@ -229,8 +237,9 @@
             // 
             // lblFecha
             // 
+            this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(850, 43);
+            this.lblFecha.Location = new System.Drawing.Point(867, 41);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(43, 13);
             this.lblFecha.TabIndex = 10;
@@ -238,6 +247,7 @@
             // 
             // lblDescuento
             // 
+            this.lblDescuento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDescuento.AutoSize = true;
             this.lblDescuento.Location = new System.Drawing.Point(727, 453);
             this.lblDescuento.Name = "lblDescuento";
@@ -247,6 +257,7 @@
             // 
             // lblSubtotal
             // 
+            this.lblSubtotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSubtotal.AutoSize = true;
             this.lblSubtotal.Location = new System.Drawing.Point(727, 425);
             this.lblSubtotal.Name = "lblSubtotal";
@@ -256,6 +267,7 @@
             // 
             // lblRecargo
             // 
+            this.lblRecargo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRecargo.AutoSize = true;
             this.lblRecargo.Location = new System.Drawing.Point(727, 486);
             this.lblRecargo.Name = "lblRecargo";
@@ -265,6 +277,7 @@
             // 
             // lblIVA
             // 
+            this.lblIVA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblIVA.AutoSize = true;
             this.lblIVA.Location = new System.Drawing.Point(727, 517);
             this.lblIVA.Name = "lblIVA";
@@ -274,6 +287,7 @@
             // 
             // lblTotal
             // 
+            this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTotal.AutoSize = true;
             this.lblTotal.Location = new System.Drawing.Point(727, 582);
             this.lblTotal.Name = "lblTotal";
@@ -283,6 +297,7 @@
             // 
             // lblFormaPago
             // 
+            this.lblFormaPago.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblFormaPago.AutoSize = true;
             this.lblFormaPago.Location = new System.Drawing.Point(383, 481);
             this.lblFormaPago.Name = "lblFormaPago";
@@ -292,6 +307,7 @@
             // 
             // lblVendedor
             // 
+            this.lblVendedor.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblVendedor.AutoSize = true;
             this.lblVendedor.Location = new System.Drawing.Point(383, 425);
             this.lblVendedor.Name = "lblVendedor";
@@ -301,6 +317,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCancelar.Location = new System.Drawing.Point(20, 540);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(83, 55);
@@ -310,6 +327,7 @@
             // 
             // btnAceptar
             // 
+            this.btnAceptar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnAceptar.Location = new System.Drawing.Point(386, 540);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(213, 55);
@@ -319,6 +337,7 @@
             // 
             // cmbVendedor
             // 
+            this.cmbVendedor.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.cmbVendedor.FormattingEnabled = true;
             this.cmbVendedor.Items.AddRange(new object[] {
             "Cesar",
@@ -333,6 +352,7 @@
             // 
             // cmbFormasPago
             // 
+            this.cmbFormasPago.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.cmbFormasPago.FormattingEnabled = true;
             this.cmbFormasPago.Items.AddRange(new object[] {
             "Efectivo",
@@ -348,6 +368,7 @@
             // 
             // txtTotal
             // 
+            this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTotal.Location = new System.Drawing.Point(969, 579);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(76, 20);
@@ -355,6 +376,7 @@
             // 
             // txtDescuentoTotal
             // 
+            this.txtDescuentoTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDescuentoTotal.Location = new System.Drawing.Point(969, 451);
             this.txtDescuentoTotal.Name = "txtDescuentoTotal";
             this.txtDescuentoTotal.Size = new System.Drawing.Size(76, 20);
@@ -362,6 +384,7 @@
             // 
             // txtDesc1
             // 
+            this.txtDesc1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDesc1.Location = new System.Drawing.Point(802, 450);
             this.txtDesc1.Name = "txtDesc1";
             this.txtDesc1.Size = new System.Drawing.Size(28, 20);
@@ -369,6 +392,7 @@
             // 
             // txtSubtotal
             // 
+            this.txtSubtotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSubtotal.Location = new System.Drawing.Point(969, 422);
             this.txtSubtotal.Name = "txtSubtotal";
             this.txtSubtotal.Size = new System.Drawing.Size(76, 20);
@@ -376,6 +400,7 @@
             // 
             // txtDesc3
             // 
+            this.txtDesc3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDesc3.Location = new System.Drawing.Point(903, 450);
             this.txtDesc3.Name = "txtDesc3";
             this.txtDesc3.Size = new System.Drawing.Size(28, 20);
@@ -383,6 +408,7 @@
             // 
             // txtDesc2
             // 
+            this.txtDesc2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDesc2.Location = new System.Drawing.Point(853, 450);
             this.txtDesc2.Name = "txtDesc2";
             this.txtDesc2.Size = new System.Drawing.Size(28, 20);
@@ -390,6 +416,7 @@
             // 
             // txtRecargo
             // 
+            this.txtRecargo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtRecargo.Location = new System.Drawing.Point(903, 483);
             this.txtRecargo.Name = "txtRecargo";
             this.txtRecargo.Size = new System.Drawing.Size(28, 20);
@@ -397,6 +424,7 @@
             // 
             // txtIVA
             // 
+            this.txtIVA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIVA.Location = new System.Drawing.Point(903, 514);
             this.txtIVA.Name = "txtIVA";
             this.txtIVA.Size = new System.Drawing.Size(28, 20);
@@ -404,6 +432,7 @@
             // 
             // txtRecargoTotal
             // 
+            this.txtRecargoTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtRecargoTotal.Location = new System.Drawing.Point(969, 483);
             this.txtRecargoTotal.Name = "txtRecargoTotal";
             this.txtRecargoTotal.Size = new System.Drawing.Size(76, 20);
@@ -411,6 +440,7 @@
             // 
             // txtImpuestos
             // 
+            this.txtImpuestos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtImpuestos.Location = new System.Drawing.Point(969, 514);
             this.txtImpuestos.Name = "txtImpuestos";
             this.txtImpuestos.Size = new System.Drawing.Size(76, 20);
@@ -418,6 +448,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(937, 453);
             this.label1.Name = "label1";
@@ -427,6 +458,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(937, 486);
             this.label2.Name = "label2";
@@ -436,6 +468,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(937, 517);
             this.label3.Name = "label3";
@@ -445,6 +478,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(887, 453);
             this.label4.Name = "label4";
@@ -454,6 +488,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(836, 454);
             this.label5.Name = "label5";
@@ -470,6 +505,7 @@
             // 
             // txtMail
             // 
+            this.txtMail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtMail.Location = new System.Drawing.Point(140, 422);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(133, 20);
@@ -477,6 +513,7 @@
             // 
             // txtDirec
             // 
+            this.txtDirec.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtDirec.Location = new System.Drawing.Point(140, 450);
             this.txtDirec.Name = "txtDirec";
             this.txtDirec.Size = new System.Drawing.Size(133, 20);
@@ -484,6 +521,7 @@
             // 
             // txtTelefono
             // 
+            this.txtTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtTelefono.Location = new System.Drawing.Point(140, 478);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(133, 20);
@@ -491,6 +529,7 @@
             // 
             // txtEstadoCrediticio
             // 
+            this.txtEstadoCrediticio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtEstadoCrediticio.Location = new System.Drawing.Point(140, 507);
             this.txtEstadoCrediticio.Name = "txtEstadoCrediticio";
             this.txtEstadoCrediticio.Size = new System.Drawing.Size(133, 20);
@@ -516,13 +555,15 @@
             // 
             // txtFechaActual
             // 
-            this.txtFechaActual.Location = new System.Drawing.Point(890, 38);
+            this.txtFechaActual.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtFechaActual.Location = new System.Drawing.Point(916, 38);
             this.txtFechaActual.Name = "txtFechaActual";
             this.txtFechaActual.Size = new System.Drawing.Size(82, 20);
             this.txtFechaActual.TabIndex = 43;
             // 
             // cmbTipoDocumento
             // 
+            this.cmbTipoDocumento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbTipoDocumento.FormattingEnabled = true;
             this.cmbTipoDocumento.Items.AddRange(new object[] {
             "Cesar",
