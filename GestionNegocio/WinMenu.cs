@@ -26,7 +26,7 @@ namespace GestionNegocio
 
         private void Principal_Paint(object sender, PaintEventArgs e)
         {
-
+            List<Permiso> listaPermisos = new List<Permiso>();
         }
 
         private void WinMenu_Load(object sender, EventArgs e)
