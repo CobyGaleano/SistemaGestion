@@ -26,11 +26,20 @@ namespace GestionNegocio
 
         private void Principal_Paint(object sender, PaintEventArgs e)
         {
-            List<Permiso> listaPermisos = new List<Permiso>();
+
         }
 
         private void WinMenu_Load(object sender, EventArgs e)
         {
+            List<Permiso> listaPermisos = new PermisoNegocio().Listar(usuarioActual.IdUsuario);
+            foreach(Button button in BarraMenu.Controls.OfType<Button>())
+            {
+                bool encontrado = listaPermisos.Any(m => m.NombreMenu == button.Name);
+                if (encontrado==false)
+                {
+                    button.Enabled = false;
+                }
+            }
             txtUsuario.Text = usuarioActual.NombreCompleto;
         }
 

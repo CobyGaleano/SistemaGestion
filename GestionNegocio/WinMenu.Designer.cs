@@ -156,14 +156,14 @@
             // BarraMenu
             // 
             this.BarraMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.BarraMenu.Controls.Add(this.panel6);
             this.BarraMenu.Controls.Add(this.SubMenuMantenimiento);
+            this.BarraMenu.Controls.Add(this.btnMantenimiento);
             this.BarraMenu.Controls.Add(this.panel4);
             this.BarraMenu.Controls.Add(this.txtUsuario);
             this.BarraMenu.Controls.Add(this.lblUsuario);
             this.BarraMenu.Controls.Add(this.btnTurnOff);
-            this.BarraMenu.Controls.Add(this.panel6);
             this.BarraMenu.Controls.Add(this.SubmenuReportes);
-            this.BarraMenu.Controls.Add(this.btnMantenimiento);
             this.BarraMenu.Controls.Add(this.panel5);
             this.BarraMenu.Controls.Add(this.btnReportes);
             this.BarraMenu.Controls.Add(this.btnGastos);
@@ -184,18 +184,18 @@
             // SubMenuMantenimiento
             // 
             this.SubMenuMantenimiento.Controls.Add(this.panel15);
+            this.SubMenuMantenimiento.Controls.Add(this.panel13);
             this.SubMenuMantenimiento.Controls.Add(this.panel14);
-            this.SubMenuMantenimiento.Controls.Add(this.btnConfiguracion);
-            this.SubMenuMantenimiento.Controls.Add(this.btnMantNegocio);
-            this.SubMenuMantenimiento.Controls.Add(this.panel7);
-            this.SubMenuMantenimiento.Controls.Add(this.btnManUsuarios);
             this.SubMenuMantenimiento.Controls.Add(this.panel11);
             this.SubMenuMantenimiento.Controls.Add(this.btnManMarcas);
-            this.SubMenuMantenimiento.Controls.Add(this.panel12);
-            this.SubMenuMantenimiento.Controls.Add(this.btnManCategorias);
-            this.SubMenuMantenimiento.Controls.Add(this.panel13);
+            this.SubMenuMantenimiento.Controls.Add(this.btnConfiguracion);
+            this.SubMenuMantenimiento.Controls.Add(this.btnManUsuarios);
             this.SubMenuMantenimiento.Controls.Add(this.btnManProveedores);
-            this.SubMenuMantenimiento.Location = new System.Drawing.Point(46, 381);
+            this.SubMenuMantenimiento.Controls.Add(this.panel12);
+            this.SubMenuMantenimiento.Controls.Add(this.btnMantNegocio);
+            this.SubMenuMantenimiento.Controls.Add(this.panel7);
+            this.SubMenuMantenimiento.Controls.Add(this.btnManCategorias);
+            this.SubMenuMantenimiento.Location = new System.Drawing.Point(46, 344);
             this.SubMenuMantenimiento.Name = "SubMenuMantenimiento";
             this.SubMenuMantenimiento.Size = new System.Drawing.Size(164, 209);
             this.SubMenuMantenimiento.TabIndex = 22;
@@ -274,9 +274,9 @@
             this.btnManUsuarios.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManUsuarios.ForeColor = System.Drawing.Color.White;
             this.btnManUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManUsuarios.Location = new System.Drawing.Point(3, 107);
+            this.btnManUsuarios.Location = new System.Drawing.Point(5, 107);
             this.btnManUsuarios.Name = "btnManUsuarios";
-            this.btnManUsuarios.Size = new System.Drawing.Size(161, 30);
+            this.btnManUsuarios.Size = new System.Drawing.Size(159, 30);
             this.btnManUsuarios.TabIndex = 22;
             this.btnManUsuarios.Text = "Mant Usuarios";
             this.btnManUsuarios.UseVisualStyleBackColor = false;
@@ -301,9 +301,9 @@
             this.btnManMarcas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManMarcas.ForeColor = System.Drawing.Color.White;
             this.btnManMarcas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManMarcas.Location = new System.Drawing.Point(3, 72);
+            this.btnManMarcas.Location = new System.Drawing.Point(5, 72);
             this.btnManMarcas.Name = "btnManMarcas";
-            this.btnManMarcas.Size = new System.Drawing.Size(161, 30);
+            this.btnManMarcas.Size = new System.Drawing.Size(159, 30);
             this.btnManMarcas.TabIndex = 20;
             this.btnManMarcas.Text = "Mant Marcas";
             this.btnManMarcas.UseVisualStyleBackColor = false;
@@ -328,9 +328,9 @@
             this.btnManCategorias.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManCategorias.ForeColor = System.Drawing.Color.White;
             this.btnManCategorias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManCategorias.Location = new System.Drawing.Point(3, 36);
+            this.btnManCategorias.Location = new System.Drawing.Point(5, 36);
             this.btnManCategorias.Name = "btnManCategorias";
-            this.btnManCategorias.Size = new System.Drawing.Size(161, 30);
+            this.btnManCategorias.Size = new System.Drawing.Size(159, 30);
             this.btnManCategorias.TabIndex = 18;
             this.btnManCategorias.Text = "Mant Categorias";
             this.btnManCategorias.UseVisualStyleBackColor = false;
@@ -525,9 +525,9 @@
             this.btnMantenimiento.ForeColor = System.Drawing.Color.White;
             this.btnMantenimiento.Image = global::GestionNegocio.Properties.Resources.mantenimiento;
             this.btnMantenimiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMantenimiento.Location = new System.Drawing.Point(3, 344);
+            this.btnMantenimiento.Location = new System.Drawing.Point(1, 303);
             this.btnMantenimiento.Name = "btnMantenimiento";
-            this.btnMantenimiento.Size = new System.Drawing.Size(204, 35);
+            this.btnMantenimiento.Size = new System.Drawing.Size(210, 35);
             this.btnMantenimiento.TabIndex = 16;
             this.btnMantenimiento.Text = "Mantenimiento";
             this.btnMantenimiento.UseVisualStyleBackColor = false;
@@ -553,7 +553,7 @@
             this.btnReportes.ForeColor = System.Drawing.Color.White;
             this.btnReportes.Image = global::GestionNegocio.Properties.Resources.reportes;
             this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportes.Location = new System.Drawing.Point(3, 385);
+            this.btnReportes.Location = new System.Drawing.Point(6, 385);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(204, 35);
             this.btnReportes.TabIndex = 14;
@@ -573,7 +573,7 @@
             this.btnGastos.ForeColor = System.Drawing.Color.White;
             this.btnGastos.Image = global::GestionNegocio.Properties.Resources.gastos;
             this.btnGastos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGastos.Location = new System.Drawing.Point(0, 303);
+            this.btnGastos.Location = new System.Drawing.Point(3, 344);
             this.btnGastos.Name = "btnGastos";
             this.btnGastos.Size = new System.Drawing.Size(210, 35);
             this.btnGastos.TabIndex = 12;
