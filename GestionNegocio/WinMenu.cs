@@ -18,10 +18,13 @@ namespace GestionNegocio
     public partial class WinMenu : Form
     {
         public static Usuario usuarioActual;
-        public WinMenu(Usuario objUsuario)
+        public WinMenu(Usuario objUsuario = null)
         {
-            usuarioActual = objUsuario;
-            InitializeComponent();
+            if (objUsuario == null)
+                usuarioActual = new Usuario(){ NombreCompleto = "PREDEFINIDO",IdUsuario = 1};
+            else
+                usuarioActual = objUsuario;
+                InitializeComponent();
         }
 
         private void Principal_Paint(object sender, PaintEventArgs e)
