@@ -19,7 +19,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("Select IdUsuario, Documento, NombreCompleto, Correo, Clave,Estado from Usuario");
+                datos.setearConsulta("Select U.IdUsuario, U.Documento, U.NombreCompleto, U.Correo, U.Clave, U.Estado, R.IdRol, R.Descripcion \r\nFROM Usuario U  Inner Join Rol R on R.IdRol = U.IdRol");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -31,6 +31,8 @@ namespace Negocio
                     aux.Correo = (string)datos.Lector["Correo"];
                     aux.Clave = (string)datos.Lector["Clave"];
                     aux.Estado = (bool)datos.Lector["Estado"];
+                    aux.rRol = new Rol() { IdRol = Convert.ToInt32(datos.Lector["IdRol"])};
+                    aux.rRol.Descripcion = (string)datos.Lector["Descripcion"];
 
                     listaUsuario.Add(aux);
                 }

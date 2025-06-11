@@ -271,5 +271,8 @@
   <ItemGroup>
     <None Include="Resources\search-big.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check-circle.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
