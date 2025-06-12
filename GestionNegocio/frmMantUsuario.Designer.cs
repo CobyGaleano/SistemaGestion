@@ -66,8 +66,9 @@
             this.Clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtIndice = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -290,7 +291,7 @@
             this.Clave,
             this.IdRol,
             this.Rol,
-            this.EstadoValor,
+            this.IdEstado,
             this.Estado});
             this.dgvUsuario.Location = new System.Drawing.Point(252, 68);
             this.dgvUsuario.MultiSelect = false;
@@ -316,7 +317,6 @@
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(23, 20);
             this.txtId.TabIndex = 6;
-            this.txtId.Visible = false;
             // 
             // lblFiltro
             // 
@@ -502,12 +502,12 @@
             this.Rol.Name = "Rol";
             this.Rol.ReadOnly = true;
             // 
-            // EstadoValor
+            // IdEstado
             // 
-            this.EstadoValor.HeaderText = "Estado Valor";
-            this.EstadoValor.Name = "EstadoValor";
-            this.EstadoValor.ReadOnly = true;
-            this.EstadoValor.Visible = false;
+            this.IdEstado.HeaderText = "IdEstado";
+            this.IdEstado.Name = "IdEstado";
+            this.IdEstado.ReadOnly = true;
+            this.IdEstado.Visible = false;
             // 
             // Estado
             // 
@@ -515,12 +515,20 @@
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
             // 
+            // txtIndice
+            // 
+            this.txtIndice.Location = new System.Drawing.Point(137, 44);
+            this.txtIndice.Name = "txtIndice";
+            this.txtIndice.Size = new System.Drawing.Size(23, 20);
+            this.txtIndice.TabIndex = 12;
+            // 
             // frmMantUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1087, 613);
+            this.Controls.Add(this.txtIndice);
             this.Controls.Add(this.btnLimpiarFiltro);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.textFiltro);
@@ -595,7 +603,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Clave;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdRol;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdEstado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.TextBox txtIndice;
     }
 }

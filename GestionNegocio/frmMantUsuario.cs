@@ -79,6 +79,7 @@ namespace GestionNegocio
 
         private void Limpiar()
         {
+            txtIndice.Text = "-1";
             txtId.Text = "0";
             txtDocumento.Text = "";
             txtNombre.Text = "";
@@ -116,18 +117,30 @@ namespace GestionNegocio
 
                 if (indice >= 0)
                 {
+                    txtIndice.Text = indice.ToString();
                     txtId.Text = dgvUsuario.Rows[indice].Cells["Id"].Value.ToString();
                     txtDocumento.Text = dgvUsuario.Rows[indice].Cells["Documento"].Value.ToString();
+                    txtNombre.Text = dgvUsuario.Rows[indice].Cells["NombreCompleto"].Value.ToString();
                     txtCorreo.Text = dgvUsuario.Rows[indice].Cells["Correo"].Value.ToString();
                     txtContraseña.Text = dgvUsuario.Rows[indice].Cells["Clave"].Value.ToString();
                     txtConfContra.Text = dgvUsuario.Rows[indice].Cells["Clave"].Value.ToString();
 
-                    foreach(OpcionCombo OC in cmbRol.Items)
+                    foreach (OpcionCombo OC in cmbRol.Items)
                     {
-                        if(Convert.ToInt32(OC.Valor) == Convert.ToInt32(dgvUsuario.Rows[indice].Cells["IdRol"].Value.ToString())
-                        {
+                        if (Convert.ToInt32(OC.Valor) == Convert.ToInt32(dgvUsuario.Rows[indice].Cells["IdRol"].Value))
+                        { 
                             int indice_combo = cmbRol.Items.IndexOf(OC);
                             cmbRol.SelectedIndex = indice_combo;
+                            break;
+                        }
+                    }
+
+                    foreach(OpcionCombo oc in cmbEstado.Items) //al momento de seleccionar el Usuario existente no copia correctamente el Estado en la plantilla de carga
+                    {
+                        if(Convert.ToInt32(oc.Valor) == Convert.ToInt32(dgvUsuario.Rows[indice].Cells["IdEstado"].Value))
+                        {
+                            int indice_combo = cmbEstado.Items.IndexOf(oc);
+                            cmbEstado.SelectedIndex = indice_combo;
                             break;
                         }
                     }
