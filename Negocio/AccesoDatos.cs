@@ -65,9 +65,17 @@ namespace Negocio
             }
         }
 
-        public void setearParametros(string nombre, object valor)
+
+        public void setearParametros(string nombre, object valor) //setear parametros CON valores
         {
             comando.Parameters.AddWithValue(nombre, valor);
+        }
+
+        public void setearParametros(string id, string mensaje) //setear parametros SIN valores
+        {
+            comando.Parameters.Add(id,SqlDbType.Int).Direction = ParameterDirection.Output;
+            comando.Parameters.Add(mensaje, SqlDbType.VarChar).Direction = ParameterDirection.Output;
+            comando.CommandType = CommandType.StoredProcedure;
         }
 
         public void ejecutarAccion()
