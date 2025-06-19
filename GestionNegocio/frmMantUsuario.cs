@@ -90,10 +90,13 @@ namespace GestionNegocio
                 ((OpcionCombo)cmbEstado.SelectedItem).Valor.ToString(),
                 ((OpcionCombo)cmbEstado.SelectedItem).Texto.ToString()
                 });
+
+                Limpiar();
             }
-
-
-            Limpiar();
+            else
+            {
+                MessageBox.Show(mensaje);
+            }
         }
 
         private void Limpiar()
