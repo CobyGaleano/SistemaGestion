@@ -36,9 +36,9 @@ namespace Negocio
             comando = new SqlCommand();
         }
 
-        public void setearConsulta(string consulta)
+        public void setearConsulta(string consulta, bool esProcedimiento = false)
         {
-            comando.CommandType = System.Data.CommandType.Text;
+            comando.CommandType = esProcedimiento ? CommandType.StoredProcedure : CommandType.Text;
             comando.CommandText = consulta;
         }
 
@@ -71,11 +71,20 @@ namespace Negocio
             comando.Parameters.AddWithValue(nombre, valor);
         }
 
-        public void setearParametros(string id, string mensaje) //setear parametros SIN valores
+        public void setearParametroSalida(string nombre, SqlDbType tipo, int tamanio = 0)
         {
-            comando.Parameters.Add(id,SqlDbType.Int).Direction = ParameterDirection.Output;
-            comando.Parameters.Add(mensaje, SqlDbType.VarChar).Direction = ParameterDirection.Output;
-            comando.CommandType = CommandType.StoredProcedure;
+            SqlParameter parametroSalida = new SqlParameter(nombre, tipo);
+            parametroSalida.Direction = ParameterDirection.Output;
+
+            if (tamanio > 0)
+                parametroSalida.Size = tamanio;
+
+            comando.Parameters.Add(parametroSalida);
+        }
+
+        public object obtenerValorParametro(string nombre)
+        {
+            return comando.Parameters[nombre].Value;
         }
 
         public void ejecutarAccion()

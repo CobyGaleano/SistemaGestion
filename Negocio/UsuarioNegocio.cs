@@ -67,16 +67,20 @@ namespace Negocio
                     @Mensaje varchar(500) output
                     )*/
 
-                datos.setearConsulta("SP_REGISTRARUSUARIO");
-                datos.setearParametros("Documento", obj.Documento);
-                datos.setearParametros("NombreCompleto", obj.NombreCompleto);
-                datos.setearParametros("Correo", obj.Correo); 
-                datos.setearParametros("Clave", obj.Clave);
-                datos.setearParametros("IdRol", obj.rRol.IdRol);
-                datos.setearParametros("Estado", obj.Estado);
-                datos.setearParametros("IdUsuarioResultado", "Mensaje");//pensar mejor manera de obtener el id
+                datos.setearConsulta("SP_REGISTRARUSUARIO", true);
+                datos.setearParametros("@Documento", obj.Documento);
+                datos.setearParametros("@NombreCompleto", obj.NombreCompleto);
+                datos.setearParametros("@Correo", obj.Correo);
+                datos.setearParametros("@Clave", obj.Clave);
+                datos.setearParametros("@IdRol", obj.rRol.IdRol);
+                datos.setearParametros("@Estado", obj.Estado);
+                datos.setearParametroSalida("@IdUsuarioResultado", SqlDbType.Int);
+                datos.setearParametroSalida("@Mensaje", SqlDbType.VarChar, 500);
 
                 datos.ejecutarAccion();
+
+                IdUsuarioGenerado = Convert.ToInt32(datos.obtenerValorParametro("@IdUsuarioResultado"));
+                Mensaje = datos.obtenerValorParametro("@Mensaje").ToString();
 
             }
             catch (Exception ex)
@@ -86,6 +90,85 @@ namespace Negocio
             }
 
             return IdUsuarioGenerado;
+        }
+
+        public bool Editar(Usuario obj, out string Mensaje)
+        {
+            bool respuesta = false;
+            Mensaje = string.Empty;
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                /*CREATE PROCEDURE SP_REGISTRARUSUARIO(
+                    @Documento varchar(50),
+                    @NombreCompleto varchar(100),
+                    @Correo varchar(100),
+                    @Clave varchar(50),
+                    @IdRol int,
+                    @Estado bit,
+                    @IdUsuarioResultado int output,
+                    @Mensaje varchar(500) output
+                    )*/
+
+                datos.setearConsulta("SP_EDITARUSUARIO");
+                datos.setearParametros("IdUsuario", obj.IdUsuario);
+                datos.setearParametros("NombreCompleto", obj.NombreCompleto);
+                datos.setearParametros("Correo", obj.Correo);
+                datos.setearParametros("Clave", obj.Clave);
+                datos.setearParametros("IdRol", obj.rRol.IdRol);
+                datos.setearParametros("Estado", obj.Estado);
+                datos.setearParametros("Respuesta", "Mensaje");//pensar mejor manera de obtener el id
+                datos.ejecutarAccion();
+
+                datos.setearParametros("Respuesta", respuesta);
+                datos.setearParametros("Mensaje", Mensaje);
+
+            }
+            catch (Exception ex)
+            {
+                respuesta = false;
+                Mensaje = ex.Message;
+            }
+
+            return respuesta;
+        }
+
+        public bool Eliminar(Usuario obj, out string Mensaje)
+        {
+            bool respuesta = false;
+            Mensaje = string.Empty;
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                /*CREATE PROCEDURE SP_REGISTRARUSUARIO(
+                    @Documento varchar(50),
+                    @NombreCompleto varchar(100),
+                    @Correo varchar(100),
+                    @Clave varchar(50),
+                    @IdRol int,
+                    @Estado bit,
+                    @IdUsuarioResultado int output,
+                    @Mensaje varchar(500) output
+                    )*/
+
+                datos.setearConsulta("SP_ELIMINARUSUARIO");
+                datos.setearParametros("IdUsuario", obj.IdUsuario);
+                datos.setearParametros("Respuesta", "Mensaje");//pensar mejor manera de obtener el id
+                datos.ejecutarAccion();
+
+                datos.setearParametros("Respuesta", respuesta);
+                datos.setearParametros("Mensaje", Mensaje);
+
+            }
+            catch (Exception ex)
+            {
+                respuesta = false;
+                Mensaje = ex.Message;
+            }
+
+            return respuesta;
         }
     }
 

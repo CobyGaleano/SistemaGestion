@@ -68,12 +68,31 @@ namespace GestionNegocio
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            dgvUsuario.Rows.Add(new object[] {"",txtId.Text,txtDocumento.Text,txtNombre.Text,txtCorreo.Text,txtContraseña.Text,
+            string mensaje = string.Empty;
+            Usuario objUsuario = new Usuario()
+            {
+                IdUsuario = Convert.ToInt32(txtId.Text),
+                Documento = txtDocumento.Text,
+                NombreCompleto = txtNombre.Text,
+                Correo = txtCorreo.Text,
+                Clave = txtContraseña.Text,
+                rRol = new Rol() { IdRol = Convert.ToInt32(((OpcionCombo)cmbRol.SelectedItem).Valor) },
+                Estado = Convert.ToInt32(((OpcionCombo)cmbEstado.SelectedItem).Valor) == 1 ? true : false
+            };
+
+            int idUsuarioGenerado = new UsuarioNegocio().Registrar(objUsuario, out mensaje);
+
+            if (idUsuarioGenerado != 0)
+            {
+                dgvUsuario.Rows.Add(new object[] {"",idUsuarioGenerado,txtDocumento.Text,txtNombre.Text,txtCorreo.Text,txtContraseña.Text,
                 ((OpcionCombo)cmbRol.SelectedItem).Valor.ToString(),
                 ((OpcionCombo)cmbRol.SelectedItem).Texto.ToString(),
                 ((OpcionCombo)cmbEstado.SelectedItem).Valor.ToString(),
                 ((OpcionCombo)cmbEstado.SelectedItem).Texto.ToString()
-            });
+                });
+            }
+
+
             Limpiar();
         }
 

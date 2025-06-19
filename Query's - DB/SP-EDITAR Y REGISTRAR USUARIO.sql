@@ -90,3 +90,46 @@ SELECT @Respuesta
 SELECT @Mensaje
 
 select * from USUARIO
+
+
+GO
+
+CREATE PROCEDURE SP_ELIMINARUSUARIO(
+@IdUsuario int,
+@Respuesta bit output,
+@Mensaje varchar(500) output
+)
+as
+begin 
+	set @Respuesta = 0
+	set @Mensaje = ''
+	declare @pasoreglas bit = 1
+
+	IF EXISTS(SELECT * FROM COMPRA C
+	INNER JOIN USUARIO U ON U.IdUsuario = C.IdUsuario
+	WHERE  U.IdUsuario = @IdUsuario
+	)
+	BEGIN
+		set @pasoreglas = 0 
+		set @Respuesta = 0
+		set @Mensaje = @Mensaje + 'No se puedo eliminar. El usuario se encuentra relacionado a una COMPRA\n'
+	END
+
+	IF EXISTS(SELECT * FROM VENTA V
+	INNER JOIN USUARIO U ON U.IdUsuario = V.IdUsuario
+	WHERE  V.IdUsuario = @IdUsuario
+	)
+	BEGIN
+		set @Respuesta = 0
+		set @Mensaje = @Mensaje + 'No se puedo eliminar. El usuario se encuentra relacionado a una VENTA\n'
+	END
+
+	IF (@pasoreglas = 1)
+	BEGIN
+		DELETE FROM USUARIO WHERE IdUsuario = @IdUsuario
+		set @Respuesta = 1
+	END
+
+END
+
+select * from usuario
