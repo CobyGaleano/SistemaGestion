@@ -82,7 +82,7 @@ namespace GestionNegocio
 
             int idUsuarioGenerado = 0;
 
-            if (Convert.ToInt32(objUsuario.Documento) == 0 || objUsuario.Documento.ToString() == "")
+            if (objUsuario.Documento.ToString() == "")
             { mensaje += "Error, debes ingresar un numero de Documento Valido"; }
             else if (objUsuario.NombreCompleto.ToString() == "" || objUsuario.Correo.ToString() == "")
             { mensaje += "Error, debe completar los campos faltantes"; }
