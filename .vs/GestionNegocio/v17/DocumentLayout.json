@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\gestionnegocio\\frmmantusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|c:\\users\\brian\\onedrive\\documentos\\programacion\\sistemagestion\\gestionnegocio\\frmmantusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|solutionrelative:gestionnegocio\\frmmantusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{352645F4-F878-4138-9797-B14BD7291D40}|Negocio\\Negocio.csproj|c:\\users\\brian\\onedrive\\documentos\\programacion\\sistemagestion\\negocio\\usuarionegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{352645F4-F878-4138-9797-B14BD7291D40}|Negocio\\Negocio.csproj|C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\negocio\\usuarionegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{352645F4-F878-4138-9797-B14BD7291D40}|Negocio\\Negocio.csproj|solutionrelative:negocio\\usuarionegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -54,8 +54,7 @@
               "RelativeToolTip": "Negocio\\AccesoDatos.cs",
               "ViewState": "AgIAAEwAAAAAAAAAAAAqwCYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T00:50:30.295Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-19T00:50:30.295Z"
             },
             {
               "$type": "Document",
@@ -67,8 +66,7 @@
               "RelativeToolTip": "Negocio\\UsuarioNegocio.cs",
               "ViewState": "AgIAAEkAAAAAAAAAAAAAwEwAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T01:01:32.315Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T01:01:32.315Z"
             },
             {
               "$type": "Document",
@@ -78,7 +76,7 @@
               "RelativeDocumentMoniker": "GestionNegocio\\frmMantUsuario.cs",
               "ToolTip": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\GestionNegocio\\frmMantUsuario.cs",
               "RelativeToolTip": "GestionNegocio\\frmMantUsuario.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAcwFwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAQwFQAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T01:46:21.671Z",
               "EditorCaption": ""
@@ -92,8 +90,7 @@
               "ToolTip": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\GestionNegocio\\frmMantUsuario.cs [Dise\u00F1o]",
               "RelativeToolTip": "GestionNegocio\\frmMantUsuario.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T01:27:07.609Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-05-27T01:27:07.609Z"
             }
           ]
         }

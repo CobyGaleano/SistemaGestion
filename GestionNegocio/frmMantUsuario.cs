@@ -80,7 +80,17 @@ namespace GestionNegocio
                 Estado = Convert.ToInt32(((OpcionCombo)cmbEstado.SelectedItem).Valor) == 1 ? true : false
             };
 
-            int idUsuarioGenerado = new UsuarioNegocio().Registrar(objUsuario, out mensaje);
+            int idUsuarioGenerado = 0;
+
+            if (Convert.ToInt32(objUsuario.Documento) == 0 || objUsuario.Documento.ToString() == "")
+            { mensaje += "Error, debes ingresar un numero de Documento Valido"; }
+            else if (objUsuario.NombreCompleto.ToString() == "" || objUsuario.Correo.ToString() == "")
+            { mensaje += "Error, debe completar los campos faltantes"; }
+            else if (objUsuario.Clave.ToString() != txtConfContra.Text)
+            { mensaje += "Error, las contraseñas no coinciden"; }
+            else
+            { idUsuarioGenerado = new UsuarioNegocio().Registrar(objUsuario, out mensaje); }
+            
 
             if (idUsuarioGenerado != 0)
             {
