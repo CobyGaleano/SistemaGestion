@@ -88,25 +88,45 @@ namespace GestionNegocio
             { mensaje += "Error, debe completar los campos faltantes"; }
             else if (objUsuario.Clave.ToString() != txtConfContra.Text)
             { mensaje += "Error, las contraseñas no coinciden"; }
-            else
-            { idUsuarioGenerado = new UsuarioNegocio().Registrar(objUsuario, out mensaje); }
-            
+            else if (objUsuario.IdUsuario == 0){ 
+                idUsuarioGenerado = new UsuarioNegocio().Registrar(objUsuario, out mensaje);
 
-            if (idUsuarioGenerado != 0)
-            {
-                dgvUsuario.Rows.Add(new object[] {"",idUsuarioGenerado,txtDocumento.Text,txtNombre.Text,txtCorreo.Text,txtContraseña.Text,
+                if (idUsuarioGenerado != 0)
+                {
+                    dgvUsuario.Rows.Add(new object[] {"",idUsuarioGenerado,txtDocumento.Text,txtNombre.Text,txtCorreo.Text,txtContraseña.Text,
                 ((OpcionCombo)cmbRol.SelectedItem).Valor.ToString(),
                 ((OpcionCombo)cmbRol.SelectedItem).Texto.ToString(),
                 ((OpcionCombo)cmbEstado.SelectedItem).Valor.ToString(),
                 ((OpcionCombo)cmbEstado.SelectedItem).Texto.ToString()
                 });
 
-                Limpiar();
+                    Limpiar();
+                }
+                else { MessageBox.Show(mensaje); }
+                
             }
             else
             {
-                MessageBox.Show(mensaje);
+                bool resultado = new UsuarioNegocio().Editar(objUsuario, out mensaje);
+                if(resultado)
+                {
+                    DataGridViewRow row = dgvUsuario.Rows[Convert.ToInt32(txtIndice.Text)];
+                    row.Cells["Documento"].Value = txtDocumento;
+                    row.Cells["NombreCompleto"].Value = txtDocumento;
+                    row.Cells["Correo"].Value = txtDocumento;
+                    row.Cells["Clave"].Value = txtDocumento;
+                    row.Cells["IdRol"].Value = ((OpcionCombo)cmbRol.SelectedItem).Valor.ToString();
+                    row.Cells["Rol"].Value = ((OpcionCombo)cmbRol.SelectedItem).Texto.ToString();
+                    row.Cells["IdEstado"].Value = ((OpcionCombo)cmbEstado.SelectedItem).Valor.ToString();
+                    row.Cells["Estado"].Value = ((OpcionCombo)cmbEstado.SelectedItem).Texto.ToString();
+
+                    Limpiar();
+                }
+                else { MessageBox.Show(mensaje); }
             }
+            
+
+            
         }
 
         private void Limpiar()
@@ -120,6 +140,8 @@ namespace GestionNegocio
             txtConfContra.Text = "";
             cmbEstado.SelectedIndex = 0;
             cmbRol.SelectedIndex = 0;
+
+            txtDocumento.Select();
 
         }
 

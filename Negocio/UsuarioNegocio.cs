@@ -118,11 +118,13 @@ namespace Negocio
                 datos.setearParametros("Clave", obj.Clave);
                 datos.setearParametros("IdRol", obj.rRol.IdRol);
                 datos.setearParametros("Estado", obj.Estado);
-                datos.setearParametros("Respuesta", "Mensaje");//pensar mejor manera de obtener el id
-                datos.ejecutarAccion();
+                datos.setearParametroSalida("@Respuesta", SqlDbType.Int);
+                datos.setearParametroSalida("@Mensaje", SqlDbType.VarChar, 500);
 
-                datos.setearParametros("Respuesta", respuesta);
-                datos.setearParametros("Mensaje", Mensaje);
+                datos.ejecutarAccion();
+                respuesta = Convert.ToBoolean(datos.obtenerValorParametro("@Respuesta"));
+                Mensaje = datos.obtenerValorParametro("@Mensaje").ToString();
+
 
             }
             catch (Exception ex)
@@ -160,6 +162,7 @@ namespace Negocio
 
                 datos.setearParametros("Respuesta", respuesta);
                 datos.setearParametros("Mensaje", Mensaje);
+
 
             }
             catch (Exception ex)
