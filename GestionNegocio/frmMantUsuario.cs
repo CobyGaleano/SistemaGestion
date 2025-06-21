@@ -201,5 +201,39 @@ namespace GestionNegocio
                 }
             }
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if(Convert.ToInt32(txtId.Text) != 0)
+            {
+                if(MessageBox.Show("¿Desea eliminar el usuario seleccionado?",  
+                                   "Mensaje", MessageBoxButtons.YesNo,
+                                   MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    String mensaje = string.Empty;
+                    Usuario objUsuario = new Usuario()
+                    {
+                        IdUsuario = Convert.ToInt32(txtId.Text)
+                    };
+                    bool respuesta = new UsuarioNegocio().Eliminar(objUsuario, out mensaje);
+
+                    if(respuesta)
+                    {
+                        dgvUsuario.Rows.RemoveAt(Convert.ToInt32(txtIndice.Text));
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+            
+                Limpiar() ;
+            }
+        }
     }
 }

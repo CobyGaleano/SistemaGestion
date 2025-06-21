@@ -111,13 +111,13 @@ namespace Negocio
                     @Mensaje varchar(500) output
                     )*/
 
-                datos.setearConsulta("SP_EDITARUSUARIO");
-                datos.setearParametros("IdUsuario", obj.IdUsuario);
-                datos.setearParametros("NombreCompleto", obj.NombreCompleto);
-                datos.setearParametros("Correo", obj.Correo);
-                datos.setearParametros("Clave", obj.Clave);
-                datos.setearParametros("IdRol", obj.rRol.IdRol);
-                datos.setearParametros("Estado", obj.Estado);
+                datos.setearConsulta("SP_EDITARUSUARIO", true);
+                datos.setearParametros("@IdUsuario", obj.IdUsuario);
+                datos.setearParametros("@NombreCompleto", obj.NombreCompleto);
+                datos.setearParametros("@Correo", obj.Correo);
+                datos.setearParametros("@Clave", obj.Clave);
+                datos.setearParametros("@IdRol", obj.rRol.IdRol);
+                datos.setearParametros("@Estado", obj.Estado);
                 datos.setearParametroSalida("@Respuesta", SqlDbType.Int);
                 datos.setearParametroSalida("@Mensaje", SqlDbType.VarChar, 500);
 
@@ -155,22 +155,21 @@ namespace Negocio
                     @Mensaje varchar(500) output
                     )*/
 
-                datos.setearConsulta("SP_ELIMINARUSUARIO");
-                datos.setearParametros("IdUsuario", obj.IdUsuario);
-                datos.setearParametros("Respuesta", "Mensaje");//pensar mejor manera de obtener el id
+                datos.setearConsulta("SP_ELIMINARUSUARIO", true);
+                datos.setearParametros("@IdUsuario", obj.IdUsuario);
+                datos.setearParametroSalida("@Respuesta", SqlDbType.Int);
+                datos.setearParametroSalida("@Mensaje", SqlDbType.VarChar, 500);
+
                 datos.ejecutarAccion();
 
-                datos.setearParametros("Respuesta", respuesta);
-                datos.setearParametros("Mensaje", Mensaje);
-
-
+                respuesta = Convert.ToBoolean(datos.obtenerValorParametro("@Respuesta"));
+                Mensaje = datos.obtenerValorParametro("@Mensaje").ToString();
             }
             catch (Exception ex)
             {
                 respuesta = false;
                 Mensaje = ex.Message;
             }
-
             return respuesta;
         }
     }
