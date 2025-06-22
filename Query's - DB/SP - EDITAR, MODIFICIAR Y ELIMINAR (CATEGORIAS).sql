@@ -1,9 +1,7 @@
+USE DBSISTEMA_VENTA
+GO
 --PROCEDIMIENTO CREAR CATEGORIA --
-CREATE PROC SP_RegistrarCategoria(
-@Descripcion VARCHAR(50),
-@Resultado BIT OUTPUT,
-@Mensaje VARCHAR (500) OUTPUT
-)
+ 
 AS
 BEGIN
 	SET @Resultado = 0

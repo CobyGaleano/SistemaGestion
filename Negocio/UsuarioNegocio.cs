@@ -65,7 +65,7 @@ namespace Negocio
                     @Estado bit,
                     @IdUsuarioResultado int output,
                     @Mensaje varchar(500) output
-                    )*/
+                )*/
 
                 datos.setearConsulta("SP_REGISTRARUSUARIO", true);
                 datos.setearParametros("@Documento", obj.Documento);
@@ -100,16 +100,17 @@ namespace Negocio
 
             try
             {
-                /*CREATE PROCEDURE SP_REGISTRARUSUARIO(
+                /*CREATE PROCEDURE SP_EDITARUSUARIO(
+                    @IdUsuario int,
                     @Documento varchar(50),
                     @NombreCompleto varchar(100),
                     @Correo varchar(100),
                     @Clave varchar(50),
                     @IdRol int,
                     @Estado bit,
-                    @IdUsuarioResultado int output,
-                    @Mensaje varchar(500) output
-                    )*/
+                    @Respuesta bit output,
+                    @Mensaje varchar(500) output)
+                */
 
                 datos.setearConsulta("SP_EDITARUSUARIO", true);
                 datos.setearParametros("@IdUsuario", obj.IdUsuario);
@@ -144,16 +145,11 @@ namespace Negocio
 
             try
             {
-                /*CREATE PROCEDURE SP_REGISTRARUSUARIO(
-                    @Documento varchar(50),
-                    @NombreCompleto varchar(100),
-                    @Correo varchar(100),
-                    @Clave varchar(50),
-                    @IdRol int,
-                    @Estado bit,
-                    @IdUsuarioResultado int output,
-                    @Mensaje varchar(500) output
-                    )*/
+                /*CREATE PROCEDURE SP_ELIMINARUSUARIO(
+                    @IdUsuario int,
+                    @Respuesta bit output,
+                    @Mensaje varchar(500) output)
+                */
 
                 datos.setearConsulta("SP_ELIMINARUSUARIO", true);
                 datos.setearParametros("@IdUsuario", obj.IdUsuario);
