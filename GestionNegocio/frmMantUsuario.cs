@@ -235,5 +235,18 @@ namespace GestionNegocio
                 Limpiar() ;
             }
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string columnaFiltro = ((OpcionCombo)cmbFiltro.SelectedItem).Valor.ToString();
+            if(dgvUsuario.Rows.Count > 0 )
+            {
+                foreach(DataGridViewRow row in dgvUsuario.Rows)
+                {
+                    if (row.Cells[columnaFiltro].Value.ToString().Trim().ToUpper().Contains(txtFiltro.Text.Trim().ToUpper()));
+
+                }
+            }
+        }
     }
 }
