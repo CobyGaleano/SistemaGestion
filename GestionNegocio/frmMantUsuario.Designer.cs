@@ -438,6 +438,7 @@
             this.btnLimpiarFiltro.Size = new System.Drawing.Size(32, 29);
             this.btnLimpiarFiltro.TabIndex = 10;
             this.btnLimpiarFiltro.UseVisualStyleBackColor = false;
+            this.btnLimpiarFiltro.Click += new System.EventHandler(this.btnLimpiarFiltro_Click);
             // 
             // btnBuscar
             // 

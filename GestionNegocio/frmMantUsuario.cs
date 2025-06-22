@@ -241,11 +241,21 @@ namespace GestionNegocio
             string columnaFiltro = ((OpcionCombo)cmbFiltro.SelectedItem).Valor.ToString();
             if(dgvUsuario.Rows.Count > 0 )
             {
-                foreach(DataGridViewRow row in dgvUsuario.Rows)
+                foreach (DataGridViewRow row in dgvUsuario.Rows)
                 {
-                    if (row.Cells[columnaFiltro].Value.ToString().Trim().ToUpper().Contains(txtFiltro.Text.Trim().ToUpper()));
-
+                    if (row.Cells[columnaFiltro].Value.ToString().Trim().ToUpper().Contains(txtFiltro.Text.Trim().ToUpper()))
+                         row.Visible = true;
+                    else row.Visible = false; 
                 }
+            }
+        }
+
+        private void btnLimpiarFiltro_Click(object sender, EventArgs e)
+        {
+            txtFiltro.Text = "";
+            foreach(DataGridViewRow row in dgvUsuario.Rows)
+            {
+                row.Visible = true;
             }
         }
     }
