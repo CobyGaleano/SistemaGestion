@@ -1,13 +1,18 @@
 USE DBSISTEMA_VENTA
 GO
 --PROCEDIMIENTO CREAR CATEGORIA --
- 
+CREATE PROC SP_RegistrarCategoria(
+@Descripcion VARCHAR(50),
+@Estado BIT,
+@Resultado INT OUTPUT,
+@Mensaje VARCHAR (500) OUTPUT
+)
 AS
 BEGIN
 	SET @Resultado = 0
 	IF NOT EXISTS (SELECT * FROM CATEGORIA WHERE Descripcion = @Descripcion)
 	BEGIN
-		INSERT INTO CATEGORIA(Descripcion) VALUES (@Descripcion)
+		INSERT INTO CATEGORIA(Descripcion, Estado) VALUES (@Descripcion, @Estado)
 		SET @Resultado = SCOPE_IDENTITY()
 		END
 		ELSE
@@ -20,7 +25,8 @@ GO
 CREATE PROC SP_EditarCategoria(
 @IdCategoria INT,
 @Descripcion VARCHAR(50),
-@Resultado BIT OUTPUT,
+@Estado BIT,
+@Resultado INT OUTPUT,
 @Mensaje VARCHAR (500) OUTPUT
 )
 AS
@@ -28,7 +34,8 @@ BEGIN
 	SET @Resultado = 1
 	IF NOT EXISTS (SELECT * FROM CATEGORIA WHERE Descripcion = @Descripcion AND IdCategoria = @IdCategoria)
 	UPDATE CATEGORIA SET
-	Descripcion = @Descripcion
+	Descripcion = @Descripcion,
+	Estado = @Estado
 	WHERE IdCategoria = @IdCategoria
 	ELSE
 	BEGIN
@@ -41,7 +48,7 @@ GO
 --PROCEDIMIENTO ELIMINAR CATEGORIA--
 CREATE PROC SP_EliminarCategoria(
 @IdCategoria INT,
-@Resultado BIT OUTPUT,
+@Resultado INT OUTPUT,
 @Mensaje VARCHAR (500) OUTPUT
 )
 AS

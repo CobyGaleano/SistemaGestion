@@ -128,40 +128,6 @@ namespace GestionNegocio
 
             
         }
-
-        private void Limpiar()
-        {
-            txtIndice.Text = "-1";
-            txtId.Text = "0";
-            txtDocumento.Text = "";
-            txtNombre.Text = "";
-            txtCorreo.Text = "";
-            txtContraseña.Text = "";
-            txtConfContra.Text = "";
-            cmbEstado.SelectedIndex = 0;
-            cmbRol.SelectedIndex = 0;
-
-            txtDocumento.Select();
-
-        }
-
-        private void dgvUsuario_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-            if (e.RowIndex < 0 ) return;
-            if (e.ColumnIndex == 0 )
-            {
-                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
-
-                var w = Properties.Resources.check_circle.Width;
-                var h = Properties.Resources.check_circle.Height;
-                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
-                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
-
-                e.Graphics.DrawImage(Properties.Resources.check_circle, new Rectangle(x, y, w, h));
-                e.Handled = true;
-            }
-        }
-
         private void dgvUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             ///Rellena los valores de mant Usuarios, por los del usuario selecionado en el DGV
@@ -256,6 +222,38 @@ namespace GestionNegocio
             foreach(DataGridViewRow row in dgvUsuario.Rows)
             {
                 row.Visible = true;
+            }
+        }
+        private void Limpiar()
+        {
+            txtIndice.Text = "-1";
+            txtId.Text = "0";
+            txtDocumento.Text = "";
+            txtNombre.Text = "";
+            txtCorreo.Text = "";
+            txtContraseña.Text = "";
+            txtConfContra.Text = "";
+            cmbEstado.SelectedIndex = 0;
+            cmbRol.SelectedIndex = 0;
+
+            txtDocumento.Select();
+
+        }
+
+        private void dgvUsuario_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+            if (e.ColumnIndex == 0)
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+
+                var w = Properties.Resources.check_circle.Width;
+                var h = Properties.Resources.check_circle.Height;
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+
+                e.Graphics.DrawImage(Properties.Resources.check_circle, new Rectangle(x, y, w, h));
+                e.Handled = true;
             }
         }
     }

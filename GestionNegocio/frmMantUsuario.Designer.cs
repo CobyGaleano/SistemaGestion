@@ -63,12 +63,12 @@
             this.lblFiltro = new System.Windows.Forms.Label();
             this.cmbFiltro = new System.Windows.Forms.ComboBox();
             this.txtFiltro = new System.Windows.Forms.TextBox();
+            this.txtIndice = new System.Windows.Forms.TextBox();
             this.btnLimpiarFiltro = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.txtIndice = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -387,7 +387,6 @@
             this.txtId.Size = new System.Drawing.Size(23, 20);
             this.txtId.TabIndex = 6;
             this.txtId.Text = "0";
-            this.txtId.Visible = false;
             // 
             // lblFiltro
             // 
@@ -421,6 +420,14 @@
             this.txtFiltro.Size = new System.Drawing.Size(155, 20);
             this.txtFiltro.TabIndex = 9;
             // 
+            // txtIndice
+            // 
+            this.txtIndice.Location = new System.Drawing.Point(137, 44);
+            this.txtIndice.Name = "txtIndice";
+            this.txtIndice.Size = new System.Drawing.Size(23, 20);
+            this.txtIndice.TabIndex = 12;
+            this.txtIndice.Text = "-1";
+            // 
             // btnLimpiarFiltro
             // 
             this.btnLimpiarFiltro.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -433,9 +440,9 @@
             this.btnLimpiarFiltro.ForeColor = System.Drawing.Color.White;
             this.btnLimpiarFiltro.Image = global::GestionNegocio.Properties.Resources.eraser;
             this.btnLimpiarFiltro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiarFiltro.Location = new System.Drawing.Point(1012, 19);
+            this.btnLimpiarFiltro.Location = new System.Drawing.Point(1012, 21);
             this.btnLimpiarFiltro.Name = "btnLimpiarFiltro";
-            this.btnLimpiarFiltro.Size = new System.Drawing.Size(32, 29);
+            this.btnLimpiarFiltro.Size = new System.Drawing.Size(30, 26);
             this.btnLimpiarFiltro.TabIndex = 10;
             this.btnLimpiarFiltro.UseVisualStyleBackColor = false;
             this.btnLimpiarFiltro.Click += new System.EventHandler(this.btnLimpiarFiltro_Click);
@@ -453,9 +460,9 @@
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Image = global::GestionNegocio.Properties.Resources.search_big;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(974, 20);
+            this.btnBuscar.Location = new System.Drawing.Point(978, 21);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(32, 28);
+            this.btnBuscar.Size = new System.Drawing.Size(30, 26);
             this.btnBuscar.TabIndex = 11;
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -522,20 +529,11 @@
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // txtIndice
-            // 
-            this.txtIndice.Location = new System.Drawing.Point(137, 44);
-            this.txtIndice.Name = "txtIndice";
-            this.txtIndice.Size = new System.Drawing.Size(23, 20);
-            this.txtIndice.TabIndex = 12;
-            this.txtIndice.Text = "-1";
-            this.txtIndice.Visible = false;
-            // 
             // frmMantUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(50)))), ((int)(((byte)(12)))));
             this.ClientSize = new System.Drawing.Size(1087, 613);
             this.Controls.Add(this.txtIndice);
             this.Controls.Add(this.btnLimpiarFiltro);

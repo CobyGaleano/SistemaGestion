@@ -57,12 +57,12 @@ namespace Negocio
                 datos.setearConsulta("SP_RegistrarCategoria", true);
                 datos.setearParametros("@Descripcion",obj.Descripcion);
                 datos.setearParametros("@Estado", obj.Estado);
-                datos.setearParametroSalida("@IdResultado", SqlDbType.Int);
+                datos.setearParametroSalida("@Resultado", SqlDbType.Int);
                 datos.setearParametroSalida("@Mensaje", SqlDbType.VarChar, 500);
 
                 datos.ejecutarAccion();
 
-                IdCategoriaGenerado = Convert.ToInt32(datos.obtenerValorParametro("@IdResultado"));
+                IdCategoriaGenerado = Convert.ToInt32(datos.obtenerValorParametro("@Resultado"));
                 Mensaje = datos.obtenerValorParametro("@Mensaje").ToString();
 
             }
