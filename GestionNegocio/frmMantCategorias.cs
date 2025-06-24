@@ -78,6 +78,8 @@ namespace GestionNegocio
                     ((OpcionCombo)cmbEstado.SelectedItem).Texto.ToString()
                     });
 
+                    MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     Limpiar();
                 }
                 else { MessageBox.Show(mensaje); }
@@ -89,9 +91,11 @@ namespace GestionNegocio
                 if (resultado)
                 {
                     DataGridViewRow row = dgvCategoria.Rows[Convert.ToInt32(txtIndice.Text)];
-                    row.Cells["Descripcion"].Value = txtDescripcion;
+                    row.Cells["Descripcion"].Value = txtDescripcion.Text;
                     row.Cells["IdEstado"].Value = ((OpcionCombo)cmbEstado.SelectedItem).Valor.ToString();
                     row.Cells["Estado"].Value = ((OpcionCombo)cmbEstado.SelectedItem).Texto.ToString();
+
+                    MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     Limpiar();
                 }
@@ -121,6 +125,7 @@ namespace GestionNegocio
                     if (respuesta)
                     {
                         dgvCategoria.Rows.RemoveAt(Convert.ToInt32(txtIndice.Text));
+                        MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {

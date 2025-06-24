@@ -91,6 +91,7 @@ namespace Negocio
                 */
 
                 datos.setearConsulta("SP_EditarCategoria", true);
+                datos.setearParametros("@IdCategoria", obj.Id);
                 datos.setearParametros("@Descripcion",obj.Descripcion);
                 datos.setearParametros("@Estado", obj.Estado);
                 datos.setearParametroSalida("@Resultado", SqlDbType.Int);
