@@ -45,7 +45,7 @@ namespace Negocio
                     }*/
                     aux.marca = new Marca();
                     aux.marca.Id = (int)datos.Lector["IdMarca"];
-                    aux.marca.Descripcion = (string)datos.Lector["Marca"];
+                    aux.marca.Nombre = (string)datos.Lector["Nombre"];
 
                     lista.Add(aux);
                 }
@@ -235,7 +235,8 @@ namespace Negocio
                         aux.categoria.Descripcion = (string)datos.Lector["Categoria"];
                     }
                     aux.marca = new Marca();
-                    aux.marca.Descripcion = (string)datos.Lector["Marca"];
+                   // aux.marca.Descripcion = (string)datos.Lector["Marca"];// VERSION PREVIA ANTES DEL REDISEÑO
+                    aux.marca.Nombre = (string)datos.Lector["Marca"];
 
                     lista.Add(aux);
                 }
@@ -269,7 +270,8 @@ namespace Negocio
                 seleccionado.categoria = new Categoria();
                 seleccionado.categoria.Descripcion = (string)datos.Lector["Categoria"];
                 seleccionado.marca = new Marca();
-                seleccionado.marca.Descripcion = (string)datos.Lector["Marca"];
+                //seleccionado.marca.Descripcion = (string)datos.Lector["Marca"];// VERSION PREVIA ANTES DEL REDISEÑO
+                seleccionado.marca.Nombre = (string)datos.Lector["Marca"];
                 seleccionado.Precio = (decimal)datos.Lector["Precio"];
                 
                 return seleccionado;
