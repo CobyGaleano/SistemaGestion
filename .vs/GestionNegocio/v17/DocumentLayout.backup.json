@@ -7,19 +7,19 @@
       "RelativeMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|solutionrelative:gestionnegocio\\frmmantmarcas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|c:\\users\\brian\\onedrive\\documentos\\programacion\\sistemagestion\\gestionnegocio\\frmmantmarcas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\gestionnegocio\\frmmantmarcas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|solutionrelative:gestionnegocio\\frmmantmarcas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|c:\\users\\brian\\onedrive\\documentos\\programacion\\sistemagestion\\gestionnegocio\\frmmantcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\gestionnegocio\\frmmantcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|solutionrelative:gestionnegocio\\frmmantcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{352645F4-F878-4138-9797-B14BD7291D40}|Negocio\\Negocio.csproj|c:\\users\\brian\\onedrive\\documentos\\programacion\\sistemagestion\\negocio\\marcanegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{352645F4-F878-4138-9797-B14BD7291D40}|Negocio\\Negocio.csproj|C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\negocio\\marcanegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{352645F4-F878-4138-9797-B14BD7291D40}|Negocio\\Negocio.csproj|solutionrelative:negocio\\marcanegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|c:\\users\\brian\\onedrive\\documentos\\programacion\\sistemagestion\\gestionnegocio\\frmmantcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\gestionnegocio\\frmmantcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|solutionrelative:gestionnegocio\\frmmantcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -54,8 +54,8 @@
               "Title": "frmMantMarcas.cs",
               "DocumentMoniker": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\GestionNegocio\\frmMantMarcas.cs",
               "RelativeDocumentMoniker": "GestionNegocio\\frmMantMarcas.cs",
-              "ToolTip": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\GestionNegocio\\frmMantMarcas.cs*",
-              "RelativeToolTip": "GestionNegocio\\frmMantMarcas.cs*",
+              "ToolTip": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\GestionNegocio\\frmMantMarcas.cs",
+              "RelativeToolTip": "GestionNegocio\\frmMantMarcas.cs",
               "ViewState": "AgIAAJQAAAAAAAAAAAAAAKUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-24T23:58:41.685Z",
@@ -67,11 +67,10 @@
               "Title": "frmMantMarcas.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\GestionNegocio\\frmMantMarcas.cs",
               "RelativeDocumentMoniker": "GestionNegocio\\frmMantMarcas.cs",
-              "ToolTip": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\GestionNegocio\\frmMantMarcas.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "GestionNegocio\\frmMantMarcas.cs [Dise\u00F1o]*",
+              "ToolTip": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\GestionNegocio\\frmMantMarcas.cs [Dise\u00F1o]",
+              "RelativeToolTip": "GestionNegocio\\frmMantMarcas.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T23:57:07.642Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-06-24T23:57:07.642Z"
             },
             {
               "$type": "Document",
@@ -83,8 +82,7 @@
               "RelativeToolTip": "GestionNegocio\\frmMantCategorias.cs",
               "ViewState": "AgIAAI4AAAAAAAAAAAAQwIgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T23:57:27.659Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-24T23:57:27.659Z"
             },
             {
               "$type": "Document",
@@ -95,8 +93,7 @@
               "ToolTip": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\GestionNegocio\\frmMantCategorias.cs [Dise\u00F1o]",
               "RelativeToolTip": "GestionNegocio\\frmMantCategorias.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T23:57:15.542Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-06-24T23:57:15.542Z"
             },
             {
               "$type": "Document",
@@ -108,8 +105,7 @@
               "RelativeToolTip": "Negocio\\MarcaNegocio.cs",
               "ViewState": "AgIAAGAAAAAAAAAAAAAqwBkAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T23:44:44.567Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-24T23:44:44.567Z"
             }
           ]
         }
