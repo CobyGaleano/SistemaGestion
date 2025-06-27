@@ -77,7 +77,8 @@ namespace GestionNegocio
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new Productos());
+            // AbrirFormHija(new Productos());  VIEJA VENTANA FORM
+            AbrirFormHija(new frmProductos());
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
