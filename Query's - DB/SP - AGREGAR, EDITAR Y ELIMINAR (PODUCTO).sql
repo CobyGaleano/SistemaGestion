@@ -100,3 +100,10 @@ BEGIN
 		SET @Mensaje = 'El PRODUCTO ha sido eliminado correctamente'
 	END
 END
+
+--CONSULTA DE SELECCION DGV --
+
+SELECT P.IdProducto, P.Codigo, P.Nombre, P.Descripcion, C.IdCategoria, C.Descripcion,
+	   M.IdMarca, M.Nombre, P.Stock, P.PrecioCompra, P.PrecioVenta, P.Estado FROM PRODUCTO P
+	   INNER JOIN CATEGORIA C ON C.IdCategoria = P.IdCategoria
+	   INNER JOIN MARCA M ON M.IdMarca = P.IdMarca
