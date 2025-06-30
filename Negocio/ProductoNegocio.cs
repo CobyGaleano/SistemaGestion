@@ -18,8 +18,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("SELECT P.IdProducto, P.Codigo, P.Nombre, P.Descripcion, C.IdCategoria, C.Descripcion, M.IdMarca, M.Nombre, P.Stock, " +
-                                     "P.PrecioCompra, P.PrecioVenta, P.Estado FROM PRODUCTO P INNER JOIN CATEGORIA C ON C.IdCategoria = P.INNER JOIN MARCA M ON M.IdMarca = P.IdMarca");
+                datos.setearConsulta("SELECT P.IdProducto, P.Codigo, P.Nombre, P.Descripcion, C.IdCategoria, C.Descripcion, M.IdMarca, M.Nombre, P.Stock, P.PrecioCompra, P.PrecioVenta, P.Estado FROM PRODUCTO P INNER JOIN CATEGORIA C ON C.IdCategoria = P.IdCategoria INNER JOIN MARCA M ON M.IdMarca = P.IdMarca");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
