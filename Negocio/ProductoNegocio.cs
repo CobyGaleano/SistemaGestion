@@ -80,9 +80,9 @@ namespace Negocio
                 datos.setearParametros("@Descripcion", obj.Descripcion);
                 datos.setearParametros("@IdCategoria", obj.oCategoria.Id);
                 datos.setearParametros("@IdMarca", obj.oMarca.Id);
-                datos.setearParametros("@Stock", obj.Stock);
-                datos.setearParametros("@PrecioCompra", obj.PrecioCompra);
-                datos.setearParametros("@PrecioVenta", obj.PrecioVenta);
+                //datos.setearParametros("@Stock", obj.Stock);
+                //datos.setearParametros("@PrecioCompra", obj.PrecioCompra);
+                //datos.setearParametros("@PrecioVenta", obj.PrecioVenta);
                 datos.setearParametros("@Estado", obj.Estado);
                 datos.setearParametroSalida("@Resultado", SqlDbType.Int);
                 datos.setearParametroSalida("@Mensaje", SqlDbType.VarChar, 500);
