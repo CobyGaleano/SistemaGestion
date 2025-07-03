@@ -198,6 +198,8 @@
             this.dgvProductos.RowTemplate.Height = 30;
             this.dgvProductos.Size = new System.Drawing.Size(809, 501);
             this.dgvProductos.TabIndex = 33;
+            this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentClick);
+            this.dgvProductos.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvProductos_CellPainting);
             // 
             // btnSeleccionar
             // 
@@ -565,8 +567,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.ComboBox cmbEstado;
-        private System.Windows.Forms.ComboBox cmbMarca;
         private System.Windows.Forms.Label lblDetalleUsuario;
         private System.Windows.Forms.Label lblListaUsuarios;
         private System.Windows.Forms.Label lblCodigo;
@@ -579,6 +579,8 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbCategoria;
+        private System.Windows.Forms.ComboBox cmbMarca;
+        private System.Windows.Forms.ComboBox cmbEstado;
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;

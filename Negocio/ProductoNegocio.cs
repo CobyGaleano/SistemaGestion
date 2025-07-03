@@ -18,29 +18,29 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("SELECT P.IdProducto, P.Codigo, P.Nombre, P.Descripcion, C.IdCategoria, C.Descripcion, M.IdMarca, M.Nombre, P.Stock, P.PrecioCompra, P.PrecioVenta, P.Estado FROM PRODUCTO P INNER JOIN CATEGORIA C ON C.IdCategoria = P.IdCategoria INNER JOIN MARCA M ON M.IdMarca = P.IdMarca");
+                datos.setearConsulta("SELECT P.IdProducto, P.Codigo, P.Nombre, P.Descripcion, C.IdCategoria, C.Descripcion[DescripcionCategoria], M.IdMarca, M.Nombre[NombreMarca], P.Stock, P.PrecioCompra, P.PrecioVenta, P.Estado FROM PRODUCTO P INNER JOIN CATEGORIA C ON C.IdCategoria = P.IdCategoria INNER JOIN MARCA M ON M.IdMarca = P.IdMarca");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
                 {
                     Producto aux = new Producto();
-                    aux.IdProducto = (int)datos.Lector["P.IdProducto"];
-                    aux.Codigo = (string)datos.Lector["P.Codigo"];
-                    aux.Nombre = (string)datos.Lector["P.Nombre"];
-                    aux.Descripcion = (string)datos.Lector["P.Descripcion"];
+                    aux.IdProducto = (int)datos.Lector["IdProducto"];
+                    aux.Codigo = (string)datos.Lector["Codigo"];
+                    aux.Nombre = (string)datos.Lector["Nombre"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
                     aux.oCategoria = new Categoria() 
                     {
-                        Id = Convert.ToInt32(datos.Lector["C.IdCategoria"]),
-                        Descripcion = (string)datos.Lector["C.Descripcion"]
+                        Id = Convert.ToInt32(datos.Lector["IdCategoria"]),
+                        Descripcion = (string)datos.Lector["DescripcionCategoria"]
                     };
                     aux.oMarca = new Marca()
                     {
-                        Id = Convert.ToInt32(datos.Lector["M.IdMarca"]),
-                        Nombre = (string)datos.Lector["M.Nombre"]
+                        Id = Convert.ToInt32(datos.Lector["IdMarca"]),
+                        Nombre = (string)datos.Lector["NombreMarca"]
                     };
-                    aux.Stock = (int)datos.Lector["Stock"];
-                    aux.PrecioCompra = (int)datos.Lector["PrecioCompra"];
-                    aux.PrecioVenta = (int)datos.Lector["PrecioVenta"];
+                    //aux.Stock = (int)datos.Lector["Stock"];
+                    //aux.PrecioCompra = (int)datos.Lector["PrecioCompra"];
+                    //aux.PrecioVenta = (int)datos.Lector["PrecioVenta"];
                     aux.Estado = (bool)datos.Lector["Estado"];
                     listaProducto.Add(aux);
                 }

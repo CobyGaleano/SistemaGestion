@@ -63,11 +63,19 @@ namespace GestionNegocio
 
             foreach (Producto item in listaProductos)
             {
-                dgvProductos.Rows.Add(new object[] {"",item.IdProducto,item.Codigo,item.Nombre,item.Descripcion,
-                item.oCategoria.Descripcion,
-                item.oMarca.Nombre,
-                item.Estado == true ? 1 : 0,
-                item.Estado == true ? "Activo" : "Inactivo"
+                dgvProductos.Rows.Add(new object[]
+                {
+                    "",
+                    item.IdProducto,
+                    item.Codigo,
+                    item.Nombre,
+                    item.Descripcion,
+                    item.oCategoria.Id,
+                    item.oCategoria.Descripcion,
+                    item.oMarca.Id,
+                    item.oMarca.Nombre,
+                    item.Estado == true ? 1 : 0,
+                    item.Estado == true ? "Activo" : "Inactivo"
                 });
             }
         }
@@ -188,8 +196,39 @@ namespace GestionNegocio
                 row.Visible = true;
             }
         }
+        private void Limpiar()
+        {
+            txtIndice.Text = "-1";
+            txtId.Text = "0";
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            txtDescripcion.Text = "";
+            cmbEstado.SelectedIndex = 0;
+            cmbCategoria.SelectedIndex = 0;
+            cmbMarca.SelectedIndex = 0;
 
-        private void dgvProductoss_CellContentClick(object sender, DataGridViewCellEventArgs e)
+            txtCodigo.Select();
+
+        }
+
+        private void dgvProductos_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+            if (e.ColumnIndex == 0)
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+
+                var w = Properties.Resources.check_circle.Width;
+                var h = Properties.Resources.check_circle.Height;
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+
+                e.Graphics.DrawImage(Properties.Resources.check_circle, new Rectangle(x, y, w, h));
+                e.Handled = true;
+            }
+        }
+
+        private void dgvProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             ///Rellena los valores de mant Productos, por los del Producto selecionado en el DGV
             if (dgvProductos.Columns[e.ColumnIndex].Name == "btnSeleccionar")
@@ -236,37 +275,6 @@ namespace GestionNegocio
                 }
             }
         }
-
-        private void dgvProductoss_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-            if (e.RowIndex < 0) return;
-            if (e.ColumnIndex == 0)
-            {
-                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
-
-                var w = Properties.Resources.check_circle.Width;
-                var h = Properties.Resources.check_circle.Height;
-                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
-                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
-
-                e.Graphics.DrawImage(Properties.Resources.check_circle, new Rectangle(x, y, w, h));
-                e.Handled = true;
-            }
-        }
-
-        private void Limpiar()
-        {
-            txtIndice.Text = "-1";
-            txtId.Text = "0";
-            txtCodigo.Text = "";
-            txtNombre.Text = "";
-            txtDescripcion.Text = "";
-            cmbEstado.SelectedIndex = 0;
-            cmbCategoria.SelectedIndex = 0;
-            cmbMarca.SelectedIndex = 0;
-
-            txtCodigo.Select();
-
-        }
     }
 }
+
