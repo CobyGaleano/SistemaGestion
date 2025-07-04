@@ -134,7 +134,7 @@ namespace Negocio
                 datos.setearParametroSalida("@Mensaje", SqlDbType.VarChar, 500);
 
                 datos.ejecutarAccion();
-                respuesta = Convert.ToBoolean(datos.obtenerValorParametro("@Respuesta"));
+                respuesta = Convert.ToBoolean(datos.obtenerValorParametro("@Resultado"));
                 Mensaje = datos.obtenerValorParametro("@Mensaje").ToString();
 
 

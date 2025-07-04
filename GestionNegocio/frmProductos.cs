@@ -127,8 +127,8 @@ namespace GestionNegocio
                 {
                     DataGridViewRow row = dgvProductos.Rows[Convert.ToInt32(txtIndice.Text)];
                     row.Cells["Codigo"].Value = txtCodigo;
-                    row.Cells["Nombre"].Value = txtCodigo;
-                    row.Cells["Descripcion"].Value = txtCodigo;
+                    row.Cells["Nombre"].Value = txtNombre;
+                    row.Cells["Descripcion"].Value = txtDescripcion;
                     row.Cells["IdCategoria"].Value = ((OpcionCombo)cmbCategoria.SelectedItem).Valor.ToString();
                     row.Cells["Categoria"].Value = ((OpcionCombo)cmbCategoria.SelectedItem).Texto.ToString();
                     row.Cells["IdMarca"].Value = ((OpcionCombo)cmbCategoria.SelectedItem).Valor.ToString();
