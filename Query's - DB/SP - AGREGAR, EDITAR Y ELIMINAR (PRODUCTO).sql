@@ -43,9 +43,9 @@ CREATE PROC sp_ModificarProducto(
 )
 AS
 BEGIN
-	SET @Resultado = 0
+	SET @Resultado = 1
 	SET @Mensaje = ''
-	IF NOT EXISTS (SELECT 1 FROM PRODUCTO WHERE @Codigo = Codigo and @IdProducto != IdProducto)
+	IF NOT EXISTS (SELECT * FROM PRODUCTO WHERE Codigo = @Codigo and IdProducto != @IdProducto)
 	
 	UPDATE PRODUCTO SET
 	Codigo = @Codigo,

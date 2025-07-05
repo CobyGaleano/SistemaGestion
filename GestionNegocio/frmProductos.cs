@@ -126,9 +126,9 @@ namespace GestionNegocio
                 if (resultado)
                 {
                     DataGridViewRow row = dgvProductos.Rows[Convert.ToInt32(txtIndice.Text)];
-                    row.Cells["Codigo"].Value = txtCodigo;
-                    row.Cells["Nombre"].Value = txtNombre;
-                    row.Cells["Descripcion"].Value = txtDescripcion;
+                    row.Cells["Codigo"].Value = txtCodigo.Text;
+                    row.Cells["Nombre"].Value = txtNombre.Text;
+                    row.Cells["Descripcion"].Value = txtDescripcion.Text;
                     row.Cells["IdCategoria"].Value = ((OpcionCombo)cmbCategoria.SelectedItem).Valor.ToString();
                     row.Cells["Categoria"].Value = ((OpcionCombo)cmbCategoria.SelectedItem).Texto.ToString();
                     row.Cells["IdMarca"].Value = ((OpcionCombo)cmbCategoria.SelectedItem).Valor.ToString();
@@ -140,6 +140,7 @@ namespace GestionNegocio
                 }
                 else { MessageBox.Show(mensaje); }
             }
+            MessageBox.Show(mensaje);
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -163,6 +164,7 @@ namespace GestionNegocio
                 if (respuesta)
                 {
                     dgvProductos.Rows.RemoveAt(Convert.ToInt32(txtIndice.Text));
+                    MessageBox.Show(mensaje);
                 }
                 else
                 {
