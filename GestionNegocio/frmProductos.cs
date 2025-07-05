@@ -70,6 +70,9 @@ namespace GestionNegocio
                     item.Codigo,
                     item.Nombre,
                     item.Descripcion,
+                    item.Stock,
+                    item.PrecioCompra,
+                    item.PrecioVenta,
                     item.oCategoria.Id,
                     item.oCategoria.Descripcion,
                     item.oMarca.Id,
@@ -244,6 +247,7 @@ namespace GestionNegocio
                     txtCodigo.Text = dgvProductos.Rows[indice].Cells["Codigo"].Value.ToString();
                     txtNombre.Text = dgvProductos.Rows[indice].Cells["Nombre"].Value.ToString();
                     txtDescripcion.Text = dgvProductos.Rows[indice].Cells["Descripcion"].Value.ToString();
+
 
                     foreach (OpcionCombo OC in cmbCategoria.Items)
                     {
