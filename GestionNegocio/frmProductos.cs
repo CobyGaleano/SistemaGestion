@@ -1,4 +1,5 @@
-﻿using Dominio;
+﻿using ClosedXML.Excel;
+using Dominio;
 using GestionNegocio.Resources;
 using Negocio;
 using System;
@@ -277,6 +278,69 @@ namespace GestionNegocio
                             cmbEstado.SelectedIndex = indice_combo;
                             break;
                         }
+                    }
+                }
+            }
+        }
+
+        private void btnExportar_Click(object sender, EventArgs e)
+        {
+            if (dgvProductos.Rows.Count < 1)
+            {
+                MessageBox.Show("No hay  datos para exportar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                DataTable dt = new DataTable();
+
+                //AGREGA LAS COLUMNAS
+                foreach (DataGridViewColumn columna in dgvProductos.Columns)
+                {
+                    if (columna.HeaderText != "" && columna.Visible)
+                    {
+                        dt.Columns.Add(columna.HeaderText, typeof(string));
+                    }
+                }
+
+                //AGREGA LAS FILAS
+                foreach (DataGridViewRow filas in dgvProductos.Rows)
+                {
+                    if (filas.Visible)
+                    {
+                        dt.Rows.Add(new object[]
+                        {
+                            filas.Cells[2].Value.ToString(),
+                            filas.Cells[3].Value.ToString(),
+                            filas.Cells[4].Value.ToString(),
+                            filas.Cells[5].Value.ToString(),
+                            filas.Cells[6].Value.ToString(),
+                            filas.Cells[7].Value.ToString(),
+                            filas.Cells[9].Value.ToString(),
+                            filas.Cells[11].Value.ToString(),
+                            filas.Cells[13].Value.ToString()
+                        });
+                    }
+                }
+
+                //CREACION DEL ARCHIVO EXCEL
+                SaveFileDialog savefile = new SaveFileDialog();
+                savefile.FileName = string.Format("ListaProductos_{0}.xlsx",DateTime.Now.ToString("ddMMyyyyHHmmss"));
+                savefile.Filter = "Excel files | *.xlsx";
+
+                if(savefile.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        XLWorkbook wb = new XLWorkbook();
+                        var hoja = wb.Worksheets.Add(dt, "Informe");
+                        hoja.ColumnsUsed().AdjustToContents();
+                        wb.SaveAs(savefile.FileName);
+                        MessageBox.Show("Reporte Generado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Error al generar el reporte", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        throw;
                     }
                 }
             }

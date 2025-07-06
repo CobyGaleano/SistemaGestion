@@ -46,14 +46,18 @@ BEGIN
 	SET @Resultado = 1
 	SET @Mensaje = ''
 	IF NOT EXISTS (SELECT * FROM PRODUCTO WHERE Codigo = @Codigo and IdProducto != @IdProducto)
-	
-	UPDATE PRODUCTO SET
-	Codigo = @Codigo,
-	Nombre = @Nombre,
-	Descripcion = @Descripcion,
-	IdCategoria = @IdCategoria,
-	IdMarca = @IdMarca,
-	Estado = @Estado
+	BEGIN
+		UPDATE PRODUCTO SET
+		Codigo = @Codigo,
+		Nombre = @Nombre,
+		Descripcion = @Descripcion,
+		IdCategoria = @IdCategoria,
+		IdMarca = @IdMarca,
+		Estado = @Estado
+		WHERE IdProducto = @IdProducto
+		SET @Mensaje = 'Producto modificada exitosamente'
+	END
+	ELSE
 	BEGIN
 		SET @Resultado = 0;
 		SET @Mensaje = 'Ya existe un producto registrado con el mismo codigo'
