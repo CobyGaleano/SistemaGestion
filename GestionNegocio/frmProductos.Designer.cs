@@ -323,11 +323,11 @@
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.BackColor = System.Drawing.Color.White;
             this.lblCodigo.ForeColor = System.Drawing.Color.Black;
-            this.lblCodigo.Location = new System.Drawing.Point(25, 73);
+            this.lblCodigo.Location = new System.Drawing.Point(28, 73);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(40, 13);
+            this.lblCodigo.Size = new System.Drawing.Size(43, 13);
             this.lblCodigo.TabIndex = 25;
-            this.lblCodigo.Text = "Codigo";
+            this.lblCodigo.Text = "Codigo:";
             // 
             // lblEstado
             // 
@@ -336,11 +336,11 @@
             this.lblEstado.AutoSize = true;
             this.lblEstado.BackColor = System.Drawing.Color.White;
             this.lblEstado.ForeColor = System.Drawing.Color.Black;
-            this.lblEstado.Location = new System.Drawing.Point(21, 359);
+            this.lblEstado.Location = new System.Drawing.Point(27, 359);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(40, 13);
+            this.lblEstado.Size = new System.Drawing.Size(43, 13);
             this.lblEstado.TabIndex = 24;
-            this.lblEstado.Text = "Estado";
+            this.lblEstado.Text = "Estado:";
             // 
             // lblDescripcion
             // 
@@ -349,11 +349,11 @@
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.BackColor = System.Drawing.Color.White;
             this.lblDescripcion.ForeColor = System.Drawing.Color.Black;
-            this.lblDescripcion.Location = new System.Drawing.Point(22, 191);
+            this.lblDescripcion.Location = new System.Drawing.Point(26, 191);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(63, 13);
+            this.lblDescripcion.Size = new System.Drawing.Size(66, 13);
             this.lblDescripcion.TabIndex = 23;
-            this.lblDescripcion.Text = "Descripcion";
+            this.lblDescripcion.Text = "Descripcion:";
             // 
             // lblMarca
             // 
@@ -362,11 +362,11 @@
             this.lblMarca.AutoSize = true;
             this.lblMarca.BackColor = System.Drawing.Color.White;
             this.lblMarca.ForeColor = System.Drawing.Color.Black;
-            this.lblMarca.Location = new System.Drawing.Point(21, 302);
+            this.lblMarca.Location = new System.Drawing.Point(27, 302);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(37, 13);
+            this.lblMarca.Size = new System.Drawing.Size(40, 13);
             this.lblMarca.TabIndex = 22;
-            this.lblMarca.Text = "Marca";
+            this.lblMarca.Text = "Marca:";
             // 
             // lblNombre
             // 
@@ -375,11 +375,11 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.BackColor = System.Drawing.Color.White;
             this.lblNombre.ForeColor = System.Drawing.Color.Black;
-            this.lblNombre.Location = new System.Drawing.Point(20, 133);
+            this.lblNombre.Location = new System.Drawing.Point(28, 133);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.Size = new System.Drawing.Size(47, 13);
             this.lblNombre.TabIndex = 19;
-            this.lblNombre.Text = "Nombre";
+            this.lblNombre.Text = "Nombre:";
             // 
             // txtCodigo
             // 
@@ -436,11 +436,11 @@
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.BackColor = System.Drawing.Color.White;
             this.lblCategoria.ForeColor = System.Drawing.Color.Black;
-            this.lblCategoria.Location = new System.Drawing.Point(22, 243);
+            this.lblCategoria.Location = new System.Drawing.Point(28, 243);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(52, 13);
+            this.lblCategoria.Size = new System.Drawing.Size(55, 13);
             this.lblCategoria.TabIndex = 41;
-            this.lblCategoria.Text = "Categoria";
+            this.lblCategoria.Text = "Categoria:";
             // 
             // btnExportar
             // 

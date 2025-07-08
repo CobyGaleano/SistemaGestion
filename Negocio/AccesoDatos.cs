@@ -101,8 +101,9 @@ namespace Negocio
             }
         }
 
-        public bool ejecutarAccion(bool respuesta)
+        public bool ejecutarAccionResultado()
         {
+            bool respuesta = false;
             comando.Connection = conexion;
             try
             {

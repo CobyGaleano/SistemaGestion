@@ -140,7 +140,7 @@ namespace Negocio
                 datos.setearConsulta("DELETE FROM CLIENTE WHERE IdCliente = @IdCliente", true);
                 datos.setearParametros("@IdCliente", obj.IdCliente);
 
-                respuesta = datos.ejecutarAccion(respuesta);
+                respuesta = datos.ejecutarAccionResultado();
 
             }
             catch (Exception ex)
