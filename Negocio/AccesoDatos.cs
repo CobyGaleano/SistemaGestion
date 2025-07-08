@@ -101,6 +101,21 @@ namespace Negocio
             }
         }
 
+        public bool ejecutarAccion(bool respuesta)
+        {
+            comando.Connection = conexion;
+            try
+            {
+                conexion.Open();
+                respuesta = comando.ExecuteNonQuery() < 0 ? true : false;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return respuesta;
+        }
+
         public object ejecutarScalar()
         {
             comando.Connection = conexion;
