@@ -16,6 +16,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
+                //datos.setearConsulta("SELECT IdCliente, Documento, NombreCompleto, Correo, Telefono, Direccion, Estado FROM CLIENTE");
                 datos.setearConsulta("SELECT IdCliente, Documento, NombreCompleto, Correo, Telefono, Estado FROM CLIENTE");
                 datos.ejecutarLectura();
 
@@ -27,6 +28,7 @@ namespace Negocio
                     aux.NombreCompleto = (string)datos.Lector["NombreCompleto"];
                     aux.Correo = (string)datos.Lector["Correo"];
                     aux.Telefono  = (string)datos.Lector["Telefono"];
+                    //aux.Direccion = (string)datos.Lector["Direccion"];
                     aux.Estado = (bool)datos.Lector["Estado"];
 
                     listaCliente.Add(aux);
@@ -66,6 +68,7 @@ namespace Negocio
                 datos.setearParametros("@NombreCompleto", obj.NombreCompleto);
                 datos.setearParametros("@Correo", obj.Correo);
                 datos.setearParametros("@Telefono", obj.Telefono);
+                //datos.setearParametros("@Direccion", obj.Direccion);
                 datos.setearParametros("@Estado", obj.Estado);
                 datos.setearParametroSalida("@Resultado", SqlDbType.Int);
                 datos.setearParametroSalida("@Mensaje", SqlDbType.VarChar, 500);
@@ -110,6 +113,7 @@ namespace Negocio
                 datos.setearParametros("@NombreCompleto", obj.NombreCompleto);
                 datos.setearParametros("@Correo", obj.Correo);
                 datos.setearParametros("@Telefono", obj.Telefono);
+                //datos.setearParametros("@Direccion", obj.Direccion);
                 datos.setearParametros("@Estado", obj.Estado);
                 datos.setearParametroSalida("@Resultado", SqlDbType.Int);
                 datos.setearParametroSalida("@Mensaje", SqlDbType.VarChar, 500);
@@ -137,7 +141,7 @@ namespace Negocio
 
             try
             {
-                datos.setearConsulta("DELETE FROM CLIENTE WHERE IdCliente = @IdCliente", true);
+                datos.setearConsulta("DELETE FROM CLIENTE WHERE IdCliente = @IdCliente");
                 datos.setearParametros("@IdCliente", obj.IdCliente);
 
                 respuesta = datos.ejecutarAccionResultado();
