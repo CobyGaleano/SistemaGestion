@@ -110,6 +110,7 @@ namespace Negocio
 
                 datos.setearConsulta("Sp_ModificarCliente", true);
                 datos.setearParametros("@IdCliente", obj.IdCliente);
+                datos.setearParametros("@Documento", obj.Documento);
                 datos.setearParametros("@NombreCompleto", obj.NombreCompleto);
                 datos.setearParametros("@Correo", obj.Correo);
                 datos.setearParametros("@Telefono", obj.Telefono);

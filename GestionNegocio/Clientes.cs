@@ -56,6 +56,7 @@ namespace GestionNegocio
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             string mensaje = string.Empty;
+            MessageBoxIcon icon = MessageBoxIcon.Warning;
             Cliente objCliente = new Cliente()
             {
                 IdCliente = Convert.ToInt32(txtId.Text),
@@ -89,10 +90,13 @@ namespace GestionNegocio
                         ((OpcionCombo)cmbEstado.SelectedItem).Valor.ToString(),
                         ((OpcionCombo)cmbEstado.SelectedItem).Texto.ToString()
                     });*/
-
-                    Limpiar();
+                    mensaje = "El CLIENTE ha sido registrado correctamente.";
+                    icon = MessageBoxIcon.Information;
                 }
-                else { MessageBox.Show(mensaje); }
+                else 
+                {
+                    mensaje = "Error, no se pudo registrar el CLIENTE";
+                }
 
             }
             else
@@ -101,18 +105,22 @@ namespace GestionNegocio
                 if (resultado)
                 {
                     DataGridViewRow row = dgvClientes.Rows[Convert.ToInt32(txtIndice.Text)];
-                    row.Cells["Documento"].Value = txtDocumento;
-                    row.Cells["NombreCompleto"].Value = txtDocumento;
-                    row.Cells["Correo"].Value = txtCorreo;
-                    //row.Cells["Direccion"].Value = txtDocumento;
-                    row.Cells["Telefono"].Value = txtDocumento;
+                    row.Cells["Documento"].Value = txtDocumento.Text;
+                    row.Cells["NombreCompleto"].Value = txtDocumento.Text;
+                    row.Cells["Correo"].Value = txtCorreo.Text;
+                    //row.Cells["Direccion"].Value = txtDocumento.Text;
+                    row.Cells["Telefono"].Value = txtDocumento.Text;
                     row.Cells["IdEstado"].Value = ((OpcionCombo)cmbEstado.SelectedItem).Valor.ToString();
                     row.Cells["Estado"].Value = ((OpcionCombo)cmbEstado.SelectedItem).Texto.ToString();
-
-                    Limpiar();
+                    mensaje = "El CLIENTE ha sido modificado correctamente";
+                    icon = MessageBoxIcon.Information;
                 }
-                else { MessageBox.Show(mensaje); }
+                else 
+                {mensaje = "Error al modificar el CLIENTE";}
+                
             }
+            MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, icon);
+            Limpiar();
         }
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
@@ -122,9 +130,10 @@ namespace GestionNegocio
         {
             if (Convert.ToInt32(txtId.Text) != 0)
             {
+                String mensaje = string.Empty;
+                MessageBoxIcon icon = MessageBoxIcon.Information;
                 if (MessageBox.Show("¿Desea eliminar el Cliente seleccionado?","Mensaje", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    String mensaje = string.Empty;
                     Cliente objCliente = new Cliente()
                     {
                         IdCliente = Convert.ToInt32(txtId.Text)
@@ -135,14 +144,18 @@ namespace GestionNegocio
                     if (respuesta)
                     {
                         dgvClientes.Rows.RemoveAt(Convert.ToInt32(txtIndice.Text));
+                        mensaje = "El CLIENTE ha sido eliminado correctamente";
+                        icon = MessageBoxIcon.Information;
                     }
                     else
                     {
-                        MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        mensaje = "Error, inesperado. No se pudo eliminar el cliente";
+                        icon = MessageBoxIcon.Exclamation;
                     }
                 }
 
                 Limpiar();
+                MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, icon);
             }
         }
         private void btnBuscar_Click(object sender, EventArgs e)

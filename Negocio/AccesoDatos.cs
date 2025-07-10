@@ -108,7 +108,7 @@ namespace Negocio
             try
             {
                 conexion.Open();
-                respuesta = comando.ExecuteNonQuery() < 0 ? true : false;
+                respuesta = comando.ExecuteNonQuery() > 0 ? true : false;
             }
             catch (Exception ex)
             {
