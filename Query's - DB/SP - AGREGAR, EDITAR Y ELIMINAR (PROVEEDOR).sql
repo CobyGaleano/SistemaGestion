@@ -1,3 +1,9 @@
+USE DBSISTEMA_VENTA
+GO
+SELECT * FROM PROVEEDOR
+GO
+
+--PROCEDIMIENTO PARA REGISTRAR PROVEEDOR--
 CREATE PROC SP_RegistarProveedor(
 @Documento VARCHAR(50),
 @RazonSocial VARCHAR(100),
@@ -23,6 +29,7 @@ BEGIN
 END
 GO
 
+--PROCEDIMIENTO PARA MODIFICAR PROVEEDOR--
 CREATE PROC SP_ModificarProveedor(
 @Documento VARCHAR(50),
 @RazonSocial VARCHAR(100),
@@ -51,3 +58,26 @@ AS
 		SET @Mensaje = 'El numero de documento ya existe'
 	END
 GO
+
+--PROCEDIMIENTO PARA ELIMINAR PROVEEDOR--
+CREATE PROC SP_EliminarProveedor(
+@IdProveedor INT,
+@Resultado INT OUTPUT,
+@Mensaje VARCHAR (500) OUTPUT
+)
+AS
+BEGIN
+	SET @Resultado = 1
+	IF NOT EXISTS(SELECT * FROM PROVEEDOR P INNER JOIN COMPRA C ON
+	P.IdProveedor = C.IdProveedor WHERE P.IdProveedor = @IdProveedor)
+	BEGIN
+		DELETE TOP (1) FROM PROVEEDOR WHERE IdProveedor = @IdProveedor
+	END
+	ELSE
+	BEGIN
+		SET @Resultado = 0
+		SET @Mensaje = 'ERROR, El PROVEEDOR se encuentra relacionado a una compra.'
+	END
+END
+GO
+	
