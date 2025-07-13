@@ -199,6 +199,9 @@
     <EmbeddedResource Include="frmMantMarcas.resx">
       <DependentUpon>frmMantMarcas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMantProveedores.resx">
+      <DependentUpon>frmMantProveedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMantUsuario.resx">
       <DependentUpon>frmMantUsuario.cs</DependentUpon>
     </EmbeddedResource>
