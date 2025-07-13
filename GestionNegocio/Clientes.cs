@@ -106,10 +106,10 @@ namespace GestionNegocio
                 {
                     DataGridViewRow row = dgvClientes.Rows[Convert.ToInt32(txtIndice.Text)];
                     row.Cells["Documento"].Value = txtDocumento.Text;
-                    row.Cells["NombreCompleto"].Value = txtDocumento.Text;
+                    row.Cells["NombreCompleto"].Value = txtNombre.Text;
                     row.Cells["Correo"].Value = txtCorreo.Text;
                     //row.Cells["Direccion"].Value = txtDocumento.Text;
-                    row.Cells["Telefono"].Value = txtDocumento.Text;
+                    row.Cells["Telefono"].Value = txtTelefono.Text;
                     row.Cells["IdEstado"].Value = ((OpcionCombo)cmbEstado.SelectedItem).Valor.ToString();
                     row.Cells["Estado"].Value = ((OpcionCombo)cmbEstado.SelectedItem).Texto.ToString();
                     mensaje = "El CLIENTE ha sido modificado correctamente";
