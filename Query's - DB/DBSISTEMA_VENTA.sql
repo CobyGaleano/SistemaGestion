@@ -136,5 +136,13 @@ Cantidad int,
 SubTotal decimal(10,2),
 FechaRegistro datetime default getdate()
 )
+GO
 
-
+CREATE TABLE NEGOCIO(
+IdNegocio INT PRIMARY KEY,
+Nombre VARCHAR (50),
+RUC VARCHAR (50),
+Direccion VARCHAR (60),
+Logo VARBINARY(MAX) NULL
+)
+GO
