@@ -110,7 +110,7 @@ namespace GestionNegocio
 
                 if (idProductoGenerado != 0)
                 {
-                    dgvProductos.Rows.Add(new object[] {"",idProductoGenerado,txtCodigo.Text,txtNombre.Text,txtDescripcion.Text,
+                    dgvProductos.Rows.Add(new object[] {"",idProductoGenerado,txtCodigo.Text,txtNombre.Text,txtDescripcion.Text,"0","0.00","0.00",
                         ((OpcionCombo)cmbCategoria.SelectedItem).Valor.ToString(),
                         ((OpcionCombo)cmbCategoria.SelectedItem).Texto.ToString(),
                         ((OpcionCombo)cmbMarca.SelectedItem).Valor.ToString(),

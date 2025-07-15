@@ -61,7 +61,7 @@ namespace Negocio
                     @Mensaje VARCHAR(500) OUTPUT)    
                 */
 
-                datos.setearConsulta("SP_RegistrarProveedor", true);
+                datos.setearConsulta("SP_RegistarProveedor", true);
                 datos.setearParametros("@Documento", obj.Documento);
                 datos.setearParametros("@RazonSocial", obj.RazonSocial);
                 datos.setearParametros("@Correo", obj.Correo);
