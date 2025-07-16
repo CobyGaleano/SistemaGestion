@@ -50,6 +50,7 @@
     <Compile Include="Documento.cs" />
     <Compile Include="Imagen.cs" />
     <Compile Include="Marca.cs" />
+    <Compile Include="Negocio.cs" />
     <Compile Include="Permiso.cs" />
     <Compile Include="Presupuesto.cs" />
     <Compile Include="Producto.cs" />
