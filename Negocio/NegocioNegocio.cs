@@ -57,19 +57,67 @@ namespace Negocio
                 datos.setearParametros("@RUC", obj.RUC);
                 datos.setearParametros("@Direccion", obj.Direccion);
 
-                if(!datos.ejecutarAccionResultado())
+                if (!datos.ejecutarAccionResultado())
                 {
                     mensaje = "No se pudo guardar los datos";
                     respuesta = false;
                 }
 
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 mensaje = ex.Message;
                 respuesta = false;
             }
 
+
+            return respuesta;
+        }
+
+        public byte[] ObtenerLogo(out bool obtenido)
+        {
+            obtenido = true;
+            byte[] LogoBytes = new byte[0];
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("SELECT Logo FROM NEGOCIO WHERE IdNegocio = 1");
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    LogoBytes = (byte[])datos.Lector["Logo"];
+                }
+            }
+            catch (Exception ex)
+            {
+                obtenido = false;
+                LogoBytes = new byte[0];
+            }
+            return LogoBytes;
+        }
+
+        public bool ActualizarLogo (byte[] image, out string mensaje)
+        {
+            mensaje = string.Empty;
+            bool respuesta = false;
+            AccesoDatos datos = new AccesoDatos ();
+            try
+            {
+                datos.setearConsulta("UPDATE NEGOCIO SET Image = @Image WHERE IdNegocio = 1");
+                datos.setearParametros("@Image", image);
+
+                if (!datos.ejecutarAccionResultado())
+                {
+                    mensaje = "No se Actualizar el loco";
+                    respuesta = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                mensaje = ex.Message;
+                respuesta = false;
+            }
 
             return respuesta;
         }
