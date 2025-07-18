@@ -31,15 +31,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblDetalleNegocio = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblLogo = new System.Windows.Forms.Label();
-            this.txtNombreNegocio = new System.Windows.Forms.TextBox();
-            this.txtRUC = new System.Windows.Forms.TextBox();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.lblNombreNegocio = new System.Windows.Forms.Label();
-            this.lblRUC = new System.Windows.Forms.Label();
-            this.lblDireccion = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.lblRUC = new System.Windows.Forms.Label();
+            this.lblNombreNegocio = new System.Windows.Forms.Label();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.txtRUC = new System.Windows.Forms.TextBox();
+            this.txtNombreNegocio = new System.Windows.Forms.TextBox();
             this.btnSubir = new System.Windows.Forms.Button();
+            this.lblLogo = new System.Windows.Forms.Label();
             this.pxbLogo = new System.Windows.Forms.PictureBox();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.groupBox1.SuspendLayout();
@@ -90,63 +90,6 @@
             this.groupBox1.TabIndex = 29;
             this.groupBox1.TabStop = false;
             // 
-            // lblLogo
-            // 
-            this.lblLogo.AutoSize = true;
-            this.lblLogo.Location = new System.Drawing.Point(15, 34);
-            this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(34, 13);
-            this.lblLogo.TabIndex = 1;
-            this.lblLogo.Text = "Logo:";
-            // 
-            // txtNombreNegocio
-            // 
-            this.txtNombreNegocio.Location = new System.Drawing.Point(311, 50);
-            this.txtNombreNegocio.Name = "txtNombreNegocio";
-            this.txtNombreNegocio.Size = new System.Drawing.Size(181, 20);
-            this.txtNombreNegocio.TabIndex = 31;
-            // 
-            // txtRUC
-            // 
-            this.txtRUC.Location = new System.Drawing.Point(311, 111);
-            this.txtRUC.Name = "txtRUC";
-            this.txtRUC.Size = new System.Drawing.Size(181, 20);
-            this.txtRUC.TabIndex = 32;
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.Location = new System.Drawing.Point(311, 173);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(181, 20);
-            this.txtDireccion.TabIndex = 33;
-            // 
-            // lblNombreNegocio
-            // 
-            this.lblNombreNegocio.AutoSize = true;
-            this.lblNombreNegocio.Location = new System.Drawing.Point(308, 34);
-            this.lblNombreNegocio.Name = "lblNombreNegocio";
-            this.lblNombreNegocio.Size = new System.Drawing.Size(90, 13);
-            this.lblNombreNegocio.TabIndex = 34;
-            this.lblNombreNegocio.Text = "Nombre Negocio:";
-            // 
-            // lblRUC
-            // 
-            this.lblRUC.AutoSize = true;
-            this.lblRUC.Location = new System.Drawing.Point(308, 95);
-            this.lblRUC.Name = "lblRUC";
-            this.lblRUC.Size = new System.Drawing.Size(36, 13);
-            this.lblRUC.TabIndex = 35;
-            this.lblRUC.Text = "R.U.C";
-            // 
-            // lblDireccion
-            // 
-            this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Location = new System.Drawing.Point(308, 157);
-            this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(34, 13);
-            this.lblDireccion.TabIndex = 36;
-            this.lblDireccion.Text = "Logo:";
-            // 
             // btnGuardar
             // 
             this.btnGuardar.Image = global::GestionNegocio.Properties.Resources.save;
@@ -158,6 +101,54 @@
             this.btnGuardar.Text = "Guardar cambios";
             this.btnGuardar.UseVisualStyleBackColor = true;
             // 
+            // lblDireccion
+            // 
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Location = new System.Drawing.Point(308, 157);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(34, 13);
+            this.lblDireccion.TabIndex = 36;
+            this.lblDireccion.Text = "Logo:";
+            // 
+            // lblRUC
+            // 
+            this.lblRUC.AutoSize = true;
+            this.lblRUC.Location = new System.Drawing.Point(308, 95);
+            this.lblRUC.Name = "lblRUC";
+            this.lblRUC.Size = new System.Drawing.Size(36, 13);
+            this.lblRUC.TabIndex = 35;
+            this.lblRUC.Text = "R.U.C";
+            // 
+            // lblNombreNegocio
+            // 
+            this.lblNombreNegocio.AutoSize = true;
+            this.lblNombreNegocio.Location = new System.Drawing.Point(308, 34);
+            this.lblNombreNegocio.Name = "lblNombreNegocio";
+            this.lblNombreNegocio.Size = new System.Drawing.Size(90, 13);
+            this.lblNombreNegocio.TabIndex = 34;
+            this.lblNombreNegocio.Text = "Nombre Negocio:";
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Location = new System.Drawing.Point(311, 173);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(181, 20);
+            this.txtDireccion.TabIndex = 33;
+            // 
+            // txtRUC
+            // 
+            this.txtRUC.Location = new System.Drawing.Point(311, 111);
+            this.txtRUC.Name = "txtRUC";
+            this.txtRUC.Size = new System.Drawing.Size(181, 20);
+            this.txtRUC.TabIndex = 32;
+            // 
+            // txtNombreNegocio
+            // 
+            this.txtNombreNegocio.Location = new System.Drawing.Point(311, 50);
+            this.txtNombreNegocio.Name = "txtNombreNegocio";
+            this.txtNombreNegocio.Size = new System.Drawing.Size(181, 20);
+            this.txtNombreNegocio.TabIndex = 31;
+            // 
             // btnSubir
             // 
             this.btnSubir.Image = global::GestionNegocio.Properties.Resources.upload_arrow1;
@@ -168,6 +159,16 @@
             this.btnSubir.TabIndex = 30;
             this.btnSubir.Text = "Subir";
             this.btnSubir.UseVisualStyleBackColor = true;
+            this.btnSubir.Click += new System.EventHandler(this.btnSubir_Click);
+            // 
+            // lblLogo
+            // 
+            this.lblLogo.AutoSize = true;
+            this.lblLogo.Location = new System.Drawing.Point(15, 34);
+            this.lblLogo.Name = "lblLogo";
+            this.lblLogo.Size = new System.Drawing.Size(34, 13);
+            this.lblLogo.TabIndex = 1;
+            this.lblLogo.Text = "Logo:";
             // 
             // pxbLogo
             // 
@@ -194,6 +195,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMantNegocio";
             this.Text = "frmMantNegocio";
+            this.Load += new System.EventHandler(this.frmMantNegocio_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pxbLogo)).EndInit();
