@@ -31,17 +31,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblDetalleNegocio = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.lblDireccion = new System.Windows.Forms.Label();
             this.lblRUC = new System.Windows.Forms.Label();
             this.lblNombreNegocio = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtRUC = new System.Windows.Forms.TextBox();
             this.txtNombreNegocio = new System.Windows.Forms.TextBox();
-            this.btnSubir = new System.Windows.Forms.Button();
             this.lblLogo = new System.Windows.Forms.Label();
-            this.pxbLogo = new System.Windows.Forms.PictureBox();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnSubir = new System.Windows.Forms.Button();
+            this.pxbLogo = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pxbLogo)).BeginInit();
             this.SuspendLayout();
@@ -89,17 +89,6 @@
             this.groupBox1.Size = new System.Drawing.Size(537, 310);
             this.groupBox1.TabIndex = 29;
             this.groupBox1.TabStop = false;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Image = global::GestionNegocio.Properties.Resources.save;
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(311, 222);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(181, 66);
-            this.btnGuardar.TabIndex = 37;
-            this.btnGuardar.Text = "Guardar cambios";
-            this.btnGuardar.UseVisualStyleBackColor = true;
             // 
             // lblDireccion
             // 
@@ -149,6 +138,30 @@
             this.txtNombreNegocio.Size = new System.Drawing.Size(181, 20);
             this.txtNombreNegocio.TabIndex = 31;
             // 
+            // lblLogo
+            // 
+            this.lblLogo.AutoSize = true;
+            this.lblLogo.Location = new System.Drawing.Point(15, 34);
+            this.lblLogo.Name = "lblLogo";
+            this.lblLogo.Size = new System.Drawing.Size(34, 13);
+            this.lblLogo.TabIndex = 1;
+            this.lblLogo.Text = "Logo:";
+            // 
+            // colorDialog1
+            // 
+            this.colorDialog1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Image = global::GestionNegocio.Properties.Resources.save;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(311, 222);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(181, 66);
+            this.btnGuardar.TabIndex = 37;
+            this.btnGuardar.Text = "Guardar cambios";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            // 
             // btnSubir
             // 
             this.btnSubir.Image = global::GestionNegocio.Properties.Resources.upload_arrow1;
@@ -161,27 +174,16 @@
             this.btnSubir.UseVisualStyleBackColor = true;
             this.btnSubir.Click += new System.EventHandler(this.btnSubir_Click);
             // 
-            // lblLogo
-            // 
-            this.lblLogo.AutoSize = true;
-            this.lblLogo.Location = new System.Drawing.Point(15, 34);
-            this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(34, 13);
-            this.lblLogo.TabIndex = 1;
-            this.lblLogo.Text = "Logo:";
-            // 
             // pxbLogo
             // 
             this.pxbLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pxbLogo.ErrorImage = global::GestionNegocio.Properties.Resources.placeholder_icon;
             this.pxbLogo.Location = new System.Drawing.Point(18, 50);
             this.pxbLogo.Name = "pxbLogo";
             this.pxbLogo.Size = new System.Drawing.Size(232, 209);
+            this.pxbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pxbLogo.TabIndex = 0;
             this.pxbLogo.TabStop = false;
-            // 
-            // colorDialog1
-            // 
-            this.colorDialog1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             // 
             // frmMantNegocio
             // 

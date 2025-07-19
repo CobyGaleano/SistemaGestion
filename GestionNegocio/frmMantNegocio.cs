@@ -22,11 +22,13 @@ namespace GestionNegocio
 
         public Image ByteToImage(byte[] imageBytes)
         {
-            MemoryStream ms = new MemoryStream();
-            ms.Write(imageBytes,0,imageBytes.Length);
-            Image image = new Bitmap(ms);
+            if (imageBytes == null || imageBytes.Length == 0)
+                return null;
 
-            return image;
+            using (MemoryStream ms = new MemoryStream(imageBytes))
+            {
+                return Image.FromStream(ms);
+            }
         }
 
         private void frmMantNegocio_Load(object sender, EventArgs e)
@@ -34,16 +36,18 @@ namespace GestionNegocio
             bool obtenido = true;
             byte[] bytesImage = new NegocioNegocio().ObtenerLogo(out obtenido);
 
-            if (obtenido) { pxbLogo.Image = ByteToImage(bytesImage); }
+            if (obtenido && bytesImage != null && bytesImage.Length > 0)
+                pxbLogo.Image = ByteToImage(bytesImage);
+            else
+                pxbLogo.Image = Properties.Resources.placeholder_icon;// una imagen por defecto opcional
 
             Dominio.Negocio datos = new NegocioNegocio().ObtenerDatos();
 
-            txtNombreNegocio.Text = datos.ToString();
-            txtRUC.Text = datos.ToString();
+            txtNombreNegocio.Text = datos.Nombre;
+            txtRUC.Text = datos.RUC;
             txtDireccion.Text = datos.Direccion;
-
-
         }
+
 
         private void btnSubir_Click(object sender, EventArgs e)
         {
@@ -55,8 +59,7 @@ namespace GestionNegocio
                 byte[] bytesImage = File.ReadAllBytes(ofd.FileName);
                 bool respuesta = new NegocioNegocio().ActualizarLogo(bytesImage,out mensaje);
 
-                if (respuesta)
-                    pxbLogo.Image = ByteToImage(bytesImage);
+                if (respuesta) { pxbLogo.Image = ByteToImage(bytesImage); }
                 else
                     MessageBox.Show(mensaje, "mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
