@@ -79,3 +79,4 @@ C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\bi
 C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\obj\Debug\GestionNegocio.frmMantProveedores.resources
 C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\obj\Debug\GestionNegocio.frmMantNegocio.resources
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\obj\Debug\GestionNegocio.Resources.frmVentas.resources
