@@ -103,6 +103,26 @@ namespace GestionNegocio.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cart_plus_24 {
+            get {
+                object obj = ResourceManager.GetObject("cart-plus-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cart_plus_36 {
+            get {
+                object obj = ResourceManager.GetObject("cart-plus-36", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cerrar {
             get {
                 object obj = ResourceManager.GetObject("Cerrar", resourceCulture);
@@ -236,6 +256,26 @@ namespace GestionNegocio.Properties {
         internal static System.Drawing.Bitmap placeholder_icon {
             get {
                 object obj = ResourceManager.GetObject("placeholder-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plus_big_32 {
+            get {
+                object obj = ResourceManager.GetObject("plus-big-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plus_big_321 {
+            get {
+                object obj = ResourceManager.GetObject("plus-big-321", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

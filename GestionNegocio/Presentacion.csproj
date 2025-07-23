@@ -177,10 +177,10 @@
     <Compile Include="Reportes.Designer.cs">
       <DependentUpon>Reportes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Resources\frmVentas.cs">
+    <Compile Include="frmVentas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Resources\frmVentas.Designer.cs">
+    <Compile Include="frmVentas.Designer.cs">
       <DependentUpon>frmVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="Resources\OpcionCombo.cs" />
@@ -245,7 +245,7 @@
     <EmbeddedResource Include="Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\frmVentas.resx">
+    <EmbeddedResource Include="frmVentas.resx">
       <DependentUpon>frmVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventas.resx">
@@ -355,6 +355,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\placeholder-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus-big-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart-plus-36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart-plus-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus-big-321.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

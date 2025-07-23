@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Dominio;
 using Negocio;
+using GestionNegocio.Resources;
 
 
 
@@ -83,7 +84,8 @@ namespace GestionNegocio
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new Ventas());
+            AbrirFormHija(new frmVentas());
+            //AbrirFormHija(new Ventas());
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
