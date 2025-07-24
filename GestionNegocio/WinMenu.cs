@@ -84,7 +84,7 @@ namespace GestionNegocio
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new frmVentas());
+            AbrirFormHija(new frmVentas(usuarioActual));
             //AbrirFormHija(new Ventas());
         }
 

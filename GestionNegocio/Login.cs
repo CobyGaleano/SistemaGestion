@@ -42,7 +42,6 @@ namespace GestionNegocio
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            List<Usuario> TEST = new UsuarioNegocio().Listar();
             Usuario oUsuario = new UsuarioNegocio().Listar().Where(u  => u.Documento == txtUser.Text && u.Clave == txtPassword.Text).FirstOrDefault();
 
             if (oUsuario != null)

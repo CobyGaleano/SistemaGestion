@@ -36,6 +36,7 @@
             this.txtFecha = new System.Windows.Forms.TextBox();
             this.gbxInformacionProveedor = new System.Windows.Forms.GroupBox();
             this.txtIdProveedor = new System.Windows.Forms.TextBox();
+            this.btnBuscarRazonSocial = new System.Windows.Forms.Button();
             this.txtRazonSocial = new System.Windows.Forms.TextBox();
             this.lblRazonSocial = new System.Windows.Forms.Label();
             this.lblNumeroDocumento = new System.Windows.Forms.Label();
@@ -48,17 +49,12 @@
             this.txtPrecioVenta = new System.Windows.Forms.TextBox();
             this.txtPrecioCompra = new System.Windows.Forms.TextBox();
             this.txtIdProducto = new System.Windows.Forms.TextBox();
+            this.btnBuscarProducto = new System.Windows.Forms.Button();
             this.txtProducto = new System.Windows.Forms.TextBox();
             this.lblProducto = new System.Windows.Forms.Label();
             this.lblCodigoProducto = new System.Windows.Forms.Label();
             this.txtCodigoProducto = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtTotal = new System.Windows.Forms.TextBox();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.btnRegistrar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnBuscarProducto = new System.Windows.Forms.Button();
-            this.btnBuscarRazonSocial = new System.Windows.Forms.Button();
             this.IdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,6 +62,10 @@
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.gbxInformacionCompra.SuspendLayout();
             this.gbxInformacionProveedor.SuspendLayout();
             this.gbxInformacionProducto.SuspendLayout();
@@ -152,6 +152,15 @@
             this.txtIdProveedor.Name = "txtIdProveedor";
             this.txtIdProveedor.Size = new System.Drawing.Size(28, 20);
             this.txtIdProveedor.TabIndex = 5;
+            // 
+            // btnBuscarRazonSocial
+            // 
+            this.btnBuscarRazonSocial.Image = global::GestionNegocio.Properties.Resources.search_big;
+            this.btnBuscarRazonSocial.Location = new System.Drawing.Point(189, 36);
+            this.btnBuscarRazonSocial.Name = "btnBuscarRazonSocial";
+            this.btnBuscarRazonSocial.Size = new System.Drawing.Size(38, 22);
+            this.btnBuscarRazonSocial.TabIndex = 4;
+            this.btnBuscarRazonSocial.UseVisualStyleBackColor = true;
             // 
             // txtRazonSocial
             // 
@@ -267,6 +276,15 @@
             this.txtIdProducto.Size = new System.Drawing.Size(28, 20);
             this.txtIdProducto.TabIndex = 6;
             // 
+            // btnBuscarProducto
+            // 
+            this.btnBuscarProducto.Image = global::GestionNegocio.Properties.Resources.search_big;
+            this.btnBuscarProducto.Location = new System.Drawing.Point(154, 45);
+            this.btnBuscarProducto.Name = "btnBuscarProducto";
+            this.btnBuscarProducto.Size = new System.Drawing.Size(38, 22);
+            this.btnBuscarProducto.TabIndex = 4;
+            this.btnBuscarProducto.UseVisualStyleBackColor = true;
+            // 
             // txtProducto
             // 
             this.txtProducto.Location = new System.Drawing.Point(194, 46);
@@ -315,64 +333,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(758, 266);
             this.dataGridView1.TabIndex = 4;
             // 
-            // txtTotal
-            // 
-            this.txtTotal.Location = new System.Drawing.Point(896, 451);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(75, 20);
-            this.txtTotal.TabIndex = 8;
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.BackColor = System.Drawing.Color.White;
-            this.lblTotal.Location = new System.Drawing.Point(899, 435);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(34, 13);
-            this.lblTotal.TabIndex = 11;
-            this.lblTotal.Text = "Total:";
-            // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.Image = global::GestionNegocio.Properties.Resources.cart_plus_24;
-            this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrar.Location = new System.Drawing.Point(896, 477);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(75, 38);
-            this.btnRegistrar.TabIndex = 12;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRegistrar.UseVisualStyleBackColor = true;
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Image = global::GestionNegocio.Properties.Resources.plus_big_321;
-            this.btnAgregar.Location = new System.Drawing.Point(896, 158);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 75);
-            this.btnAgregar.TabIndex = 5;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            // 
-            // btnBuscarProducto
-            // 
-            this.btnBuscarProducto.Image = global::GestionNegocio.Properties.Resources.search_big;
-            this.btnBuscarProducto.Location = new System.Drawing.Point(154, 45);
-            this.btnBuscarProducto.Name = "btnBuscarProducto";
-            this.btnBuscarProducto.Size = new System.Drawing.Size(38, 22);
-            this.btnBuscarProducto.TabIndex = 4;
-            this.btnBuscarProducto.UseVisualStyleBackColor = true;
-            // 
-            // btnBuscarRazonSocial
-            // 
-            this.btnBuscarRazonSocial.Image = global::GestionNegocio.Properties.Resources.search_big;
-            this.btnBuscarRazonSocial.Location = new System.Drawing.Point(189, 36);
-            this.btnBuscarRazonSocial.Name = "btnBuscarRazonSocial";
-            this.btnBuscarRazonSocial.Size = new System.Drawing.Size(38, 22);
-            this.btnBuscarRazonSocial.TabIndex = 4;
-            this.btnBuscarRazonSocial.UseVisualStyleBackColor = true;
-            // 
             // IdProducto
             // 
             this.IdProducto.HeaderText = "Id Producto";
@@ -413,6 +373,46 @@
             this.btnEliminar.UseColumnTextForButtonValue = true;
             this.btnEliminar.Width = 50;
             // 
+            // txtTotal
+            // 
+            this.txtTotal.Location = new System.Drawing.Point(896, 451);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(75, 20);
+            this.txtTotal.TabIndex = 8;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.BackColor = System.Drawing.Color.White;
+            this.lblTotal.Location = new System.Drawing.Point(899, 435);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(34, 13);
+            this.lblTotal.TabIndex = 11;
+            this.lblTotal.Text = "Total:";
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.Image = global::GestionNegocio.Properties.Resources.cart_plus_24;
+            this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistrar.Location = new System.Drawing.Point(896, 477);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(75, 38);
+            this.btnRegistrar.TabIndex = 12;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Image = global::GestionNegocio.Properties.Resources.plus_big_321;
+            this.btnAgregar.Location = new System.Drawing.Point(896, 158);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 75);
+            this.btnAgregar.TabIndex = 5;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            // 
             // frmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -431,6 +431,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmVentas";
             this.Text = "frmVentas";
+            this.Load += new System.EventHandler(this.frmVentas_Load);
             this.gbxInformacionCompra.ResumeLayout(false);
             this.gbxInformacionCompra.PerformLayout();
             this.gbxInformacionProveedor.ResumeLayout(false);

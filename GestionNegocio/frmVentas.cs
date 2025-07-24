@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dominio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,17 @@ namespace GestionNegocio.Resources
 {
     public partial class frmVentas : Form
     {
-        public frmVentas()
+        private Usuario usuario;
+        public frmVentas(Usuario oUsuario = null)
         {
+            usuario = oUsuario;
             InitializeComponent();
+
+        }
+
+        private void frmVentas_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show(usuario.NombreCompleto);
         }
     }
 }
