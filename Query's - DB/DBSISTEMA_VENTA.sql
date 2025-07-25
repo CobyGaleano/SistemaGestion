@@ -146,3 +146,12 @@ Direccion VARCHAR (60),
 Logo VARBINARY(MAX) NULL
 )
 GO
+
+INSERT INTO NEGOCIO (IdNegocio,Nombre,RUC,Direccion) VALUES (1,'Maxikiosco - Piruchos', '101010', 'Av. SiempreVivas 123')
+
+GO
+
+SELECT * FROM NEGOCIO
+GO
+
+SELECT IdNegocio, Nombre, RUC, Direccion FROM NEGOCIO

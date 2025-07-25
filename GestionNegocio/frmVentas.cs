@@ -23,7 +23,20 @@ namespace GestionNegocio.Resources
 
         private void frmVentas_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(usuario.NombreCompleto);
+            cmbTipoDocumento.Items.Add(new OpcionCombo() { Valor = "P", Texto = "Presupuesto" });
+            cmbTipoDocumento.Items.Add(new OpcionCombo() { Valor = "X", Texto = "Comprobante" });
+            cmbTipoDocumento.Items.Add(new OpcionCombo() { Valor = "B", Texto = "Factura B" });
+            cmbTipoDocumento.Items.Add(new OpcionCombo() { Valor = "A", Texto = "Factura A" });
+            cmbTipoDocumento.DisplayMember = "Texto";
+            cmbTipoDocumento.ValueMember = "Valor";
+            cmbTipoDocumento.SelectedIndex = 0;
+
+            txtFecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
+
+            txtIdProveedor.Text = "0";
+            txtIdProducto.Text = "0";
+
+             
         }
     }
 }
