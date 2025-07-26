@@ -80,3 +80,4 @@ C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\bi
 C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\obj\Debug\GestionNegocio.frmMantProveedores.resources
 C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\obj\Debug\GestionNegocio.frmMantNegocio.resources
 C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\obj\Debug\GestionNegocio.Resources.frmVentas.resources
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\obj\Debug\GestionNegocio.Modales.mdProveedor.resources

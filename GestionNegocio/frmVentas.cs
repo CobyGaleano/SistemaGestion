@@ -1,4 +1,5 @@
 ﻿using Dominio;
+using GestionNegocio.Modales;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace GestionNegocio.Resources
 {
@@ -37,6 +39,14 @@ namespace GestionNegocio.Resources
             txtIdProducto.Text = "0";
 
              
+        }
+
+        private void btnBuscarProveedor_Click(object sender, EventArgs e)
+        {
+            using (var modal = new mdProveedor())
+            {
+                var result = modal.ShowDialog();
+            }
         }
     }
 }

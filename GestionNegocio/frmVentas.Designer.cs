@@ -36,7 +36,7 @@
             this.txtFecha = new System.Windows.Forms.TextBox();
             this.gbxInformacionProveedor = new System.Windows.Forms.GroupBox();
             this.txtIdProveedor = new System.Windows.Forms.TextBox();
-            this.btnBuscarRazonSocial = new System.Windows.Forms.Button();
+            this.btnBuscarProveedor = new System.Windows.Forms.Button();
             this.txtRazonSocial = new System.Windows.Forms.TextBox();
             this.lblRazonSocial = new System.Windows.Forms.Label();
             this.lblNumeroDocumento = new System.Windows.Forms.Label();
@@ -134,7 +134,7 @@
             // 
             this.gbxInformacionProveedor.BackColor = System.Drawing.Color.White;
             this.gbxInformacionProveedor.Controls.Add(this.txtIdProveedor);
-            this.gbxInformacionProveedor.Controls.Add(this.btnBuscarRazonSocial);
+            this.gbxInformacionProveedor.Controls.Add(this.btnBuscarProveedor);
             this.gbxInformacionProveedor.Controls.Add(this.txtRazonSocial);
             this.gbxInformacionProveedor.Controls.Add(this.lblRazonSocial);
             this.gbxInformacionProveedor.Controls.Add(this.lblNumeroDocumento);
@@ -153,14 +153,15 @@
             this.txtIdProveedor.Size = new System.Drawing.Size(28, 20);
             this.txtIdProveedor.TabIndex = 5;
             // 
-            // btnBuscarRazonSocial
+            // btnBuscarProveedor
             // 
-            this.btnBuscarRazonSocial.Image = global::GestionNegocio.Properties.Resources.search_big;
-            this.btnBuscarRazonSocial.Location = new System.Drawing.Point(189, 36);
-            this.btnBuscarRazonSocial.Name = "btnBuscarRazonSocial";
-            this.btnBuscarRazonSocial.Size = new System.Drawing.Size(38, 22);
-            this.btnBuscarRazonSocial.TabIndex = 4;
-            this.btnBuscarRazonSocial.UseVisualStyleBackColor = true;
+            this.btnBuscarProveedor.Image = global::GestionNegocio.Properties.Resources.search_big;
+            this.btnBuscarProveedor.Location = new System.Drawing.Point(189, 36);
+            this.btnBuscarProveedor.Name = "btnBuscarProveedor";
+            this.btnBuscarProveedor.Size = new System.Drawing.Size(38, 22);
+            this.btnBuscarProveedor.TabIndex = 4;
+            this.btnBuscarProveedor.UseVisualStyleBackColor = true;
+            this.btnBuscarProveedor.Click += new System.EventHandler(this.btnBuscarProveedor_Click);
             // 
             // txtRazonSocial
             // 
@@ -457,7 +458,7 @@
         private System.Windows.Forms.Label lblRazonSocial;
         private System.Windows.Forms.Label lblNumeroDocumento;
         private System.Windows.Forms.TextBox txtNumeroDocumento;
-        private System.Windows.Forms.Button btnBuscarRazonSocial;
+        private System.Windows.Forms.Button btnBuscarProveedor;
         private System.Windows.Forms.TextBox txtRazonSocial;
         private System.Windows.Forms.TextBox txtIdProveedor;
         private System.Windows.Forms.GroupBox gbxInformacionProducto;
