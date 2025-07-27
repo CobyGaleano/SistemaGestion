@@ -46,7 +46,17 @@ namespace GestionNegocio.Resources
             using (var modal = new mdProveedor())
             {
                 var result = modal.ShowDialog();
+
+                if (result == DialogResult.OK)
+                {
+                    txtIdProveedor.Text = modal.proveedor.IdProveedor.ToString();
+                    txtNumeroDocumento.Text = modal.proveedor.Documento;
+                    txtRazonSocial.Text = modal.proveedor.RazonSocial;
+                }
+                else { txtNumeroDocumento.Select(); }
             }
+
+            
         }
     }
 }

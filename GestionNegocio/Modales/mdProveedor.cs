@@ -16,7 +16,7 @@ namespace GestionNegocio.Modales
 {
     public partial class mdProveedor : Form
     {
-        public Proveedor proveedor{ get; set; }
+        public Proveedor proveedor { get; set; }
         public mdProveedor()
         {
             InitializeComponent();
@@ -40,7 +40,49 @@ namespace GestionNegocio.Modales
 
             foreach (Proveedor item in listaProveedores)
             {
-                dgvProveedores.Rows.Add(new object[] {"",item.IdProveedor,item.Documento,item.RazonSocial});
+                dgvProveedores.Rows.Add(new object[] { item.IdProveedor, item.Documento, item.RazonSocial });
+            }
+        }
+
+        private void dgvProveedores_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int iRow = e.RowIndex;
+            int iCol = e.ColumnIndex;
+
+            if (iRow >= 0 && iCol >= 0)
+            {
+                proveedor = new Proveedor()
+                {
+                    IdProveedor = Convert.ToInt32(dgvProveedores.Rows[iRow].Cells["Id"].Value.ToString()),
+                    Documento = dgvProveedores.Rows[iRow].Cells["Documento"].Value.ToString(),
+                    RazonSocial = dgvProveedores.Rows[iRow].Cells["RazonSocial"].Value.ToString()
+                };
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+
+            }
+        }
+
+        private void btnBuscarFiltro_Click(object sender, EventArgs e)
+        {
+            string columnaFiltro = ((OpcionCombo)cmbFiltro.SelectedItem).Valor.ToString();
+            if (dgvProveedores.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dgvProveedores.Rows)
+                {
+                    if (row.Cells[columnaFiltro].Value.ToString().Trim().ToUpper().Contains(txtFiltro.Text.Trim().ToUpper()))
+                        row.Visible = true;
+                    else row.Visible = false;
+                }
+            }
+        }
+
+        private void btnLimpiarFiltro_Click(object sender, EventArgs e)
+        {
+            txtFiltro.Text = "";
+            foreach (DataGridViewRow row in dgvProveedores.Rows)
+            {
+                row.Visible = true;
             }
         }
     }
