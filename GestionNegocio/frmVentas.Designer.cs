@@ -285,6 +285,7 @@
             this.btnBuscarProducto.Size = new System.Drawing.Size(38, 22);
             this.btnBuscarProducto.TabIndex = 4;
             this.btnBuscarProducto.UseVisualStyleBackColor = true;
+            this.btnBuscarProducto.Click += new System.EventHandler(this.btnBuscarProducto_Click);
             // 
             // txtProducto
             // 

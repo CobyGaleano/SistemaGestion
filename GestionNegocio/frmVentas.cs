@@ -58,5 +58,22 @@ namespace GestionNegocio.Resources
 
             
         }
+
+        private void btnBuscarProducto_Click(object sender, EventArgs e)
+        {
+            using (var modal = new mdProductos())
+            {
+                var result = modal.ShowDialog();
+
+                if (result == DialogResult.OK)
+                {
+                    txtIdProducto.Text = modal.producto.IdProducto.ToString();
+                    txtCodigoProducto.Text = modal.producto.Codigo;
+                    txtProducto.Text = modal.producto.Nombre;
+                    txtPrecioCompra.Select();
+                }
+                else { txtCodigoProducto.Select(); }
+            }
+        }
     }
 }

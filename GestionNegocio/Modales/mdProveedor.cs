@@ -49,7 +49,7 @@ namespace GestionNegocio.Modales
             int iRow = e.RowIndex;
             int iCol = e.ColumnIndex;
 
-            if (iRow >= 0 && iCol >= 0)
+            if (iRow >= 0 && iCol > 0)
             {
                 proveedor = new Proveedor()
                 {
