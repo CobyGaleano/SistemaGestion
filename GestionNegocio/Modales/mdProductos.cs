@@ -66,6 +66,8 @@ namespace GestionNegocio.Modales
                     IdProducto = Convert.ToInt32(dgvProductos.Rows[iRow].Cells["IdProducto"].Value.ToString()),
                     Codigo = dgvProductos.Rows[iRow].Cells["Codigo"].Value.ToString(),
                     Nombre = dgvProductos.Rows[iRow].Cells["Nombre"].Value.ToString(),
+                    oCategoria = new Categoria() { Id = Convert.ToInt32(dgvProductos.Rows[iRow].Cells["IdCategoria"].Value.ToString()) },
+                    oMarca = new Marca() { Id = Convert.ToInt32(dgvProductos.Rows[iRow].Cells["IdMarca"].Value.ToString()) },
                     Stock = Convert.ToInt32(dgvProductos.Rows[iRow].Cells["Stock"].Value.ToString()),
                     PrecioCompra = Convert.ToInt32(dgvProductos.Rows[iRow].Cells["PrecioCompra"].ToString()),
                     PrecioVenta = Convert.ToInt32(dgvProductos.Rows[iRow].Cells["PrecioVenta"].ToString()),

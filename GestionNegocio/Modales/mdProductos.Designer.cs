@@ -37,15 +37,17 @@
             this.cmbFiltro = new System.Windows.Forms.ComboBox();
             this.lblFiltro = new System.Windows.Forms.Label();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblListaUsuarios = new System.Windows.Forms.Label();
+            this.IdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblListaUsuarios = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -137,10 +139,12 @@
             this.dgvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
+            this.IdProducto,
             this.Codigo,
             this.Nombre,
+            this.IdCategoria,
             this.Categoria,
+            this.IdMarca,
             this.Marca,
             this.Stock,
             this.PrecioCompra,
@@ -167,12 +171,27 @@
             this.dgvProductos.TabIndex = 41;
             this.dgvProductos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellDoubleClick);
             // 
-            // Id
+            // lblListaUsuarios
             // 
-            this.Id.HeaderText = "IdProducto";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
+            this.lblListaUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblListaUsuarios.BackColor = System.Drawing.Color.White;
+            this.lblListaUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblListaUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListaUsuarios.ForeColor = System.Drawing.Color.Black;
+            this.lblListaUsuarios.Location = new System.Drawing.Point(12, 9);
+            this.lblListaUsuarios.Name = "lblListaUsuarios";
+            this.lblListaUsuarios.Padding = new System.Windows.Forms.Padding(6, 6, 0, 0);
+            this.lblListaUsuarios.Size = new System.Drawing.Size(611, 68);
+            this.lblListaUsuarios.TabIndex = 40;
+            this.lblListaUsuarios.Text = "Lista de Productos:";
+            // 
+            // IdProducto
+            // 
+            this.IdProducto.HeaderText = "IdProducto";
+            this.IdProducto.Name = "IdProducto";
+            this.IdProducto.ReadOnly = true;
+            this.IdProducto.Visible = false;
             // 
             // Codigo
             // 
@@ -188,11 +207,25 @@
             this.Nombre.ReadOnly = true;
             this.Nombre.Width = 125;
             // 
+            // IdCategoria
+            // 
+            this.IdCategoria.HeaderText = "IdCategoria";
+            this.IdCategoria.Name = "IdCategoria";
+            this.IdCategoria.ReadOnly = true;
+            this.IdCategoria.Visible = false;
+            // 
             // Categoria
             // 
             this.Categoria.HeaderText = "Categoria";
             this.Categoria.Name = "Categoria";
             this.Categoria.ReadOnly = true;
+            // 
+            // IdMarca
+            // 
+            this.IdMarca.HeaderText = "IdMarca";
+            this.IdMarca.Name = "IdMarca";
+            this.IdMarca.ReadOnly = true;
+            this.IdMarca.Visible = false;
             // 
             // Marca
             // 
@@ -221,21 +254,6 @@
             this.PrecioVenta.Name = "PrecioVenta";
             this.PrecioVenta.ReadOnly = true;
             this.PrecioVenta.Width = 80;
-            // 
-            // lblListaUsuarios
-            // 
-            this.lblListaUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblListaUsuarios.BackColor = System.Drawing.Color.White;
-            this.lblListaUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblListaUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListaUsuarios.ForeColor = System.Drawing.Color.Black;
-            this.lblListaUsuarios.Location = new System.Drawing.Point(12, 9);
-            this.lblListaUsuarios.Name = "lblListaUsuarios";
-            this.lblListaUsuarios.Padding = new System.Windows.Forms.Padding(6, 6, 0, 0);
-            this.lblListaUsuarios.Size = new System.Drawing.Size(611, 68);
-            this.lblListaUsuarios.TabIndex = 40;
-            this.lblListaUsuarios.Text = "Lista de Productos:";
             // 
             // mdProductos
             // 
@@ -269,10 +287,12 @@
         private System.Windows.Forms.Label lblFiltro;
         private System.Windows.Forms.DataGridView dgvProductos;
         private System.Windows.Forms.Label lblListaUsuarios;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdCategoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdMarca;
         private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioCompra;
