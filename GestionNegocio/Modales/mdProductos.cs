@@ -45,8 +45,8 @@ namespace GestionNegocio.Modales
                     item.IdProducto,
                     item.Codigo,
                     item.Nombre,
-                    //item.oCategoria.Descripcion,
-                    //item.oMarca.Nombre,
+                    item.oCategoria.Descripcion,
+                    item.oMarca.Nombre,
                     item.Stock,
                     item.PrecioCompra,
                     item.PrecioVenta,
@@ -59,18 +59,18 @@ namespace GestionNegocio.Modales
             int iRow = e.RowIndex;
             int iCol = e.ColumnIndex;
 
-            if (iRow >= 0 && iCol > 0)
+            if (iRow >= 0 && iCol >= 0)
             {
                 producto = new Producto()
                 {
                     IdProducto = Convert.ToInt32(dgvProductos.Rows[iRow].Cells["IdProducto"].Value.ToString()),
                     Codigo = dgvProductos.Rows[iRow].Cells["Codigo"].Value.ToString(),
                     Nombre = dgvProductos.Rows[iRow].Cells["Nombre"].Value.ToString(),
-                    //oCategoria = new Categoria() { Descripcion = dgvProductos.Rows[iRow].Cells["Categoria"].Value.ToString() },
-                    //oMarca = new Marca() { Nombre = dgvProductos.Rows[iRow].Cells["Marca"].Value.ToString() },
+                    oCategoria = new Categoria() { Descripcion = dgvProductos.Rows[iRow].Cells["Categoria"].Value.ToString() },
+                    oMarca = new Marca() { Nombre = dgvProductos.Rows[iRow].Cells["Marca"].Value.ToString() },
                     Stock = Convert.ToInt32(dgvProductos.Rows[iRow].Cells["Stock"].Value.ToString()),
-                    PrecioCompra = Convert.ToInt32(dgvProductos.Rows[iRow].Cells["PrecioCompra"].ToString()),
-                    PrecioVenta = Convert.ToInt32(dgvProductos.Rows[iRow].Cells["PrecioVenta"].ToString()),
+                    PrecioCompra = Convert.ToInt32(dgvProductos.Rows[iRow].Cells["PrecioCompra"].Value.ToString()),
+                    PrecioVenta = Convert.ToInt32(dgvProductos.Rows[iRow].Cells["PrecioVenta"].Value.ToString()),
                 };
                 this.DialogResult = DialogResult.OK;
                 this.Close();
