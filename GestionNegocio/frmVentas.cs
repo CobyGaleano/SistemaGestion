@@ -1,5 +1,6 @@
 ﻿using Dominio;
 using GestionNegocio.Modales;
+using Negocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -73,6 +74,28 @@ namespace GestionNegocio.Resources
                     txtPrecioCompra.Select();
                 }
                 else { txtCodigoProducto.Select(); }
+            }
+        }
+
+        private void txtCodigoProducto_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyData == Keys.Enter)
+            {
+                Producto oProducto = new ProductoNegocio().Listar().Where(p => p.Codigo == txtCodigoProducto.Text && p.Estado == true).FirstOrDefault();
+
+                if (oProducto != null)
+                {
+                    txtCodigoProducto.BackColor = Color.Honeydew;
+                    txtIdProducto.Text = oProducto.IdProducto.ToString();
+                    txtProducto.Text = oProducto.Nombre.ToString();
+                    txtPrecioCompra.Select();
+                }
+                else
+                {
+                    txtCodigoProducto.BackColor = Color.MistyRose;
+                    txtIdProducto.Text = "0";
+                    txtProducto.Text = "";
+                }
             }
         }
     }
