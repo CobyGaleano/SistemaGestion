@@ -54,7 +54,7 @@
             this.lblProducto = new System.Windows.Forms.Label();
             this.lblCodigoProducto = new System.Windows.Forms.Label();
             this.txtCodigoProducto = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvVenta = new System.Windows.Forms.DataGridView();
             this.IdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,7 +70,7 @@
             this.gbxInformacionProveedor.SuspendLayout();
             this.gbxInformacionProducto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVenta)).BeginInit();
             this.SuspendLayout();
             // 
             // lblContenedor
@@ -320,10 +320,10 @@
             this.txtCodigoProducto.TabIndex = 0;
             this.txtCodigoProducto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodigoProducto_KeyDown);
             // 
-            // dataGridView1
+            // dgvVenta
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdProducto,
             this.Producto,
             this.PrecioCompra,
@@ -331,10 +331,10 @@
             this.Cantidad,
             this.SubTotal,
             this.btnEliminar});
-            this.dataGridView1.Location = new System.Drawing.Point(132, 249);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(758, 266);
-            this.dataGridView1.TabIndex = 4;
+            this.dgvVenta.Location = new System.Drawing.Point(132, 249);
+            this.dgvVenta.Name = "dgvVenta";
+            this.dgvVenta.Size = new System.Drawing.Size(758, 266);
+            this.dgvVenta.TabIndex = 4;
             // 
             // IdProducto
             // 
@@ -415,6 +415,7 @@
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // frmVentas
             // 
@@ -424,7 +425,7 @@
             this.ClientSize = new System.Drawing.Size(1071, 574);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvVenta);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.gbxInformacionProducto);
             this.Controls.Add(this.gbxInformacionProveedor);
@@ -442,7 +443,7 @@
             this.gbxInformacionProducto.ResumeLayout(false);
             this.gbxInformacionProducto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVenta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -476,7 +477,7 @@
         private System.Windows.Forms.TextBox txtPrecioVenta;
         private System.Windows.Forms.TextBox txtPrecioCompra;
         private System.Windows.Forms.NumericUpDown nudCantidad;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvVenta;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label lblTotal;

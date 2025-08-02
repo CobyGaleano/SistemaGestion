@@ -98,5 +98,53 @@ namespace GestionNegocio.Resources
                 }
             }
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            decimal precioCompra = 0;
+            decimal precioVenta = 0;
+            bool productoExiste = false;
+
+            if (int.Parse(txtIdProducto.Text) == 0)
+            {
+                MessageBox.Show("Debe seleccionar un producto", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if(!decimal.TryParse(txtPrecioCompra.Text, out precioCompra))
+            {
+                MessageBox.Show("Precio Compra - Formato moneda incorrecto", "Mensaje", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                txtPrecioCompra.Select();
+            }
+
+            if (!decimal.TryParse(txtPrecioVenta.Text, out precioVenta))
+            {
+                MessageBox.Show("Precio Venta - Formato moneda incorrecto", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtPrecioVenta.Select();
+            }
+
+            foreach(DataGridViewRow fila in dgvVenta.Rows)
+            {
+                if (fila.Cells["IdProducto"].Value.ToString() == txtIdProducto.Text)
+                {
+                    productoExiste = true;
+                    break;
+                }
+            }
+
+            if(!productoExiste)
+            {
+                dgvVenta.Rows.Add(new object[]
+                {
+                    txtIdProducto.Text,
+                    txtProducto.Text,
+                    txtPrecioCompra.Text,
+                    txtPrecioVenta.Text,
+                    nudCantidad.Value.ToString(),
+                    (nudCantidad.Value * precioCompra).ToString("0.00")
+
+                });
+            }
+        }
     }
 }
