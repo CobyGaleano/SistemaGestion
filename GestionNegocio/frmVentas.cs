@@ -125,7 +125,7 @@ namespace GestionNegocio.Resources
 
             foreach(DataGridViewRow fila in dgvVenta.Rows)
             {
-                if (fila.Cells["IdProducto"].Value.ToString() == txtIdProducto.Text)
+                if (Convert.ToString(fila.Cells[0].Value) == txtIdProducto.Text)
                 {
                     productoExiste = true;
                     break;
