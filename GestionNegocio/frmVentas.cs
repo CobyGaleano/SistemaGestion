@@ -24,6 +24,16 @@ namespace GestionNegocio.Resources
 
         }
 
+        private void limpiar()
+        {
+            txtIdProducto.Text = "0";
+            txtCodigoProducto.Text = "";
+            txtProducto.Text = "";
+            txtPrecioCompra.Text = "";
+            txtPrecioVenta.Text = "";
+            nudCantidad.Value = 1;
+        }
+
         private void frmVentas_Load(object sender, EventArgs e)
         {
             cmbTipoDocumento.Items.Add(new OpcionCombo() { Valor = "P", Texto = "Presupuesto" });
@@ -62,6 +72,7 @@ namespace GestionNegocio.Resources
 
         private void btnBuscarProducto_Click(object sender, EventArgs e)
         {
+            limpiar();
             using (var modal = new mdProductos())
             {
                 var result = modal.ShowDialog();
@@ -141,7 +152,7 @@ namespace GestionNegocio.Resources
                     txtPrecioCompra.Text,
                     txtPrecioVenta.Text,
                     nudCantidad.Value.ToString(),
-                    (nudCantidad.Value * precioCompra).ToString("0.00")
+                    (nudCantidad.Value * precioVenta).ToString("0.00")
 
                 });
             }
