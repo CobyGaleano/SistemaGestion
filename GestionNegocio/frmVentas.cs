@@ -34,6 +34,24 @@ namespace GestionNegocio.Resources
             nudCantidad.Value = 1;
         }
 
+        private void sumarTotal()
+        {
+            /*for(int fila = 0; fila < dgvVenta.Rows.Count; fila++ )
+            {
+                decimal subtotalActual = Convert.ToDecimal(dgvVenta.Rows[fila].Cells["SubTotal"].Value.ToString());
+                total += subtotalActual;
+            }*/
+            decimal total = 0;
+            if(dgvVenta.Rows.Count > 0)
+            {
+                foreach(DataGridViewRow row in dgvVenta.Rows)
+                {
+                    total += Convert.ToDecimal(row.Cells["SubTotal"].Value.ToString());
+                }
+            }
+            txtTotal.Text = total.ToString("0.00"); 
+        }
+
         private void frmVentas_Load(object sender, EventArgs e)
         {
             cmbTipoDocumento.Items.Add(new OpcionCombo() { Valor = "P", Texto = "Presupuesto" });
@@ -48,8 +66,6 @@ namespace GestionNegocio.Resources
 
             txtIdProveedor.Text = "0";
             txtIdProducto.Text = "0";
-
-             
         }
 
         private void btnBuscarProveedor_Click(object sender, EventArgs e)
@@ -149,13 +165,13 @@ namespace GestionNegocio.Resources
                 {
                     txtIdProducto.Text,
                     txtProducto.Text,
-                    txtPrecioCompra.Text,
-                    txtPrecioVenta.Text,
+                    precioCompra.ToString("0.00"),
+                    precioVenta.ToString("0.00"),
                     nudCantidad.Value.ToString(),
                     (nudCantidad.Value * precioVenta).ToString("0.00")
-
                 });
             }
+            sumarTotal();
         }
     }
 }
