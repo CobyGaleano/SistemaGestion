@@ -11,8 +11,11 @@
       "RelativeMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|solutionrelative:gestionnegocio\\frmventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|c:\\users\\brian\\onedrive\\documentos\\programacion\\sistemagestion\\gestionnegocio\\frmproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|solutionrelative:gestionnegocio\\frmproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|Presentacion||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|c:\\users\\brian\\onedrive\\documentos\\programacion\\sistemagestion\\gestionnegocio\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|solutionrelative:gestionnegocio\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,14 +46,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "frmProductos.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\GestionNegocio\\frmProductos.cs",
-              "RelativeDocumentMoniker": "GestionNegocio\\frmProductos.cs",
-              "ToolTip": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\GestionNegocio\\frmProductos.cs [Dise\u00F1o]",
-              "RelativeToolTip": "GestionNegocio\\frmProductos.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T01:26:05.751Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "Title": "Presentacion",
+              "DocumentMoniker": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\GestionNegocio\\Presentacion.csproj",
+              "RelativeDocumentMoniker": "GestionNegocio\\Presentacion.csproj",
+              "ToolTip": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\GestionNegocio\\Presentacion.csproj",
+              "RelativeToolTip": "GestionNegocio\\Presentacion.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-08-06T02:27:42.27Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -72,7 +75,7 @@
               "RelativeDocumentMoniker": "GestionNegocio\\frmVentas.cs",
               "ToolTip": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\GestionNegocio\\frmVentas.cs",
               "RelativeToolTip": "GestionNegocio\\frmVentas.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAACcAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAALgAAAAAAAAAAAArwMgAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-27T23:22:40.344Z",
               "EditorCaption": ""

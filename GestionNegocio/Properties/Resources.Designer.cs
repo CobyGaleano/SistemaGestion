@@ -333,6 +333,16 @@ namespace GestionNegocio.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap trash_24 {
+            get {
+                object obj = ResourceManager.GetObject("trash_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap upload_arrow {
             get {
                 object obj = ResourceManager.GetObject("upload-arrow", resourceCulture);
