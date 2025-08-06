@@ -36,19 +36,19 @@ namespace GestionNegocio.Resources
 
         private void sumarTotal()
         {
-            /*for(int fila = 0; fila < dgvVenta.Rows.Count; fila++ )
+            decimal total = 0;
+            for(int fila = 0; fila < dgvVenta.Rows.Count; fila++ )
             {
                 decimal subtotalActual = Convert.ToDecimal(dgvVenta.Rows[fila].Cells["SubTotal"].Value.ToString());
                 total += subtotalActual;
-            }*/
-            decimal total = 0;
-            if(dgvVenta.Rows.Count > 0)
+            }
+            /*if(dgvVenta.Rows.Count > 0)
             {
                 foreach(DataGridViewRow row in dgvVenta.Rows)
                 {
                     total += Convert.ToDecimal(row.Cells["SubTotal"].Value.ToString());
                 }
-            }
+            }*/
             txtTotal.Text = total.ToString("0.00"); 
         }
 
@@ -88,7 +88,6 @@ namespace GestionNegocio.Resources
 
         private void btnBuscarProducto_Click(object sender, EventArgs e)
         {
-            limpiar();
             using (var modal = new mdProductos())
             {
                 var result = modal.ShowDialog();
@@ -172,6 +171,8 @@ namespace GestionNegocio.Resources
                 });
             }
             sumarTotal();
+            limpiar();
+            txtCodigoProducto.Select();
         }
     }
 }
