@@ -34,6 +34,7 @@
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.BarraMenu = new System.Windows.Forms.Panel();
+            this.btnLogo = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.SubMenuMantenimiento = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
@@ -69,7 +70,6 @@
             this.btnVentas = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnProductos = new System.Windows.Forms.Button();
-            this.btnLogo = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.ContPrincipal = new System.Windows.Forms.Panel();
             this.BarraTitulo.SuspendLayout();
@@ -78,10 +78,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.BarraMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogo)).BeginInit();
             this.SubMenuMantenimiento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnTurnOff)).BeginInit();
             this.SubmenuReportes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // BarraTitulo
@@ -180,6 +180,19 @@
             this.BarraMenu.Size = new System.Drawing.Size(213, 613);
             this.BarraMenu.TabIndex = 1;
             this.BarraMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.BarraMenu_Paint);
+            // 
+            // btnLogo
+            // 
+            this.btnLogo.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogo.Image = global::GestionNegocio.Properties.Resources.Logo;
+            this.btnLogo.Location = new System.Drawing.Point(0, 0);
+            this.btnLogo.Name = "btnLogo";
+            this.btnLogo.Size = new System.Drawing.Size(212, 174);
+            this.btnLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnLogo.TabIndex = 5;
+            this.btnLogo.TabStop = false;
+            this.btnLogo.Click += new System.EventHandler(this.btnLogo_Click);
             // 
             // panel6
             // 
@@ -665,19 +678,6 @@
             this.btnProductos.UseVisualStyleBackColor = false;
             this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
-            // btnLogo
-            // 
-            this.btnLogo.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogo.Image = global::GestionNegocio.Properties.Resources.Logo;
-            this.btnLogo.Location = new System.Drawing.Point(0, 0);
-            this.btnLogo.Name = "btnLogo";
-            this.btnLogo.Size = new System.Drawing.Size(212, 174);
-            this.btnLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnLogo.TabIndex = 5;
-            this.btnLogo.TabStop = false;
-            this.btnLogo.Click += new System.EventHandler(this.btnLogo_Click);
-            // 
             // ContPrincipal
             // 
             this.ContPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(50)))), ((int)(((byte)(12)))));
@@ -706,10 +706,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.BarraMenu.ResumeLayout(false);
             this.BarraMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogo)).EndInit();
             this.SubMenuMantenimiento.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnTurnOff)).EndInit();
             this.SubmenuReportes.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnLogo)).EndInit();
             this.ResumeLayout(false);
 
         }

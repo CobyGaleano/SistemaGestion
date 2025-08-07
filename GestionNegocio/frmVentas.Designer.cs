@@ -55,10 +55,6 @@
             this.lblCodigoProducto = new System.Windows.Forms.Label();
             this.txtCodigoProducto = new System.Windows.Forms.TextBox();
             this.dgvVenta = new System.Windows.Forms.DataGridView();
-            this.txtTotal = new System.Windows.Forms.TextBox();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.btnRegistrar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.IdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,6 +62,10 @@
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.gbxInformacionCompra.SuspendLayout();
             this.gbxInformacionProveedor.SuspendLayout();
             this.gbxInformacionProducto.SuspendLayout();
@@ -81,7 +81,8 @@
             this.lblContenedor.Name = "lblContenedor";
             this.lblContenedor.Size = new System.Drawing.Size(872, 507);
             this.lblContenedor.TabIndex = 0;
-            this.lblContenedor.Text = "Registrar Compras:";
+            this.lblContenedor.Text = "Registrar Ventas:";
+
             // 
             // gbxInformacionCompra
             // 
@@ -144,7 +145,7 @@
             this.gbxInformacionProveedor.Size = new System.Drawing.Size(485, 66);
             this.gbxInformacionProveedor.TabIndex = 2;
             this.gbxInformacionProveedor.TabStop = false;
-            this.gbxInformacionProveedor.Text = "Informacion Proveedor:";
+            this.gbxInformacionProveedor.Text = "Informacion Cliente:";
             // 
             // txtIdProveedor
             // 
@@ -339,47 +340,6 @@
             this.dgvVenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVenta_CellContentClick);
             this.dgvVenta.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvVenta_CellPainting);
             // 
-            // txtTotal
-            // 
-            this.txtTotal.Location = new System.Drawing.Point(896, 451);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(75, 20);
-            this.txtTotal.TabIndex = 8;
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.BackColor = System.Drawing.Color.White;
-            this.lblTotal.Location = new System.Drawing.Point(899, 435);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(34, 13);
-            this.lblTotal.TabIndex = 11;
-            this.lblTotal.Text = "Total:";
-            // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.Image = global::GestionNegocio.Properties.Resources.cart_plus_24;
-            this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrar.Location = new System.Drawing.Point(896, 477);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(75, 38);
-            this.btnRegistrar.TabIndex = 12;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRegistrar.UseVisualStyleBackColor = true;
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Image = global::GestionNegocio.Properties.Resources.plus_big_321;
-            this.btnAgregar.Location = new System.Drawing.Point(896, 158);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 75);
-            this.btnAgregar.TabIndex = 5;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
             // IdProducto
             // 
             this.IdProducto.HeaderText = "IdProducto";
@@ -420,6 +380,47 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.UseColumnTextForButtonValue = true;
             this.btnEliminar.Width = 30;
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Location = new System.Drawing.Point(896, 451);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(75, 20);
+            this.txtTotal.TabIndex = 8;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.BackColor = System.Drawing.Color.White;
+            this.lblTotal.Location = new System.Drawing.Point(899, 435);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(34, 13);
+            this.lblTotal.TabIndex = 11;
+            this.lblTotal.Text = "Total:";
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.Image = global::GestionNegocio.Properties.Resources.cart_plus_24;
+            this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistrar.Location = new System.Drawing.Point(896, 477);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(75, 38);
+            this.btnRegistrar.TabIndex = 12;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Image = global::GestionNegocio.Properties.Resources.plus_big_321;
+            this.btnAgregar.Location = new System.Drawing.Point(896, 158);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 75);
+            this.btnAgregar.TabIndex = 5;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // frmVentas
             // 
