@@ -44,10 +44,10 @@ namespace GestionNegocio
 
         private void Gastos_Load(object sender, EventArgs e)
         {
-            cmbTipoDocumento.Items.Add(new OpcionCombo() { Valor = "P", Texto = "Presupuesto" });
-            cmbTipoDocumento.Items.Add(new OpcionCombo() { Valor = "X", Texto = "Comprobante" });
-            cmbTipoDocumento.Items.Add(new OpcionCombo() { Valor = "B", Texto = "Factura B" });
-            cmbTipoDocumento.Items.Add(new OpcionCombo() { Valor = "A", Texto = "Factura A" });
+            cmbTipoDocumento.Items.Add(new OpcionCombo() { Valor = "P", Texto = "Nota de Pedido" });
+            cmbTipoDocumento.Items.Add(new OpcionCombo() { Valor = "X", Texto = "Orden de Compra" });
+            //cmbTipoDocumento.Items.Add(new OpcionCombo() { Valor = "B", Texto = "Factura B" });
+            //cmbTipoDocumento.Items.Add(new OpcionCombo() { Valor = "A", Texto = "Factura A" });
             cmbTipoDocumento.DisplayMember = "Texto";
             cmbTipoDocumento.ValueMember = "Valor";
             cmbTipoDocumento.SelectedIndex = 0;
