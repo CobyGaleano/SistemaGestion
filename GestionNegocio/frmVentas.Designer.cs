@@ -82,7 +82,6 @@
             this.lblContenedor.Size = new System.Drawing.Size(872, 507);
             this.lblContenedor.TabIndex = 0;
             this.lblContenedor.Text = "Registrar Ventas:";
-
             // 
             // gbxInformacionCompra
             // 
@@ -409,6 +408,7 @@
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnAgregar
             // 

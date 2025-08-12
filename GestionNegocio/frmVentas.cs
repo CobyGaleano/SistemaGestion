@@ -206,6 +206,9 @@ namespace GestionNegocio.Resources
             }
         }
 
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
