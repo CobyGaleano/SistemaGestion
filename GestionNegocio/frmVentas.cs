@@ -16,12 +16,11 @@ namespace GestionNegocio.Resources
 {
     public partial class frmVentas : Form
     {
-        private Usuario usuario;
+        private Usuario _Usuario;
         public frmVentas(Usuario oUsuario = null)
         {
-            usuario = oUsuario;
+            _Usuario = oUsuario;
             InitializeComponent();
-
         }
 
         private void limpiar()

@@ -16,8 +16,10 @@ namespace GestionNegocio
 {
     public partial class Gastos : Form
     {
-        public Gastos()
+        private Usuario _Usuario;
+        public Gastos(Usuario oUsuario = null)
         {
+            _Usuario = oUsuario;
             InitializeComponent();
         }
 
@@ -230,7 +232,17 @@ namespace GestionNegocio
                     }
                 );
             }
-            string prueba = "";
+            int IdCorrelativo = new CompraNegocio().ObtenerCorrelativo();
+            string numeroDocumento = string.Format("{0:00000}",IdCorrelativo);
+
+            Compra oCompra = new Compra()
+            {
+                oUsuario = new Usuario() { IdUsuario = _Usuario.IdUsuario },
+                oProveedor = new Proveedor() { IdProveedor = Convert.ToInt32(txtIdProveedor.Text)},
+                TipoDocumento = ((OpcionCombo)cmbTipoDocumento.SelectedItem).ToString(),
+                NumeroDocumento = numeroDocumento,
+
+            };
         }
     }
 }

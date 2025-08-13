@@ -19,7 +19,6 @@ namespace Negocio
             try
             {
                 datos.setearConsulta("SELECT COUNT (*) + 1 FROM COMPRA");
-                datos.ejecutarLectura();
                 idCorrelativo = Convert.ToInt32(datos.ejecutarScalar());
             }
             catch (Exception ex)
