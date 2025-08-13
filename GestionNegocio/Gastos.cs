@@ -241,8 +241,28 @@ namespace GestionNegocio
                 oProveedor = new Proveedor() { IdProveedor = Convert.ToInt32(txtIdProveedor.Text)},
                 TipoDocumento = ((OpcionCombo)cmbTipoDocumento.SelectedItem).ToString(),
                 NumeroDocumento = numeroDocumento,
-
+                MontoTotal = Convert.ToDecimal(txtTotal.Text)
             };
+
+            string mensaje = string.Empty;
+            bool respuesta = new CompraNegocio().RegistrarCompra(oCompra, detalle_compra, out mensaje);
+
+            if(respuesta)
+            {
+                var result = MessageBox.Show("Numero de compra generada:\n" + numeroDocumento + "\n\n¿Desea copiar al portapapeles?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if(result == DialogResult.Yes) Clipboard.SetText(numeroDocumento.ToString());
+
+                txtIdProveedor.Text = "0";
+                txtNumeroDocumento.Text = "";
+                txtRazonSocial.Text = "";
+                dgvVenta.Rows.Clear();
+                sumarTotal();
+            }
+
+            else
+            {
+                MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
     }
 }

@@ -95,7 +95,7 @@ namespace GestionNegocio
 
         private void btnGastos_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new Gastos());
+            AbrirFormHija(new Gastos(usuarioActual));
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
