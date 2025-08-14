@@ -36,7 +36,7 @@ namespace Negocio
             try
             {
                 datos.setearConsulta("sp_RegistrarCompra", true);
-                datos.setearParametros("@IdUsuario", obj.IdCompra);
+                datos.setearParametros("@IdUsuario", obj.oUsuario.IdUsuario);
                 datos.setearParametros("@IdProveedor",obj.oProveedor.IdProveedor);
                 datos.setearParametros("@TipoDocumento",obj.TipoDocumento);
                 datos.setearParametros("@NumeroDocumento",obj.NumeroDocumento);

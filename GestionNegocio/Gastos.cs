@@ -239,7 +239,7 @@ namespace GestionNegocio
             {
                 oUsuario = new Usuario() { IdUsuario = _Usuario.IdUsuario },
                 oProveedor = new Proveedor() { IdProveedor = Convert.ToInt32(txtIdProveedor.Text)},
-                TipoDocumento = ((OpcionCombo)cmbTipoDocumento.SelectedItem).ToString(),
+                TipoDocumento = ((OpcionCombo)cmbTipoDocumento.SelectedItem).Texto,
                 NumeroDocumento = numeroDocumento,
                 MontoTotal = Convert.ToDecimal(txtTotal.Text)
             };
