@@ -57,6 +57,40 @@ namespace Negocio
             return resultado;
         }
 
+        public Compra obtenerCompra(string numero)
+        {
+            Compra obj = new Compra();
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("SELECT C.IdCompra, U.NombreCompleto, P.Documento, P.RazonSocial, C.TipoDocumento, C.NumeroDocumento,\r\nC.MontoTotal, CONVERT(CHAR(18),C.FechaRegistro,103)[FechaRegistro] FROM COMPRA C\r\nINNER JOIN  USUARIO U ON U.IdUsuario = C.IdUsuario\r\nINNER JOIN PROVEEDOR P ON P.IdProveedor = C.IdProveedor\r\nWHERE C.NumeroDocumento =@numero ");
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Usuario aux = new Usuario();
+                    aux.IdUsuario = (int)datos.Lector["IdUsuario"];
+                    aux.Documento = (string)datos.Lector["Documento"];
+                    aux.NombreCompleto = (string)datos.Lector["NombreCompleto"];
+                    aux.Correo = (string)datos.Lector["Correo"];
+                    aux.Clave = (string)datos.Lector["Clave"];
+                    aux.Estado = (bool)datos.Lector["Estado"];
+                    aux.rRol = new Rol() { IdRol = Convert.ToInt32(datos.Lector["IdRol"]) };
+                    aux.rRol.Descripcion = (string)datos.Lector["Descripcion"];
+
+                    listaUsuario.Add(aux);
+                }
+                return listaUsuario;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+
+            return obj;
+        }
     
     }
 }
