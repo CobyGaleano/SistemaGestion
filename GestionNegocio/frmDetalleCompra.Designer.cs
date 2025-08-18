@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblContenedor = new System.Windows.Forms.Label();
             this.txtDocumento = new System.Windows.Forms.TextBox();
             this.lblNroDocumento = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
@@ -41,35 +40,28 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.gpbInfoCompra = new System.Windows.Forms.GroupBox();
             this.gpbProveedor = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.txtNroDoc = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtDocProveedor = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtRazonSocial = new System.Windows.Forms.TextBox();
             this.dgvDetalleCompra = new System.Windows.Forms.DataGridView();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtMontoTotal = new System.Windows.Forms.TextBox();
+            this.lblMontoTotal = new System.Windows.Forms.Label();
+            this.btnDescargarPDF = new System.Windows.Forms.Button();
+            this.lblContenedor = new System.Windows.Forms.Label();
             this.gpbInfoCompra.SuspendLayout();
             this.gpbProveedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleCompra)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblContenedor
-            // 
-            this.lblContenedor.BackColor = System.Drawing.Color.White;
-            this.lblContenedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblContenedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContenedor.Location = new System.Drawing.Point(146, 21);
-            this.lblContenedor.Name = "lblContenedor";
-            this.lblContenedor.Size = new System.Drawing.Size(713, 475);
-            this.lblContenedor.TabIndex = 0;
-            this.lblContenedor.Text = "Detalle Compra";
-            // 
             // txtDocumento
             // 
-            this.txtDocumento.Location = new System.Drawing.Point(553, 67);
+            this.txtDocumento.Location = new System.Drawing.Point(570, 55);
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.Size = new System.Drawing.Size(100, 20);
             this.txtDocumento.TabIndex = 1;
@@ -78,7 +70,7 @@
             // 
             this.lblNroDocumento.AutoSize = true;
             this.lblNroDocumento.BackColor = System.Drawing.Color.White;
-            this.lblNroDocumento.Location = new System.Drawing.Point(429, 70);
+            this.lblNroDocumento.Location = new System.Drawing.Point(446, 58);
             this.lblNroDocumento.Name = "lblNroDocumento";
             this.lblNroDocumento.Size = new System.Drawing.Size(118, 13);
             this.lblNroDocumento.TabIndex = 2;
@@ -86,7 +78,7 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(740, 64);
+            this.btnLimpiar.Location = new System.Drawing.Point(757, 52);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpiar.TabIndex = 3;
@@ -95,12 +87,13 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(659, 64);
+            this.btnBuscar.Location = new System.Drawing.Point(676, 52);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblFecha
             // 
@@ -162,7 +155,7 @@
             this.gpbInfoCompra.Controls.Add(this.txtFecha);
             this.gpbInfoCompra.Controls.Add(this.lblTipoDoc);
             this.gpbInfoCompra.Controls.Add(this.txtTipoDoc);
-            this.gpbInfoCompra.Location = new System.Drawing.Point(179, 93);
+            this.gpbInfoCompra.Location = new System.Drawing.Point(196, 81);
             this.gpbInfoCompra.Name = "gpbInfoCompra";
             this.gpbInfoCompra.Size = new System.Drawing.Size(636, 77);
             this.gpbInfoCompra.TabIndex = 4;
@@ -174,15 +167,22 @@
             this.gpbProveedor.BackColor = System.Drawing.Color.White;
             this.gpbProveedor.Controls.Add(this.txtNroDoc);
             this.gpbProveedor.Controls.Add(this.label3);
-            this.gpbProveedor.Controls.Add(this.textBox2);
+            this.gpbProveedor.Controls.Add(this.txtDocProveedor);
             this.gpbProveedor.Controls.Add(this.label4);
-            this.gpbProveedor.Controls.Add(this.textBox3);
-            this.gpbProveedor.Location = new System.Drawing.Point(179, 176);
+            this.gpbProveedor.Controls.Add(this.txtRazonSocial);
+            this.gpbProveedor.Location = new System.Drawing.Point(196, 164);
             this.gpbProveedor.Name = "gpbProveedor";
             this.gpbProveedor.Size = new System.Drawing.Size(636, 77);
             this.gpbProveedor.TabIndex = 5;
             this.gpbProveedor.TabStop = false;
             this.gpbProveedor.Text = "Información proveedor:";
+            // 
+            // txtNroDoc
+            // 
+            this.txtNroDoc.Location = new System.Drawing.Point(561, 39);
+            this.txtNroDoc.Name = "txtNroDoc";
+            this.txtNroDoc.Size = new System.Drawing.Size(57, 20);
+            this.txtNroDoc.TabIndex = 8;
             // 
             // label3
             // 
@@ -194,12 +194,12 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Numero Documento:";
             // 
-            // textBox2
+            // txtDocProveedor
             // 
-            this.textBox2.Location = new System.Drawing.Point(9, 39);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(164, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtDocProveedor.Location = new System.Drawing.Point(9, 39);
+            this.txtDocProveedor.Name = "txtDocProveedor";
+            this.txtDocProveedor.Size = new System.Drawing.Size(164, 20);
+            this.txtDocProveedor.TabIndex = 5;
             // 
             // label4
             // 
@@ -211,19 +211,12 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Razon Social:";
             // 
-            // textBox3
+            // txtRazonSocial
             // 
-            this.textBox3.Location = new System.Drawing.Point(197, 39);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(209, 20);
-            this.textBox3.TabIndex = 3;
-            // 
-            // txtNroDoc
-            // 
-            this.txtNroDoc.Location = new System.Drawing.Point(561, 39);
-            this.txtNroDoc.Name = "txtNroDoc";
-            this.txtNroDoc.Size = new System.Drawing.Size(57, 20);
-            this.txtNroDoc.TabIndex = 8;
+            this.txtRazonSocial.Location = new System.Drawing.Point(197, 39);
+            this.txtRazonSocial.Name = "txtRazonSocial";
+            this.txtRazonSocial.Size = new System.Drawing.Size(209, 20);
+            this.txtRazonSocial.TabIndex = 3;
             // 
             // dgvDetalleCompra
             // 
@@ -233,9 +226,9 @@
             this.PrecioCompra,
             this.Cantidad,
             this.SubTotal});
-            this.dgvDetalleCompra.Location = new System.Drawing.Point(179, 259);
+            this.dgvDetalleCompra.Location = new System.Drawing.Point(196, 247);
             this.dgvDetalleCompra.Name = "dgvDetalleCompra";
-            this.dgvDetalleCompra.Size = new System.Drawing.Size(636, 223);
+            this.dgvDetalleCompra.Size = new System.Drawing.Size(636, 239);
             this.dgvDetalleCompra.TabIndex = 6;
             // 
             // Producto
@@ -261,12 +254,56 @@
             this.SubTotal.Name = "SubTotal";
             this.SubTotal.Width = 150;
             // 
+            // txtMontoTotal
+            // 
+            this.txtMontoTotal.Location = new System.Drawing.Point(266, 492);
+            this.txtMontoTotal.Name = "txtMontoTotal";
+            this.txtMontoTotal.Size = new System.Drawing.Size(159, 20);
+            this.txtMontoTotal.TabIndex = 7;
+            // 
+            // lblMontoTotal
+            // 
+            this.lblMontoTotal.AutoSize = true;
+            this.lblMontoTotal.BackColor = System.Drawing.Color.White;
+            this.lblMontoTotal.Location = new System.Drawing.Point(193, 495);
+            this.lblMontoTotal.Name = "lblMontoTotal";
+            this.lblMontoTotal.Size = new System.Drawing.Size(67, 13);
+            this.lblMontoTotal.TabIndex = 8;
+            this.lblMontoTotal.Text = "Monto Total:";
+            // 
+            // btnDescargarPDF
+            // 
+            this.btnDescargarPDF.Image = global::GestionNegocio.Properties.Resources.folder_down_arrow_24;
+            this.btnDescargarPDF.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDescargarPDF.Location = new System.Drawing.Point(700, 495);
+            this.btnDescargarPDF.Name = "btnDescargarPDF";
+            this.btnDescargarPDF.Size = new System.Drawing.Size(132, 23);
+            this.btnDescargarPDF.TabIndex = 9;
+            this.btnDescargarPDF.Text = "Descargar en PDF";
+            this.btnDescargarPDF.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDescargarPDF.UseVisualStyleBackColor = true;
+            // 
+            // lblContenedor
+            // 
+            this.lblContenedor.BackColor = System.Drawing.Color.White;
+            this.lblContenedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblContenedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContenedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblContenedor.Location = new System.Drawing.Point(163, 9);
+            this.lblContenedor.Name = "lblContenedor";
+            this.lblContenedor.Size = new System.Drawing.Size(713, 517);
+            this.lblContenedor.TabIndex = 0;
+            this.lblContenedor.Text = "Detalle Compra";
+            // 
             // frmDetalleCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(50)))), ((int)(((byte)(12)))));
             this.ClientSize = new System.Drawing.Size(1055, 535);
+            this.Controls.Add(this.btnDescargarPDF);
+            this.Controls.Add(this.lblMontoTotal);
+            this.Controls.Add(this.txtMontoTotal);
             this.Controls.Add(this.dgvDetalleCompra);
             this.Controls.Add(this.gpbProveedor);
             this.Controls.Add(this.gpbInfoCompra);
@@ -305,13 +342,16 @@
         private System.Windows.Forms.GroupBox gpbProveedor;
         private System.Windows.Forms.TextBox txtNroDoc;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDocProveedor;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtRazonSocial;
         private System.Windows.Forms.DataGridView dgvDetalleCompra;
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioCompra;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
+        private System.Windows.Forms.TextBox txtMontoTotal;
+        private System.Windows.Forms.Label lblMontoTotal;
+        private System.Windows.Forms.Button btnDescargarPDF;
     }
 }

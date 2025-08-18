@@ -264,5 +264,11 @@ namespace GestionNegocio
                 MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+        private void btnDetalleCompra_Click(object sender, EventArgs e)
+        {
+            Form fh = new frmDetalleCompra();
+            fh.ShowDialog();
+        }
     }
 }

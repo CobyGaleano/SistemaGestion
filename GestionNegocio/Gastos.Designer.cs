@@ -66,6 +66,7 @@
             this.txtNumeroDocumento = new System.Windows.Forms.TextBox();
             this.gbxInformacionProveedor = new System.Windows.Forms.GroupBox();
             this.btnBuscarProveedor = new System.Windows.Forms.Button();
+            this.btnDetalleCompra = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVenta)).BeginInit();
             this.gbxInformacionProducto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
@@ -422,12 +423,26 @@
             this.btnBuscarProveedor.UseVisualStyleBackColor = true;
             this.btnBuscarProveedor.Click += new System.EventHandler(this.btnBuscarProveedor_Click);
             // 
+            // btnDetalleCompra
+            // 
+            this.btnDetalleCompra.Image = global::GestionNegocio.Properties.Resources.folder_search_36;
+            this.btnDetalleCompra.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnDetalleCompra.Location = new System.Drawing.Point(984, 466);
+            this.btnDetalleCompra.Name = "btnDetalleCompra";
+            this.btnDetalleCompra.Size = new System.Drawing.Size(75, 75);
+            this.btnDetalleCompra.TabIndex = 21;
+            this.btnDetalleCompra.Text = "Detalle Compra";
+            this.btnDetalleCompra.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDetalleCompra.UseVisualStyleBackColor = true;
+            this.btnDetalleCompra.Click += new System.EventHandler(this.btnDetalleCompra_Click);
+            // 
             // Gastos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(50)))), ((int)(((byte)(12)))));
             this.ClientSize = new System.Drawing.Size(1071, 574);
+            this.Controls.Add(this.btnDetalleCompra);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.dgvVenta);
             this.Controls.Add(this.lblTotal);
@@ -493,5 +508,6 @@
         private System.Windows.Forms.TextBox txtNumeroDocumento;
         private System.Windows.Forms.GroupBox gbxInformacionProveedor;
         private System.Windows.Forms.Button btnBuscarProveedor;
+        private System.Windows.Forms.Button btnDetalleCompra;
     }
 }

@@ -398,5 +398,11 @@
   <ItemGroup>
     <None Include="Resources\trash-24.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-search-36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-down-arrow-24.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
