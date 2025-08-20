@@ -41,5 +41,28 @@ namespace GestionNegocio
                 txtMontoTotal.Text = oCompra.MontoTotal.ToString("0.00");
             }
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtFecha.Text = "";
+            txtTipoDoc.Text = "";
+            txtUsuario.Text = "";
+            txtDocProveedor.Text = "";
+            txtRazonSocial.Text = "";
+
+            dgvDetalleCompra.Rows.Clear();
+            txtMontoTotal.Text = "0.00";
+        }
+
+        private void btnDescargarPDF_Click(object sender, EventArgs e)
+        {
+            if(txtTipoDoc.Text == "")
+            {
+                MessageBox.Show("No se encontraron resultados", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            string Texto_HTML = Properties
+        }
     }
 }

@@ -78,20 +78,27 @@
             // 
             // btnLimpiar
             // 
+            this.btnLimpiar.Image = global::GestionNegocio.Properties.Resources.eraser;
+            this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLimpiar.Location = new System.Drawing.Point(757, 52);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpiar.TabIndex = 3;
             this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnBuscar
             // 
+            this.btnBuscar.Image = global::GestionNegocio.Properties.Resources.search_big;
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscar.Location = new System.Drawing.Point(676, 52);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
@@ -220,6 +227,7 @@
             // 
             // dgvDetalleCompra
             // 
+            this.dgvDetalleCompra.AllowUserToAddRows = false;
             this.dgvDetalleCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetalleCompra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Producto,
@@ -282,6 +290,7 @@
             this.btnDescargarPDF.Text = "Descargar en PDF";
             this.btnDescargarPDF.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDescargarPDF.UseVisualStyleBackColor = true;
+            this.btnDescargarPDF.Click += new System.EventHandler(this.btnDescargarPDF_Click);
             // 
             // lblContenedor
             // 
@@ -345,7 +354,6 @@
         private System.Windows.Forms.TextBox txtDocProveedor;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtRazonSocial;
-        private System.Windows.Forms.DataGridView dgvDetalleCompra;
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioCompra;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
@@ -353,5 +361,6 @@
         private System.Windows.Forms.TextBox txtMontoTotal;
         private System.Windows.Forms.Label lblMontoTotal;
         private System.Windows.Forms.Button btnDescargarPDF;
+        private System.Windows.Forms.DataGridView dgvDetalleCompra;
     }
 }
