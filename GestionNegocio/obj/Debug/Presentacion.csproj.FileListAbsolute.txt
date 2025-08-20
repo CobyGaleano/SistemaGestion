@@ -84,3 +84,8 @@ C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\ob
 C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\obj\Debug\GestionNegocio.Modales.mdProductos.resources
 C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\obj\Debug\GestionNegocio.frmDetalleCompra.resources
 C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\obj\Debug\GestionNegocio.exe.config
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\bin\Debug\itextsharp.dll
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\bin\Debug\itextsharp.xmlworker.dll
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\bin\Debug\itextsharp.xml

@@ -62,7 +62,20 @@ namespace GestionNegocio
                 return;
             }
 
-            string Texto_HTML = Properties
+            string Texto_HTML = Properties.Resources.PlantillaCompra.ToString();
+            Dominio.Negocio oDatos = new NegocioNegocio().ObtenerDatos();
+
+            Texto_HTML = Texto_HTML.Replace("@nombrenegocio", oDatos.Nombre.ToUpper());
+            Texto_HTML = Texto_HTML.Replace("@docnegocio", oDatos.RUC);
+            Texto_HTML = Texto_HTML.Replace("@direcnegocio", oDatos.Direccion);
+
+            Texto_HTML = Texto_HTML.Replace("@tipodocumento", txtTipoDoc.Text.ToUpper());
+            Texto_HTML = Texto_HTML.Replace("@numerodocumento", txtNroDoc.Text);
+
+            Texto_HTML = Texto_HTML.Replace("@docproveeor", txtDocProveedor.Text);
+            Texto_HTML = Texto_HTML.Replace("@nombreproveedor", txtRazonSocial.Text);
+            Texto_HTML = Texto_HTML.Replace("@fecharegistro", txtFecha.Text);
+            Texto_HTML = Texto_HTML.Replace("@usuarioregistro", txtUsuario.Text);
         }
     }
 }
