@@ -75,8 +75,8 @@
               "Title": "frmDetalleCompra.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\GestionNegocio\\frmDetalleCompra.cs",
               "RelativeDocumentMoniker": "GestionNegocio\\frmDetalleCompra.cs",
-              "ToolTip": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\GestionNegocio\\frmDetalleCompra.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "GestionNegocio\\frmDetalleCompra.cs [Dise\u00F1o]*",
+              "ToolTip": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\GestionNegocio\\frmDetalleCompra.cs [Dise\u00F1o]",
+              "RelativeToolTip": "GestionNegocio\\frmDetalleCompra.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-19T23:17:34.36Z",
               "EditorCaption": " [Dise\u00F1o]"
@@ -87,9 +87,9 @@
               "Title": "frmDetalleCompra.cs",
               "DocumentMoniker": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\GestionNegocio\\frmDetalleCompra.cs",
               "RelativeDocumentMoniker": "GestionNegocio\\frmDetalleCompra.cs",
-              "ToolTip": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\GestionNegocio\\frmDetalleCompra.cs*",
-              "RelativeToolTip": "GestionNegocio\\frmDetalleCompra.cs*",
-              "ViewState": "AgIAADEAAAAAAAAAAAAWwE0AAABPAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\GestionNegocio\\frmDetalleCompra.cs",
+              "RelativeToolTip": "GestionNegocio\\frmDetalleCompra.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAjwFEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-18T02:17:47.443Z",
               "EditorCaption": ""
@@ -104,7 +104,8 @@
               "RelativeToolTip": "GestionNegocio\\Gastos.cs",
               "ViewState": "AgIAAPsAAAAAAAAAAAAjwA4BAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T02:04:38.755Z"
+              "WhenOpened": "2025-08-18T02:04:38.755Z",
+              "EditorCaption": ""
             }
           ]
         }
