@@ -1,10 +1,13 @@
-﻿using Dominio;
+﻿using DocumentFormat.OpenXml.Wordprocessing;
+using Dominio;
+using iTextSharp.text.pdf;
 using Negocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -76,7 +79,35 @@ namespace GestionNegocio
             Texto_HTML = Texto_HTML.Replace("@nombreproveedor", txtRazonSocial.Text);
             Texto_HTML = Texto_HTML.Replace("@fecharegistro", txtFecha.Text);
             Texto_HTML = Texto_HTML.Replace("@usuarioregistro", txtUsuario.Text);
-            //gggg
+
+            string filas = string.Empty;
+            foreach(DataGridViewRow row in dgvDetalleCompra.Rows)
+            {
+                filas += "<tr>";
+                filas += "<td>" + row.Cells["Producto"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["PrecioCompra"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["Cantidad"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["SubTotal"].Value.ToString() + "</td>";
+                filas += "</tr>";
+            }
+            Texto_HTML = Texto_HTML.Replace("@filas", filas);
+            Texto_HTML = Texto_HTML.Replace("@montoTotal", txtMontoTotal.Text);
+
+            //CREACION DEL ARCHIVO EXCEL
+            SaveFileDialog savefile = new SaveFileDialog();
+            savefile.FileName = string.Format("Compras_{0}.xlsx", txtNroDoc.Text);
+            savefile.Filter = "PDF files|*.pdf";
+
+            if(savefile.ShowDialog() == DialogResult.OK)
+            {
+                using (FileStream stream  = new FileStream(savefile.FileName, FileMode.Create))
+                {
+                    Document pdfDoc = new Document(PageSize.A);
+                    PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
+                    pdfDoc.Open();
+                }
+            }
+
         }
     }
 }
