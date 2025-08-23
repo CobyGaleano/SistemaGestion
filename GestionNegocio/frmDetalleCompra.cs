@@ -95,18 +95,31 @@ namespace GestionNegocio
 
             //CREACION DEL ARCHIVO EXCEL
             SaveFileDialog savefile = new SaveFileDialog();
-            savefile.FileName = string.Format("Compras_{0}.xlsx", txtNroDoc.Text);
+            savefile.FileName = string.Format("Compras_{0}.pdf", txtNroDoc.Text);
             savefile.Filter = "PDF files|*.pdf";
 
-            if(savefile.ShowDialog() == DialogResult.OK)
-            {
-                using (FileStream stream  = new FileStream(savefile.FileName, FileMode.Create))
+            if (savefile.ShowDialog() == DialogResult.OK)
+            { 
                 {
-                    Document pdfDoc = new Document(PageSize.A);
-                    PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
-                    pdfDoc.Open();
+                    using (FileStream stream = new FileStream(savefile.FileName, FileMode.Create))
+                    {
+                        Document pdfDoc = new Document(PageSize.A4, 25, 25, 25, 25);
+                        PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
+                        pdfDoc.Open();
+
+                        using (StringReader sr = new StringReader(Texto_HTML))
+                        {
+                            iTextSharp.tool.xml.XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
+                        }
+
+                        pdfDoc.Close();
+                        stream.Close();
+                    }
+
+                    MessageBox.Show("PDF generado correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+        }
 
         }
     }
