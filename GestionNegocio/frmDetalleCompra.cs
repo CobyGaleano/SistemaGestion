@@ -1,5 +1,5 @@
-﻿using DocumentFormat.OpenXml.Wordprocessing;
-using Dominio;
+﻿using Dominio;
+using iTextSharp.text;
 using iTextSharp.text.pdf;
 using Negocio;
 using System;
@@ -100,24 +100,35 @@ namespace GestionNegocio
 
             if (savefile.ShowDialog() == DialogResult.OK)
             { 
-                {
-                    using (FileStream stream = new FileStream(savefile.FileName, FileMode.Create))
+            
+                using (FileStream stream = new FileStream(savefile.FileName, FileMode.Create))
+                { 
+                    Document pdfDoc = new Document(PageSize.A4, 25, 25, 25, 25);
+                    PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
+                    pdfDoc.Open();
+
+                    bool obtenido = true;
+                    byte[] byteImagen = new NegocioNegocio().ObtenerLogo(out obtenido);
+
+                    if(obtenido)
                     {
-                        Document pdfDoc = new Document(PageSize.A4, 25, 25, 25, 25);
-                        PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
-                        pdfDoc.Open();
-
-                        using (StringReader sr = new StringReader(Texto_HTML))
-                        {
-                            iTextSharp.tool.xml.XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
-                        }
-
-                        pdfDoc.Close();
-                        stream.Close();
+                        iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(byteImagen);
+                        img.ScaleToFit(60, 60);
+                        img.Alignment = iTextSharp.text.Image.UNDERLYING;
+                        img.SetAbsolutePosition(pdfDoc.Left, pdfDoc.GetTop(51));
+                        pdfDoc.Add(img);
                     }
 
-                    MessageBox.Show("PDF generado correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    using (StringReader sr = new StringReader(Texto_HTML))
+                    {
+                       iTextSharp.tool.xml.XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
+                    }
+                    pdfDoc.Close();
+                    stream.Close();
                 }
+
+                MessageBox.Show("PDF generado correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
             }
         }
 
