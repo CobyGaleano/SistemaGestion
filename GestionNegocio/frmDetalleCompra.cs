@@ -66,7 +66,7 @@ namespace GestionNegocio
             }
 
             string Texto_HTML = Properties.Resources.PlantillaCompra.ToString();
-            Dominio.Negocio oDatos = new NegocioNegocio().ObtenerDatos();
+            Dominio.Negocio oDatos = new NegocioNegocio().ObtenerDatos(); //ERROR AL OBTENER LOS DATOS - VERIFICAR ERROR
 
             Texto_HTML = Texto_HTML.Replace("@nombrenegocio", oDatos.Nombre.ToUpper());
             Texto_HTML = Texto_HTML.Replace("@docnegocio", oDatos.RUC);
@@ -125,13 +125,9 @@ namespace GestionNegocio
                     }
                     pdfDoc.Close();
                     stream.Close();
+                    MessageBox.Show("PDF generado correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-
-                MessageBox.Show("PDF generado correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            
             }
-        }
-
         }
     }
 }

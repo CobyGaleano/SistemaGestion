@@ -207,7 +207,76 @@ namespace GestionNegocio.Resources
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            if (Convert.ToInt32(txtIdProveedor.Text) == 0)
+            {
+                MessageBox.Show("Debe seleccionar un proveedor", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
 
+            if (dgvVenta.Rows.Count < 1)
+            {
+                MessageBox.Show("Debe ingresar al menos un articulo en la compra", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            DataTable detalle_compra = new DataTable();
+
+            detalle_compra.Columns.Add("IdProducto", typeof(int));
+            detalle_compra.Columns.Add("PrecioCompra", typeof(decimal));
+            detalle_compra.Columns.Add("PrecioVenta", typeof(decimal));
+            detalle_compra.Columns.Add("Cantidad", typeof(int));
+            detalle_compra.Columns.Add("MontoTotal", typeof(decimal));
+
+            foreach (DataGridViewRow row in dgvVenta.Rows)
+            {
+                detalle_compra.Rows.Add(
+                    new object[] {
+                        Convert.ToInt32(row.Cells["IdProducto"].Value.ToString()),
+                        row.Cells["PrecioCompra"].Value.ToString(),
+                        row.Cells["PrecioVenta"].Value.ToString(),
+                        row.Cells["Cantidad"].Value.ToString(),
+                        row.Cells["SubTotal"].Value.ToString()
+                    }
+                );
+            }
+            int IdCorrelativo = new CompraNegocio().ObtenerCorrelativo();
+            string numeroDocumento = string.Format("{0:00000}", IdCorrelativo);
+
+            Compra oCompra = new Compra()
+            {
+                oUsuario = new Usuario() { IdUsuario = _Usuario.IdUsuario },
+                oProveedor = new Proveedor() { IdProveedor = Convert.ToInt32(txtIdProveedor.Text) },
+                TipoDocumento = ((OpcionCombo)cmbTipoDocumento.SelectedItem).Texto,
+                NumeroDocumento = numeroDocumento,
+                MontoTotal = Convert.ToDecimal(txtTotal.Text)
+            };
+
+            string mensaje = string.Empty;
+            bool respuesta = new CompraNegocio().RegistrarCompra(oCompra, detalle_compra, out mensaje);
+
+            if (respuesta)
+            {
+                var result = MessageBox.Show("Numero de compra generada:\n" + numeroDocumento + "\n\n¿Desea copiar al portapapeles?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (result == DialogResult.Yes) Clipboard.SetText(numeroDocumento.ToString());
+
+                txtIdProveedor.Text = "0";
+                txtNumeroDocumento.Text = "";
+                txtRazonSocial.Text = "";
+                dgvVenta.Rows.Clear();
+                sumarTotal();
+            }
+
+            else
+            {
+                MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
+
+        private void btnDetalleCompra_Click(object sender, EventArgs e)
+        {
+            Form fh = new frmDetalleCompra();
+            fh.ShowDialog();
+        }
+    }
     }
 }

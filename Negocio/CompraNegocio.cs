@@ -86,7 +86,7 @@ namespace Negocio
                         IdCompra = Convert.ToInt32(datos.Lector["IdCompra"]),
                         oUsuario = new Usuario() { NombreCompleto = datos.Lector["NombreCompleto"].ToString()},
                         oProveedor = new Proveedor() { Documento = datos.Lector["Documento"].ToString(), RazonSocial = datos.Lector["RazonSocial"].ToString() },
-                        TipoDocumento = datos.Lector["TipoDocumento"].ToString(),
+                        TipoDocumento = (string)datos.Lector["TipoDocumento"].ToString(),
                         NumeroDocumento = datos.Lector["NumeroDocumento"].ToString(),
                         MontoTotal = Convert.ToDecimal(datos.Lector["MontoTotal"].ToString()),
                         FechaRegistro = datos.Lector["FechaRegistro"].ToString()
