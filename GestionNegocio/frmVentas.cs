@@ -63,8 +63,10 @@ namespace GestionNegocio.Resources
 
             txtFecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
-            txtIdProveedor.Text = "0";
+            txtIdCliente.Text = "0";
             txtIdProducto.Text = "0";
+            txtCambio.Text = "";
+            txtPagaCon.Text = "";
         }
 
         private void btnBuscarProveedor_Click(object sender, EventArgs e)
@@ -75,7 +77,7 @@ namespace GestionNegocio.Resources
 
                 if (result == DialogResult.OK)
                 {
-                    txtIdProveedor.Text = modal.proveedor.IdProveedor.ToString();
+                    txtIdCliente.Text = modal.proveedor.IdProveedor.ToString();
                     txtNumeroDocumento.Text = modal.proveedor.Documento;
                     txtRazonSocial.Text = modal.proveedor.RazonSocial;
                 }
@@ -207,7 +209,7 @@ namespace GestionNegocio.Resources
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(txtIdProveedor.Text) == 0)
+            if (Convert.ToInt32(txtIdCliente.Text) == 0)
             {
                 MessageBox.Show("Debe seleccionar un proveedor", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
@@ -245,7 +247,7 @@ namespace GestionNegocio.Resources
             Compra oCompra = new Compra()
             {
                 oUsuario = new Usuario() { IdUsuario = _Usuario.IdUsuario },
-                oProveedor = new Proveedor() { IdProveedor = Convert.ToInt32(txtIdProveedor.Text) },
+                oProveedor = new Proveedor() { IdProveedor = Convert.ToInt32(txtIdCliente.Text) },
                 TipoDocumento = ((OpcionCombo)cmbTipoDocumento.SelectedItem).Texto,
                 NumeroDocumento = numeroDocumento,
                 MontoTotal = Convert.ToDecimal(txtTotal.Text)
@@ -259,7 +261,7 @@ namespace GestionNegocio.Resources
                 var result = MessageBox.Show("Numero de compra generada:\n" + numeroDocumento + "\n\n¿Desea copiar al portapapeles?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (result == DialogResult.Yes) Clipboard.SetText(numeroDocumento.ToString());
 
-                txtIdProveedor.Text = "0";
+                txtIdCliente.Text = "0";
                 txtNumeroDocumento.Text = "";
                 txtRazonSocial.Text = "";
                 dgvVenta.Rows.Clear();

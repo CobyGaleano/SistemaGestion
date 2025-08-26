@@ -35,8 +35,8 @@
             this.cmbTipoDocumento = new System.Windows.Forms.ComboBox();
             this.txtFecha = new System.Windows.Forms.TextBox();
             this.gbxInformacionProveedor = new System.Windows.Forms.GroupBox();
-            this.txtIdProveedor = new System.Windows.Forms.TextBox();
-            this.btnBuscarProveedor = new System.Windows.Forms.Button();
+            this.txtIdCliente = new System.Windows.Forms.TextBox();
+            this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.txtRazonSocial = new System.Windows.Forms.TextBox();
             this.lblRazonSocial = new System.Windows.Forms.Label();
             this.lblNumeroDocumento = new System.Windows.Forms.Label();
@@ -66,6 +66,10 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.lblPagaCon = new System.Windows.Forms.Label();
+            this.txtPagaCon = new System.Windows.Forms.TextBox();
+            this.txtCambio = new System.Windows.Forms.TextBox();
+            this.lblCambio = new System.Windows.Forms.Label();
             this.gbxInformacionCompra.SuspendLayout();
             this.gbxInformacionProveedor.SuspendLayout();
             this.gbxInformacionProducto.SuspendLayout();
@@ -133,8 +137,8 @@
             // gbxInformacionProveedor
             // 
             this.gbxInformacionProveedor.BackColor = System.Drawing.Color.White;
-            this.gbxInformacionProveedor.Controls.Add(this.txtIdProveedor);
-            this.gbxInformacionProveedor.Controls.Add(this.btnBuscarProveedor);
+            this.gbxInformacionProveedor.Controls.Add(this.txtIdCliente);
+            this.gbxInformacionProveedor.Controls.Add(this.btnBuscarCliente);
             this.gbxInformacionProveedor.Controls.Add(this.txtRazonSocial);
             this.gbxInformacionProveedor.Controls.Add(this.lblRazonSocial);
             this.gbxInformacionProveedor.Controls.Add(this.lblNumeroDocumento);
@@ -146,22 +150,22 @@
             this.gbxInformacionProveedor.TabStop = false;
             this.gbxInformacionProveedor.Text = "Informacion Cliente:";
             // 
-            // txtIdProveedor
+            // txtIdCliente
             // 
-            this.txtIdProveedor.Location = new System.Drawing.Point(451, 11);
-            this.txtIdProveedor.Name = "txtIdProveedor";
-            this.txtIdProveedor.Size = new System.Drawing.Size(28, 20);
-            this.txtIdProveedor.TabIndex = 5;
+            this.txtIdCliente.Location = new System.Drawing.Point(451, 11);
+            this.txtIdCliente.Name = "txtIdCliente";
+            this.txtIdCliente.Size = new System.Drawing.Size(28, 20);
+            this.txtIdCliente.TabIndex = 5;
             // 
-            // btnBuscarProveedor
+            // btnBuscarCliente
             // 
-            this.btnBuscarProveedor.Image = global::GestionNegocio.Properties.Resources.search_big;
-            this.btnBuscarProveedor.Location = new System.Drawing.Point(189, 36);
-            this.btnBuscarProveedor.Name = "btnBuscarProveedor";
-            this.btnBuscarProveedor.Size = new System.Drawing.Size(38, 22);
-            this.btnBuscarProveedor.TabIndex = 4;
-            this.btnBuscarProveedor.UseVisualStyleBackColor = true;
-            this.btnBuscarProveedor.Click += new System.EventHandler(this.btnBuscarProveedor_Click);
+            this.btnBuscarCliente.Image = global::GestionNegocio.Properties.Resources.search_big;
+            this.btnBuscarCliente.Location = new System.Drawing.Point(189, 36);
+            this.btnBuscarCliente.Name = "btnBuscarCliente";
+            this.btnBuscarCliente.Size = new System.Drawing.Size(38, 22);
+            this.btnBuscarCliente.TabIndex = 4;
+            this.btnBuscarCliente.UseVisualStyleBackColor = true;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarProveedor_Click);
             // 
             // txtRazonSocial
             // 
@@ -382,7 +386,7 @@
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(896, 451);
+            this.txtTotal.Location = new System.Drawing.Point(896, 291);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(75, 20);
             this.txtTotal.TabIndex = 8;
@@ -391,7 +395,7 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.BackColor = System.Drawing.Color.White;
-            this.lblTotal.Location = new System.Drawing.Point(899, 435);
+            this.lblTotal.Location = new System.Drawing.Point(899, 275);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(34, 13);
             this.lblTotal.TabIndex = 11;
@@ -422,12 +426,50 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // lblPagaCon
+            // 
+            this.lblPagaCon.AutoSize = true;
+            this.lblPagaCon.BackColor = System.Drawing.Color.White;
+            this.lblPagaCon.Location = new System.Drawing.Point(899, 377);
+            this.lblPagaCon.Name = "lblPagaCon";
+            this.lblPagaCon.Size = new System.Drawing.Size(56, 13);
+            this.lblPagaCon.TabIndex = 14;
+            this.lblPagaCon.Text = "Paga con:";
+            // 
+            // txtPagaCon
+            // 
+            this.txtPagaCon.Location = new System.Drawing.Point(896, 393);
+            this.txtPagaCon.Name = "txtPagaCon";
+            this.txtPagaCon.Size = new System.Drawing.Size(75, 20);
+            this.txtPagaCon.TabIndex = 13;
+            // 
+            // txtCambio
+            // 
+            this.txtCambio.Location = new System.Drawing.Point(896, 441);
+            this.txtCambio.Name = "txtCambio";
+            this.txtCambio.Size = new System.Drawing.Size(75, 20);
+            this.txtCambio.TabIndex = 13;
+            // 
+            // lblCambio
+            // 
+            this.lblCambio.AutoSize = true;
+            this.lblCambio.BackColor = System.Drawing.Color.White;
+            this.lblCambio.Location = new System.Drawing.Point(899, 425);
+            this.lblCambio.Name = "lblCambio";
+            this.lblCambio.Size = new System.Drawing.Size(45, 13);
+            this.lblCambio.TabIndex = 14;
+            this.lblCambio.Text = "Cambio:";
+            // 
             // frmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(50)))), ((int)(((byte)(12)))));
             this.ClientSize = new System.Drawing.Size(1071, 574);
+            this.Controls.Add(this.lblCambio);
+            this.Controls.Add(this.lblPagaCon);
+            this.Controls.Add(this.txtCambio);
+            this.Controls.Add(this.txtPagaCon);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgvVenta);
@@ -466,9 +508,9 @@
         private System.Windows.Forms.Label lblRazonSocial;
         private System.Windows.Forms.Label lblNumeroDocumento;
         private System.Windows.Forms.TextBox txtNumeroDocumento;
-        private System.Windows.Forms.Button btnBuscarProveedor;
+        private System.Windows.Forms.Button btnBuscarCliente;
         private System.Windows.Forms.TextBox txtRazonSocial;
-        private System.Windows.Forms.TextBox txtIdProveedor;
+        private System.Windows.Forms.TextBox txtIdCliente;
         private System.Windows.Forms.GroupBox gbxInformacionProducto;
         private System.Windows.Forms.Button btnBuscarProducto;
         private System.Windows.Forms.TextBox txtProducto;
@@ -494,5 +536,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
         private System.Windows.Forms.DataGridViewButtonColumn btnEliminar;
+        private System.Windows.Forms.Label lblPagaCon;
+        private System.Windows.Forms.TextBox txtPagaCon;
+        private System.Windows.Forms.TextBox txtCambio;
+        private System.Windows.Forms.Label lblCambio;
     }
 }
