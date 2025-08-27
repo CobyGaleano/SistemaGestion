@@ -75,7 +75,7 @@ namespace GestionNegocio
             Texto_HTML = Texto_HTML.Replace("@tipodocumento", txtTipoDoc.Text.ToUpper());
             Texto_HTML = Texto_HTML.Replace("@numerodocumento", txtNroDoc.Text);
 
-            Texto_HTML = Texto_HTML.Replace("@docproveeor", txtDocProveedor.Text);
+            Texto_HTML = Texto_HTML.Replace("@docproveedor", txtDocProveedor.Text);
             Texto_HTML = Texto_HTML.Replace("@nombreproveedor", txtRazonSocial.Text);
             Texto_HTML = Texto_HTML.Replace("@fecharegistro", txtFecha.Text);
             Texto_HTML = Texto_HTML.Replace("@usuarioregistro", txtUsuario.Text);

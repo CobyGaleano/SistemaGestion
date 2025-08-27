@@ -34,9 +34,9 @@ namespace Negocio
 
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                obj = new Dominio.Negocio();
+                throw ex;
             }
 
 

@@ -280,5 +280,5 @@ namespace GestionNegocio.Resources
             fh.ShowDialog();
         }
     }
-    }
+    
 }
