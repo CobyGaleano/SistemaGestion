@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GestionNegocio.Resources;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,20 @@ namespace GestionNegocio.Modales
         public mdClientes()
         {
             InitializeComponent();
+        }
+
+        private void mdClientes_Load(object sender, EventArgs e)
+        {
+            foreach (DataGridViewColumn column in dgvClientes.Columns)
+            {
+                if (column.Visible == true)
+                {
+                    cmbFiltro.Items.Add(new OpcionCombo() { Valor = column.Name, Texto = column.HeaderText });
+                }
+            }
+            cmbFiltro.DisplayMember = "Texto";
+            cmbFiltro.ValueMember = "Valor";
+            cmbFiltro.SelectedIndex = 0;
         }
     }
 }

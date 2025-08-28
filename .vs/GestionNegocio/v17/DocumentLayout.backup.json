@@ -3,23 +3,31 @@
   "WorkspaceRootPath": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\gestionnegocio\\frmdetallecompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|solutionrelative:gestionnegocio\\frmdetallecompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|c:\\users\\brian\\onedrive\\documentos\\programacion\\sistemagestion\\gestionnegocio\\modales\\mdclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|solutionrelative:gestionnegocio\\modales\\mdclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{352645F4-F878-4138-9797-B14BD7291D40}|Negocio\\Negocio.csproj|c:\\users\\brian\\onedrive\\documentos\\programacion\\sistemagestion\\negocio\\negocionegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{352645F4-F878-4138-9797-B14BD7291D40}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negocionegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|c:\\users\\brian\\onedrive\\documentos\\programacion\\sistemagestion\\gestionnegocio\\modales\\mdproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|solutionrelative:gestionnegocio\\modales\\mdproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{352645F4-F878-4138-9797-B14BD7291D40}|Negocio\\Negocio.csproj|c:\\users\\brian\\onedrive\\documentos\\programacion\\sistemagestion\\negocio\\proveedornegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{352645F4-F878-4138-9797-B14BD7291D40}|Negocio\\Negocio.csproj|C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\negocio\\proveedornegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{352645F4-F878-4138-9797-B14BD7291D40}|Negocio\\Negocio.csproj|solutionrelative:negocio\\proveedornegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|c:\\users\\brian\\onedrive\\documentos\\programacion\\sistemagestion\\gestionnegocio\\frmmantnegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|c:\\users\\brian\\onedrive\\documentos\\programacion\\sistemagestion\\gestionnegocio\\frmdetallecompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|solutionrelative:gestionnegocio\\frmdetallecompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{352645F4-F878-4138-9797-B14BD7291D40}|Negocio\\Negocio.csproj|C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\negocio\\negocionegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{352645F4-F878-4138-9797-B14BD7291D40}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negocionegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\gestionnegocio\\frmmantnegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|solutionrelative:gestionnegocio\\frmmantnegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|c:\\users\\brian\\onedrive\\documentos\\programacion\\sistemagestion\\gestionnegocio\\frmventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\gestionnegocio\\frmventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF60D03F-DEF8-4209-AC54-A826089C4735}|GestionNegocio\\Presentacion.csproj|solutionrelative:gestionnegocio\\frmventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -34,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 538,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,6 +62,30 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "mdProductos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\GestionNegocio\\Modales\\mdProductos.cs",
+              "RelativeDocumentMoniker": "GestionNegocio\\Modales\\mdProductos.cs",
+              "ToolTip": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\GestionNegocio\\Modales\\mdProductos.cs [Dise\u00F1o]",
+              "RelativeToolTip": "GestionNegocio\\Modales\\mdProductos.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T02:44:31.371Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "mdClientes.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\GestionNegocio\\Modales\\mdClientes.cs",
+              "RelativeDocumentMoniker": "GestionNegocio\\Modales\\mdClientes.cs",
+              "ToolTip": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\GestionNegocio\\Modales\\mdClientes.cs [Dise\u00F1o]",
+              "RelativeToolTip": "GestionNegocio\\Modales\\mdClientes.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T02:44:15.865Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "ProveedorNegocio.cs",
               "DocumentMoniker": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\Negocio\\ProveedorNegocio.cs",
@@ -67,7 +99,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "frmMantNegocio.cs",
               "DocumentMoniker": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\GestionNegocio\\frmMantNegocio.cs",
               "RelativeDocumentMoniker": "GestionNegocio\\frmMantNegocio.cs",
@@ -75,12 +107,11 @@
               "RelativeToolTip": "GestionNegocio\\frmMantNegocio.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T01:17:25.303Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-27T01:17:25.303Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "NegocioNegocio.cs",
               "DocumentMoniker": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\Negocio\\NegocioNegocio.cs",
               "RelativeDocumentMoniker": "Negocio\\NegocioNegocio.cs",
@@ -88,12 +119,11 @@
               "RelativeToolTip": "Negocio\\NegocioNegocio.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAUwCsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T01:15:21.628Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-27T01:15:21.628Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "frmVentas.cs",
               "DocumentMoniker": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\GestionNegocio\\frmVentas.cs",
               "RelativeDocumentMoniker": "GestionNegocio\\frmVentas.cs",
@@ -101,25 +131,24 @@
               "RelativeToolTip": "GestionNegocio\\frmVentas.cs",
               "ViewState": "AgIAAOsAAAAAAAAAAAAAABoBAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T02:32:24.95Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-25T02:32:24.95Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "frmDetalleCompra.cs",
               "DocumentMoniker": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\GestionNegocio\\frmDetalleCompra.cs",
               "RelativeDocumentMoniker": "GestionNegocio\\frmDetalleCompra.cs",
               "ToolTip": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\GestionNegocio\\frmDetalleCompra.cs",
               "RelativeToolTip": "GestionNegocio\\frmDetalleCompra.cs",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAUwF4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAUwF4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-18T02:17:47.443Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Gastos.cs",
               "DocumentMoniker": "C:\\Users\\BRIAN\\OneDrive\\Documentos\\PROGRAMACION\\SistemaGestion\\GestionNegocio\\Gastos.cs",
               "RelativeDocumentMoniker": "GestionNegocio\\Gastos.cs",
@@ -127,8 +156,7 @@
               "RelativeToolTip": "GestionNegocio\\Gastos.cs",
               "ViewState": "AgIAANwAAAAAAAAAAAAiwD4AAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T02:04:38.755Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T02:04:38.755Z"
             }
           ]
         }

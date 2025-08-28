@@ -37,9 +37,9 @@
             this.cmbFiltro = new System.Windows.Forms.ComboBox();
             this.lblFiltro = new System.Windows.Forms.Label();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
-            this.lblListaClientes = new System.Windows.Forms.Label();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblListaClientes = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,6 +152,20 @@
             this.dgvClientes.Size = new System.Drawing.Size(611, 299);
             this.dgvClientes.TabIndex = 48;
             // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 170;
+            // 
+            // NroDocumento
+            // 
+            this.NroDocumento.HeaderText = "Numero de documento";
+            this.NroDocumento.Name = "NroDocumento";
+            this.NroDocumento.ReadOnly = true;
+            this.NroDocumento.Width = 250;
+            // 
             // lblListaClientes
             // 
             this.lblListaClientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -166,20 +180,6 @@
             this.lblListaClientes.Size = new System.Drawing.Size(611, 68);
             this.lblListaClientes.TabIndex = 47;
             this.lblListaClientes.Text = "Lista de Clientes:";
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 170;
-            // 
-            // NroDocumento
-            // 
-            this.NroDocumento.HeaderText = "Numero de documento";
-            this.NroDocumento.Name = "NroDocumento";
-            this.NroDocumento.ReadOnly = true;
-            this.NroDocumento.Width = 250;
             // 
             // mdClientes
             // 
@@ -197,6 +197,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mdClientes";
+            this.Load += new System.EventHandler(this.mdClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
