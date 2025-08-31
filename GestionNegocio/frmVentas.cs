@@ -51,6 +51,13 @@ namespace GestionNegocio.Resources
             txtTotal.Text = total.ToString("0.00"); 
         }
 
+        private void CalcularCambio()
+        {
+            int cambio = 0;
+            cambio = Convert.ToInt32(txtTotal) - Convert.ToInt32(txtPagaCon);
+            txtCambio.Text = Convert.ToString(cambio); 
+        }
+
         private void frmVentas_Load(object sender, EventArgs e)
         {
             cmbTipoDocumento.Items.Add(new OpcionCombo() { Valor = "P", Texto = "Presupuesto" });
@@ -71,15 +78,15 @@ namespace GestionNegocio.Resources
 
         private void btnBuscarProveedor_Click(object sender, EventArgs e)
         {
-            using (var modal = new mdProveedor())
+            using (var modal = new mdClientes())
             {
                 var result = modal.ShowDialog();
 
                 if (result == DialogResult.OK)
                 {
-                    txtIdCliente.Text = modal.proveedor.IdProveedor.ToString();
-                    txtNumeroDocumento.Text = modal.proveedor.Documento;
-                    txtRazonSocial.Text = modal.proveedor.RazonSocial;
+                    txtIdCliente.Text = modal._Cliente.IdCliente.ToString();
+                    txtNumeroDocumento.Text = modal._Cliente.Documento;
+                    txtNombreCompleto.Text = modal._Cliente.NombreCompleto;
                 }
                 else { txtNumeroDocumento.Select(); }
             }
@@ -172,6 +179,7 @@ namespace GestionNegocio.Resources
                 });
             }
             sumarTotal();
+            CalcularCambio();
             limpiar();
             txtCodigoProducto.Select();
         }
@@ -263,7 +271,7 @@ namespace GestionNegocio.Resources
 
                 txtIdCliente.Text = "0";
                 txtNumeroDocumento.Text = "";
-                txtRazonSocial.Text = "";
+                txtNombreCompleto.Text = "";
                 dgvVenta.Rows.Clear();
                 sumarTotal();
             }

@@ -89,3 +89,4 @@ C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\bi
 C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\bin\Debug\itextsharp.xmlworker.dll
 C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\bin\Debug\BouncyCastle.Cryptography.xml
 C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\bin\Debug\itextsharp.xml
+C:\Users\BRIAN\OneDrive\Documentos\PROGRAMACION\SistemaGestion\GestionNegocio\obj\Debug\GestionNegocio.Modales.mdClientes.resources

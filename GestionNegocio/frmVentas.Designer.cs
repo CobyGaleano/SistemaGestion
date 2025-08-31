@@ -37,8 +37,8 @@
             this.gbxInformacionProveedor = new System.Windows.Forms.GroupBox();
             this.txtIdCliente = new System.Windows.Forms.TextBox();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
-            this.txtRazonSocial = new System.Windows.Forms.TextBox();
-            this.lblRazonSocial = new System.Windows.Forms.Label();
+            this.txtNombreCompleto = new System.Windows.Forms.TextBox();
+            this.lblNombreCliente = new System.Windows.Forms.Label();
             this.lblNumeroDocumento = new System.Windows.Forms.Label();
             this.txtNumeroDocumento = new System.Windows.Forms.TextBox();
             this.gbxInformacionProducto = new System.Windows.Forms.GroupBox();
@@ -139,8 +139,8 @@
             this.gbxInformacionProveedor.BackColor = System.Drawing.Color.White;
             this.gbxInformacionProveedor.Controls.Add(this.txtIdCliente);
             this.gbxInformacionProveedor.Controls.Add(this.btnBuscarCliente);
-            this.gbxInformacionProveedor.Controls.Add(this.txtRazonSocial);
-            this.gbxInformacionProveedor.Controls.Add(this.lblRazonSocial);
+            this.gbxInformacionProveedor.Controls.Add(this.txtNombreCompleto);
+            this.gbxInformacionProveedor.Controls.Add(this.lblNombreCliente);
             this.gbxInformacionProveedor.Controls.Add(this.lblNumeroDocumento);
             this.gbxInformacionProveedor.Controls.Add(this.txtNumeroDocumento);
             this.gbxInformacionProveedor.Location = new System.Drawing.Point(486, 79);
@@ -167,21 +167,21 @@
             this.btnBuscarCliente.UseVisualStyleBackColor = true;
             this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarProveedor_Click);
             // 
-            // txtRazonSocial
+            // txtNombreCompleto
             // 
-            this.txtRazonSocial.Location = new System.Drawing.Point(229, 37);
-            this.txtRazonSocial.Name = "txtRazonSocial";
-            this.txtRazonSocial.Size = new System.Drawing.Size(250, 20);
-            this.txtRazonSocial.TabIndex = 3;
+            this.txtNombreCompleto.Location = new System.Drawing.Point(229, 37);
+            this.txtNombreCompleto.Name = "txtNombreCompleto";
+            this.txtNombreCompleto.Size = new System.Drawing.Size(250, 20);
+            this.txtNombreCompleto.TabIndex = 3;
             // 
-            // lblRazonSocial
+            // lblNombreCliente
             // 
-            this.lblRazonSocial.AutoSize = true;
-            this.lblRazonSocial.Location = new System.Drawing.Point(232, 21);
-            this.lblRazonSocial.Name = "lblRazonSocial";
-            this.lblRazonSocial.Size = new System.Drawing.Size(71, 13);
-            this.lblRazonSocial.TabIndex = 2;
-            this.lblRazonSocial.Text = "Razon social:";
+            this.lblNombreCliente.AutoSize = true;
+            this.lblNombreCliente.Location = new System.Drawing.Point(232, 21);
+            this.lblNombreCliente.Name = "lblNombreCliente";
+            this.lblNombreCliente.Size = new System.Drawing.Size(93, 13);
+            this.lblNombreCliente.TabIndex = 2;
+            this.lblNombreCliente.Text = "Nombre completo:";
             // 
             // lblNumeroDocumento
             // 
@@ -442,6 +442,7 @@
             this.txtPagaCon.Name = "txtPagaCon";
             this.txtPagaCon.Size = new System.Drawing.Size(75, 20);
             this.txtPagaCon.TabIndex = 13;
+            this.txtPagaCon.Text = "0";
             // 
             // txtCambio
             // 
@@ -449,6 +450,7 @@
             this.txtCambio.Name = "txtCambio";
             this.txtCambio.Size = new System.Drawing.Size(75, 20);
             this.txtCambio.TabIndex = 13;
+            this.txtCambio.Text = "0";
             // 
             // lblCambio
             // 
@@ -505,11 +507,11 @@
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.ComboBox cmbTipoDocumento;
         private System.Windows.Forms.GroupBox gbxInformacionProveedor;
-        private System.Windows.Forms.Label lblRazonSocial;
+        private System.Windows.Forms.Label lblNombreCliente;
         private System.Windows.Forms.Label lblNumeroDocumento;
         private System.Windows.Forms.TextBox txtNumeroDocumento;
         private System.Windows.Forms.Button btnBuscarCliente;
-        private System.Windows.Forms.TextBox txtRazonSocial;
+        private System.Windows.Forms.TextBox txtNombreCompleto;
         private System.Windows.Forms.TextBox txtIdCliente;
         private System.Windows.Forms.GroupBox gbxInformacionProducto;
         private System.Windows.Forms.Button btnBuscarProducto;
