@@ -323,6 +323,7 @@
             this.Controls.Add(this.lblContenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDetalleCompra";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDetalleCompra";
             this.gpbInfoCompra.ResumeLayout(false);
             this.gpbInfoCompra.PerformLayout();
