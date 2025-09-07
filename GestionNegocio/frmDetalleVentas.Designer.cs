@@ -43,9 +43,9 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblNroDocumento = new System.Windows.Forms.Label();
             this.txtDocumento = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnDescargarPDF = new System.Windows.Forms.Button();
+            this.lblMontoTotal = new System.Windows.Forms.Label();
+            this.txtMontoTotal = new System.Windows.Forms.TextBox();
             this.dgvDetalleCompra = new System.Windows.Forms.DataGridView();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -196,34 +196,35 @@
             this.txtDocumento.Size = new System.Drawing.Size(100, 20);
             this.txtDocumento.TabIndex = 22;
             // 
-            // button1
+            // btnDescargarPDF
             // 
-            this.button1.Image = global::GestionNegocio.Properties.Resources.folder_down_arrow_24;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(700, 496);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 23);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "Descargar en PDF";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDescargarPDF.Image = global::GestionNegocio.Properties.Resources.folder_down_arrow_24;
+            this.btnDescargarPDF.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDescargarPDF.Location = new System.Drawing.Point(700, 496);
+            this.btnDescargarPDF.Name = "btnDescargarPDF";
+            this.btnDescargarPDF.Size = new System.Drawing.Size(132, 23);
+            this.btnDescargarPDF.TabIndex = 31;
+            this.btnDescargarPDF.Text = "Descargar en PDF";
+            this.btnDescargarPDF.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDescargarPDF.UseVisualStyleBackColor = true;
+            this.btnDescargarPDF.Click += new System.EventHandler(this.btnDescargarPDF_Click);
             // 
-            // label1
+            // lblMontoTotal
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(193, 496);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 13);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "Monto Total:";
+            this.lblMontoTotal.AutoSize = true;
+            this.lblMontoTotal.BackColor = System.Drawing.Color.White;
+            this.lblMontoTotal.Location = new System.Drawing.Point(193, 496);
+            this.lblMontoTotal.Name = "lblMontoTotal";
+            this.lblMontoTotal.Size = new System.Drawing.Size(67, 13);
+            this.lblMontoTotal.TabIndex = 30;
+            this.lblMontoTotal.Text = "Monto Total:";
             // 
-            // textBox1
+            // txtMontoTotal
             // 
-            this.textBox1.Location = new System.Drawing.Point(266, 493);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(159, 20);
-            this.textBox1.TabIndex = 29;
+            this.txtMontoTotal.Location = new System.Drawing.Point(266, 493);
+            this.txtMontoTotal.Name = "txtMontoTotal";
+            this.txtMontoTotal.Size = new System.Drawing.Size(159, 20);
+            this.txtMontoTotal.TabIndex = 29;
             // 
             // dgvDetalleCompra
             // 
@@ -311,9 +312,9 @@
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.lblNroDocumento);
             this.Controls.Add(this.txtDocumento);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnDescargarPDF);
+            this.Controls.Add(this.lblMontoTotal);
+            this.Controls.Add(this.txtMontoTotal);
             this.Controls.Add(this.dgvDetalleCompra);
             this.Controls.Add(this.gpbCliente);
             this.Controls.Add(this.btnLimpiar);
@@ -348,9 +349,9 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label lblNroDocumento;
         private System.Windows.Forms.TextBox txtDocumento;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnDescargarPDF;
+        private System.Windows.Forms.Label lblMontoTotal;
+        private System.Windows.Forms.TextBox txtMontoTotal;
         private System.Windows.Forms.DataGridView dgvDetalleCompra;
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioCompra;
