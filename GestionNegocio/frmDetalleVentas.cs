@@ -94,5 +94,28 @@ namespace GestionNegocio
                 }
             }
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            Venta oVenta = new CompraNegocio().obtenerCompra(txtDocumento.Text);
+            if (oCompra.IdCompra != 0)
+            {
+                List<Detalle_Compra> oDetalleCompra = new CompraNegocio().obtenerDetalleCompra(oCompra.IdCompra);
+                txtNroDoc.Text = oCompra.NumeroDocumento;
+                txtFecha.Text = oCompra.FechaRegistro;
+                txtTipoDoc.Text = oCompra.TipoDocumento;
+                txtUsuario.Text = oCompra.oUsuario.NombreCompleto;
+                txtDocProveedor.Text = oCompra.oProveedor.Documento;
+                txtRazonSocial.Text = oCompra.oProveedor.RazonSocial;
+
+                oCompra.ListaDetalleCompra = oDetalleCompra;
+                dgvDetalleCompra.Rows.Clear();
+                foreach (Detalle_Compra dc in oCompra.ListaDetalleCompra)
+                {
+                    dgvDetalleCompra.Rows.Add(new object[] { dc.oProducto.Nombre, dc.PrecioCompra, dc.Cantidad, dc.MontoTotal });
+                }
+                txtMontoTotal.Text = oCompra.MontoTotal.ToString("0.00");
+            }
+        }
     }
 }
