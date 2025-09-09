@@ -117,5 +117,17 @@ namespace GestionNegocio
                 txtMontoTotal.Text = oCompra.MontoTotal.ToString("0.00");
             }
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtFecha.Text = "";
+            txtTipoDoc.Text = "";
+            txtUsuario.Text = "";
+            txtDocProveedor.Text = "";
+            txtRazonSocial.Text = "";
+
+            dgvDetalleCompra.Rows.Clear();
+            txtMontoTotal.Text = "0.00";
+        }
     }
 }
