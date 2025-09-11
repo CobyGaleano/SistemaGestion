@@ -50,7 +50,7 @@ namespace GestionNegocio
             {
                 filas += "<tr>";
                 filas += "<td>" + row.Cells["Producto"].Value.ToString() + "</td>";
-                filas += "<td>" + row.Cells["PrecioCompra"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["PrecioVenta"].Value.ToString() + "</td>";
                 filas += "<td>" + row.Cells["Cantidad"].Value.ToString() + "</td>";
                 filas += "<td>" + row.Cells["SubTotal"].Value.ToString() + "</td>";
                 filas += "</tr>";
@@ -98,21 +98,21 @@ namespace GestionNegocio
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             Venta oVenta = new CompraNegocio().obtenerCompra(txtDocumento.Text);
-            if (oCompra.IdCompra != 0)
+            if (oVenta.IdCompra != 0)
             {
-                List<Detalle_Compra> oDetalleCompra = new CompraNegocio().obtenerDetalleCompra(oCompra.IdCompra);
-                txtNroDoc.Text = oCompra.NumeroDocumento;
-                txtFecha.Text = oCompra.FechaRegistro;
-                txtTipoDoc.Text = oCompra.TipoDocumento;
-                txtUsuario.Text = oCompra.oUsuario.NombreCompleto;
-                txtDocProveedor.Text = oCompra.oProveedor.Documento;
-                txtRazonSocial.Text = oCompra.oProveedor.RazonSocial;
+                List<Detalle_Compra> oDetalleCompra = new CompraNegocio().obtenerDetalleCompra(oVenta.IdCompra);
+                txtNroDoc.Text = oVenta.NumeroDocumento;
+                txtFecha.Text = oVenta.FechaRegistro;
+                txtTipoDoc.Text = oVenta.TipoDocumento;
+                txtUsuario.Text = oVenta.oUsuario.NombreCompleto;
+                txtDocProveedor.Text = oVenta.oProveedor.Documento;
+                txtRazonSocial.Text = oVenta.oProveedor.RazonSocial;
 
-                oCompra.ListaDetalleCompra = oDetalleCompra;
+                oVenta.ListaDetalleCompra = oDetalleCompra;
                 dgvDetalleCompra.Rows.Clear();
-                foreach (Detalle_Compra dc in oCompra.ListaDetalleCompra)
+                foreach (Detalle_Compra dc in oVenta.ListaDetalleCompra)
                 {
-                    dgvDetalleCompra.Rows.Add(new object[] { dc.oProducto.Nombre, dc.PrecioCompra, dc.Cantidad, dc.MontoTotal });
+                    dgvDetalleCompra.Rows.Add(new object[] { dc.oProducto.Nombre, dc.PrecioVenta, dc.Cantidad, dc.MontoTotal });
                 }
                 txtMontoTotal.Text = oCompra.MontoTotal.ToString("0.00");
             }

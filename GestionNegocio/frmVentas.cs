@@ -282,9 +282,9 @@ namespace GestionNegocio.Resources
             }
         }
 
-        private void btnDetalleCompra_Click(object sender, EventArgs e)
+        private void btnDetalleVenta_Click(object sender, EventArgs e)
         {
-            Form fh = new frmDetalleCompra();
+            Form fh = new frmDetalleVentas();
             fh.ShowDialog();
         }
     }

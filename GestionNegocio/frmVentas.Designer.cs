@@ -70,6 +70,7 @@
             this.txtPagaCon = new System.Windows.Forms.TextBox();
             this.txtCambio = new System.Windows.Forms.TextBox();
             this.lblCambio = new System.Windows.Forms.Label();
+            this.btnDetalleVenta = new System.Windows.Forms.Button();
             this.gbxInformacionCompra.SuspendLayout();
             this.gbxInformacionProveedor.SuspendLayout();
             this.gbxInformacionProducto.SuspendLayout();
@@ -462,12 +463,26 @@
             this.lblCambio.TabIndex = 14;
             this.lblCambio.Text = "Cambio:";
             // 
+            // btnDetalleVenta
+            // 
+            this.btnDetalleVenta.Image = global::GestionNegocio.Properties.Resources.folder_search_36;
+            this.btnDetalleVenta.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnDetalleVenta.Location = new System.Drawing.Point(989, 462);
+            this.btnDetalleVenta.Name = "btnDetalleVenta";
+            this.btnDetalleVenta.Size = new System.Drawing.Size(75, 75);
+            this.btnDetalleVenta.TabIndex = 22;
+            this.btnDetalleVenta.Text = "Detalle Venta";
+            this.btnDetalleVenta.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDetalleVenta.UseVisualStyleBackColor = true;
+            this.btnDetalleVenta.Click += new System.EventHandler(this.btnDetalleVenta_Click);
+            // 
             // frmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(50)))), ((int)(((byte)(12)))));
             this.ClientSize = new System.Drawing.Size(1071, 574);
+            this.Controls.Add(this.btnDetalleVenta);
             this.Controls.Add(this.lblCambio);
             this.Controls.Add(this.lblPagaCon);
             this.Controls.Add(this.txtCambio);
@@ -542,5 +557,6 @@
         private System.Windows.Forms.TextBox txtPagaCon;
         private System.Windows.Forms.TextBox txtCambio;
         private System.Windows.Forms.Label lblCambio;
+        private System.Windows.Forms.Button btnDetalleVenta;
     }
 }
