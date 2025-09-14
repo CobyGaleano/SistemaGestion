@@ -44,10 +44,10 @@
             this.gbxInformacionProducto = new System.Windows.Forms.GroupBox();
             this.nudCantidad = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblStock = new System.Windows.Forms.Label();
             this.lblPrecioVenta = new System.Windows.Forms.Label();
-            this.lblPrecioCompra = new System.Windows.Forms.Label();
+            this.txtStock = new System.Windows.Forms.TextBox();
             this.txtPrecioVenta = new System.Windows.Forms.TextBox();
-            this.txtPrecioCompra = new System.Windows.Forms.TextBox();
             this.txtIdProducto = new System.Windows.Forms.TextBox();
             this.btnBuscarProducto = new System.Windows.Forms.Button();
             this.txtProducto = new System.Windows.Forms.TextBox();
@@ -205,10 +205,10 @@
             this.gbxInformacionProducto.BackColor = System.Drawing.Color.White;
             this.gbxInformacionProducto.Controls.Add(this.nudCantidad);
             this.gbxInformacionProducto.Controls.Add(this.label3);
+            this.gbxInformacionProducto.Controls.Add(this.lblStock);
             this.gbxInformacionProducto.Controls.Add(this.lblPrecioVenta);
-            this.gbxInformacionProducto.Controls.Add(this.lblPrecioCompra);
+            this.gbxInformacionProducto.Controls.Add(this.txtStock);
             this.gbxInformacionProducto.Controls.Add(this.txtPrecioVenta);
-            this.gbxInformacionProducto.Controls.Add(this.txtPrecioCompra);
             this.gbxInformacionProducto.Controls.Add(this.txtIdProducto);
             this.gbxInformacionProducto.Controls.Add(this.btnBuscarProducto);
             this.gbxInformacionProducto.Controls.Add(this.txtProducto);
@@ -243,37 +243,37 @@
             this.label3.TabIndex = 12;
             this.label3.Text = "Cantidad:";
             // 
+            // lblStock
+            // 
+            this.lblStock.AutoSize = true;
+            this.lblStock.Location = new System.Drawing.Point(509, 30);
+            this.lblStock.Name = "lblStock";
+            this.lblStock.Size = new System.Drawing.Size(41, 13);
+            this.lblStock.TabIndex = 11;
+            this.lblStock.Text = "Stock: ";
+            // 
             // lblPrecioVenta
             // 
             this.lblPrecioVenta.AutoSize = true;
-            this.lblPrecioVenta.Location = new System.Drawing.Point(509, 30);
+            this.lblPrecioVenta.Location = new System.Drawing.Point(395, 30);
             this.lblPrecioVenta.Name = "lblPrecioVenta";
             this.lblPrecioVenta.Size = new System.Drawing.Size(71, 13);
-            this.lblPrecioVenta.TabIndex = 11;
+            this.lblPrecioVenta.TabIndex = 10;
             this.lblPrecioVenta.Text = "Precio Venta:";
             // 
-            // lblPrecioCompra
+            // txtStock
             // 
-            this.lblPrecioCompra.AutoSize = true;
-            this.lblPrecioCompra.Location = new System.Drawing.Point(395, 30);
-            this.lblPrecioCompra.Name = "lblPrecioCompra";
-            this.lblPrecioCompra.Size = new System.Drawing.Size(79, 13);
-            this.lblPrecioCompra.TabIndex = 10;
-            this.lblPrecioCompra.Text = "Precio Compra:";
+            this.txtStock.Location = new System.Drawing.Point(506, 46);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.Size = new System.Drawing.Size(111, 20);
+            this.txtStock.TabIndex = 8;
             // 
             // txtPrecioVenta
             // 
-            this.txtPrecioVenta.Location = new System.Drawing.Point(506, 46);
+            this.txtPrecioVenta.Location = new System.Drawing.Point(392, 46);
             this.txtPrecioVenta.Name = "txtPrecioVenta";
-            this.txtPrecioVenta.Size = new System.Drawing.Size(111, 20);
-            this.txtPrecioVenta.TabIndex = 8;
-            // 
-            // txtPrecioCompra
-            // 
-            this.txtPrecioCompra.Location = new System.Drawing.Point(392, 46);
-            this.txtPrecioCompra.Name = "txtPrecioCompra";
-            this.txtPrecioCompra.Size = new System.Drawing.Size(108, 20);
-            this.txtPrecioCompra.TabIndex = 7;
+            this.txtPrecioVenta.Size = new System.Drawing.Size(108, 20);
+            this.txtPrecioVenta.TabIndex = 7;
             // 
             // txtIdProducto
             // 
@@ -536,10 +536,10 @@
         private System.Windows.Forms.TextBox txtCodigoProducto;
         private System.Windows.Forms.TextBox txtIdProducto;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblStock;
         private System.Windows.Forms.Label lblPrecioVenta;
-        private System.Windows.Forms.Label lblPrecioCompra;
+        private System.Windows.Forms.TextBox txtStock;
         private System.Windows.Forms.TextBox txtPrecioVenta;
-        private System.Windows.Forms.TextBox txtPrecioCompra;
         private System.Windows.Forms.NumericUpDown nudCantidad;
         private System.Windows.Forms.DataGridView dgvVenta;
         private System.Windows.Forms.Button btnAgregar;

@@ -97,10 +97,12 @@ namespace GestionNegocio
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            Venta oVenta = new CompraNegocio().obtenerCompra(txtDocumento.Text);
-            if (oVenta.IdCompra != 0)
+            Venta oVenta = new VentaNegocio().obtenerVenta(txtDocumento.Text);
+            if (oVenta.IdVenta != 0)
             {
-                List<Detalle_Compra> oDetalleCompra = new CompraNegocio().obtenerDetalleCompra(oVenta.IdCompra);
+                List<Detalle_Venta> cLista = new List<Detalle_Venta>();
+                AccesoDatos datos = new AccesoDatos();
+                List<Detalle_Compra> oDetalleCompra = new VentaNegocio().obtenerDetalleVenta(oVenta.IdVenta);
                 txtNroDoc.Text = oVenta.NumeroDocumento;
                 txtFecha.Text = oVenta.FechaRegistro;
                 txtTipoDoc.Text = oVenta.TipoDocumento;
@@ -108,14 +110,13 @@ namespace GestionNegocio
                 txtDocProveedor.Text = oVenta.oProveedor.Documento;
                 txtRazonSocial.Text = oVenta.oProveedor.RazonSocial;
 
-                oVenta.ListaDetalleCompra = oDetalleCompra;
+                oVenta.ListaDetalleVenta = oDetalleCompra;
                 dgvDetalleCompra.Rows.Clear();
-                foreach (Detalle_Compra dc in oVenta.ListaDetalleCompra)
+                foreach (Detalle_Compra dc in oVenta.ListaDetalleVenta)
                 {
                     dgvDetalleCompra.Rows.Add(new object[] { dc.oProducto.Nombre, dc.PrecioVenta, dc.Cantidad, dc.MontoTotal });
                 }
-                txtMontoTotal.Text = oCompra.MontoTotal.ToString("0.00");
-            }
+                txtMontoTotal.Text = oVenta
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)

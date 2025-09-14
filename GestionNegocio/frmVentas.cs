@@ -28,8 +28,8 @@ namespace GestionNegocio.Resources
             txtIdProducto.Text = "0";
             txtCodigoProducto.Text = "";
             txtProducto.Text = "";
-            txtPrecioCompra.Text = "";
             txtPrecioVenta.Text = "";
+            txtStock.Text = "";
             nudCantidad.Value = 1;
         }
 
@@ -105,7 +105,9 @@ namespace GestionNegocio.Resources
                     txtIdProducto.Text = modal.producto.IdProducto.ToString();
                     txtCodigoProducto.Text = modal.producto.Codigo;
                     txtProducto.Text = modal.producto.Nombre;
-                    txtPrecioCompra.Select();
+                    txtPrecioVenta.Text = modal.producto.PrecioVenta.ToString("0.00");
+                    txtStock.Text = modal.producto.Stock.ToString();
+                    nudCantidad.Select();
                 }
                 else { txtCodigoProducto.Select(); }
             }
@@ -122,7 +124,7 @@ namespace GestionNegocio.Resources
                     txtCodigoProducto.BackColor = Color.Honeydew;
                     txtIdProducto.Text = oProducto.IdProducto.ToString();
                     txtProducto.Text = oProducto.Nombre.ToString();
-                    txtPrecioCompra.Select();
+                    txtPrecioVenta.Select();
                 }
                 else
                 {
@@ -135,7 +137,6 @@ namespace GestionNegocio.Resources
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            decimal precioCompra = 0;
             decimal precioVenta = 0;
             bool productoExiste = false;
 
@@ -145,16 +146,16 @@ namespace GestionNegocio.Resources
                 return;
             }
 
-            if(!decimal.TryParse(txtPrecioCompra.Text, out precioCompra))
+            if(!decimal.TryParse(txtPrecioVenta.Text, out precioVenta))
             {
                 MessageBox.Show("Precio Compra - Formato moneda incorrecto", "Mensaje", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-                txtPrecioCompra.Select();
+                txtPrecioVenta.Select();
             }
 
-            if (!decimal.TryParse(txtPrecioVenta.Text, out precioVenta))
+            if (!decimal.TryParse(txtStock.Text, out precioVenta))
             {
                 MessageBox.Show("Precio Venta - Formato moneda incorrecto", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                txtPrecioVenta.Select();
+                txtStock.Select();
             }
 
             foreach(DataGridViewRow fila in dgvVenta.Rows)
@@ -172,7 +173,6 @@ namespace GestionNegocio.Resources
                 {
                     txtIdProducto.Text,
                     txtProducto.Text,
-                    precioCompra.ToString("0.00"),
                     precioVenta.ToString("0.00"),
                     nudCantidad.Value.ToString(),
                     (nudCantidad.Value * precioVenta).ToString("0.00")
@@ -232,7 +232,7 @@ namespace GestionNegocio.Resources
             DataTable detalle_compra = new DataTable();
 
             detalle_compra.Columns.Add("IdProducto", typeof(int));
-            detalle_compra.Columns.Add("PrecioCompra", typeof(decimal));
+            detalle_compra.Columns.Add("precioVenta", typeof(decimal));
             detalle_compra.Columns.Add("PrecioVenta", typeof(decimal));
             detalle_compra.Columns.Add("Cantidad", typeof(int));
             detalle_compra.Columns.Add("MontoTotal", typeof(decimal));
@@ -242,7 +242,7 @@ namespace GestionNegocio.Resources
                 detalle_compra.Rows.Add(
                     new object[] {
                         Convert.ToInt32(row.Cells["IdProducto"].Value.ToString()),
-                        row.Cells["PrecioCompra"].Value.ToString(),
+                        row.Cells["precioVenta"].Value.ToString(),
                         row.Cells["PrecioVenta"].Value.ToString(),
                         row.Cells["Cantidad"].Value.ToString(),
                         row.Cells["SubTotal"].Value.ToString()
