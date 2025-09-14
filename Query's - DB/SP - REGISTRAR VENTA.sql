@@ -1,0 +1,12 @@
+USE DBSISTEMA_VENTA
+GO
+
+/*PROCESOS PARA REGISTRAR UNA VENTA*/
+CREATE TYPE [dbo].[EDetalle_Venta] AS TABLE(
+	[IdProducto] INT NULL,
+	[PrecioVenta] DECIMAL(18,2) NULL,
+	[Cantidad] INT NULL,
+	[SubTotal] DECIMAL(18,2) NULL
+)
+
+GO
