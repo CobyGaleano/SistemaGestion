@@ -51,3 +51,9 @@ BEGIN
 		ROLLBACK TRANSACTION registro
 	END CATCH
 END
+
+GO
+
+UPDATE PRODUCTO SET Stock = Stock - @cantidad WHERE IdProducto = @idProducto
+
+select * from venta

@@ -40,7 +40,7 @@ namespace GestionNegocio
             Texto_HTML = Texto_HTML.Replace("@tipodocumento", txtTipoDoc.Text.ToUpper());
             Texto_HTML = Texto_HTML.Replace("@numerodocumento", txtNroDoc.Text);
 
-            Texto_HTML = Texto_HTML.Replace("@docproveedor", txtDocProveedor.Text);
+            Texto_HTML = Texto_HTML.Replace("@docproveedor", txtDocCliente.Text);
             Texto_HTML = Texto_HTML.Replace("@nombreproveedor", txtRazonSocial.Text);
             Texto_HTML = Texto_HTML.Replace("@fecharegistro", txtFecha.Text);
             Texto_HTML = Texto_HTML.Replace("@usuarioregistro", txtUsuario.Text);
@@ -102,21 +102,22 @@ namespace GestionNegocio
             {
                 List<Detalle_Venta> cLista = new List<Detalle_Venta>();
                 AccesoDatos datos = new AccesoDatos();
-                List<Detalle_Compra> oDetalleCompra = new VentaNegocio().obtenerDetalleVenta(oVenta.IdVenta);
+                List<Detalle_Venta> oDetalleVenta = new VentaNegocio().obtenerDetalleVenta(oVenta.IdVenta);
                 txtNroDoc.Text = oVenta.NumeroDocumento;
                 txtFecha.Text = oVenta.FechaRegistro;
                 txtTipoDoc.Text = oVenta.TipoDocumento;
                 txtUsuario.Text = oVenta.oUsuario.NombreCompleto;
-                txtDocProveedor.Text = oVenta.oProveedor.Documento;
-                txtRazonSocial.Text = oVenta.oProveedor.RazonSocial;
+                txtDocCliente.Text = oVenta.DocumentoCliente;
+                txtRazonSocial.Text = oVenta.NombreCliente;
 
-                oVenta.ListaDetalleVenta = oDetalleCompra;
+                oVenta.listaDetalleVenta = oDetalleVenta;
                 dgvDetalleCompra.Rows.Clear();
-                foreach (Detalle_Compra dc in oVenta.ListaDetalleVenta)
+                foreach (Detalle_Venta dv in oVenta.listaDetalleVenta)
                 {
-                    dgvDetalleCompra.Rows.Add(new object[] { dc.oProducto.Nombre, dc.PrecioVenta, dc.Cantidad, dc.MontoTotal });
+                    dgvDetalleCompra.Rows.Add(new object[] { dv.oProducto.Nombre, dv.PrecioVenta, dv.Cantidad, dv.SubTotal });
                 }
-                txtMontoTotal.Text = oVenta
+                txtMontoTotal.Text = oVenta.MontoTotal.ToString();
+            }
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -124,7 +125,7 @@ namespace GestionNegocio
             txtFecha.Text = "";
             txtTipoDoc.Text = "";
             txtUsuario.Text = "";
-            txtDocProveedor.Text = "";
+            txtDocCliente.Text = "";
             txtRazonSocial.Text = "";
 
             dgvDetalleCompra.Rows.Clear();

@@ -30,7 +30,7 @@
         {
             this.txtNroDoc = new System.Windows.Forms.TextBox();
             this.lblDocumentoCliente = new System.Windows.Forms.Label();
-            this.txtDocProveedor = new System.Windows.Forms.TextBox();
+            this.txtDocCliente = new System.Windows.Forms.TextBox();
             this.txtRazonSocial = new System.Windows.Forms.TextBox();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
@@ -76,12 +76,12 @@
             this.lblDocumentoCliente.TabIndex = 6;
             this.lblDocumentoCliente.Text = "Numero Documento:";
             // 
-            // txtDocProveedor
+            // txtDocCliente
             // 
-            this.txtDocProveedor.Location = new System.Drawing.Point(9, 39);
-            this.txtDocProveedor.Name = "txtDocProveedor";
-            this.txtDocProveedor.Size = new System.Drawing.Size(164, 20);
-            this.txtDocProveedor.TabIndex = 5;
+            this.txtDocCliente.Location = new System.Drawing.Point(9, 39);
+            this.txtDocCliente.Name = "txtDocCliente";
+            this.txtDocCliente.Size = new System.Drawing.Size(164, 20);
+            this.txtDocCliente.TabIndex = 5;
             // 
             // txtRazonSocial
             // 
@@ -269,7 +269,7 @@
             this.gpbCliente.BackColor = System.Drawing.Color.White;
             this.gpbCliente.Controls.Add(this.txtNroDoc);
             this.gpbCliente.Controls.Add(this.lblDocumentoCliente);
-            this.gpbCliente.Controls.Add(this.txtDocProveedor);
+            this.gpbCliente.Controls.Add(this.txtDocCliente);
             this.gpbCliente.Controls.Add(this.lblNombreCompleto);
             this.gpbCliente.Controls.Add(this.txtRazonSocial);
             this.gpbCliente.Location = new System.Drawing.Point(196, 165);
@@ -338,7 +338,7 @@
         #endregion
         private System.Windows.Forms.TextBox txtNroDoc;
         private System.Windows.Forms.Label lblDocumentoCliente;
-        private System.Windows.Forms.TextBox txtDocProveedor;
+        private System.Windows.Forms.TextBox txtDocCliente;
         private System.Windows.Forms.TextBox txtRazonSocial;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.TextBox txtUsuario;

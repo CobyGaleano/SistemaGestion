@@ -233,7 +233,6 @@ namespace GestionNegocio.Resources
 
             detalle_compra.Columns.Add("IdProducto", typeof(int));
             detalle_compra.Columns.Add("precioVenta", typeof(decimal));
-            detalle_compra.Columns.Add("PrecioVenta", typeof(decimal));
             detalle_compra.Columns.Add("Cantidad", typeof(int));
             detalle_compra.Columns.Add("MontoTotal", typeof(decimal));
 
@@ -243,7 +242,6 @@ namespace GestionNegocio.Resources
                     new object[] {
                         Convert.ToInt32(row.Cells["IdProducto"].Value.ToString()),
                         row.Cells["precioVenta"].Value.ToString(),
-                        row.Cells["PrecioVenta"].Value.ToString(),
                         row.Cells["Cantidad"].Value.ToString(),
                         row.Cells["SubTotal"].Value.ToString()
                     }
