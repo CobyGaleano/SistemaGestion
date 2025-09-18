@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 
 namespace GestionNegocio.Resources
-{
+{//LA SEGUNDA MAYOR TRUCHADA QUE INTENTO
     public partial class frmVentas : Form
     {
         private Usuario _Usuario;
