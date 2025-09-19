@@ -137,7 +137,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("SELECT P.Nombre, DC.PrecioVenta, DC.Cantidad, DC.MontoTotal FROM DETALLE_Venta DC\r\nINNER JOIN PRODUCTO P ON P.IdProducto = DC.IdProducto\r\nWHERE DC.IdVenta = @idVenta");
+                datos.setearConsulta("SELECT P.Nombre, DV.PrecioVenta, DV.Cantidad, DV.Subtotal FROM DETALLE_Venta DV\r\nINNER JOIN PRODUCTO P ON P.IdProducto = DV.IdProducto\r\nWHERE DV.IdVenta = @idVenta");
                 datos.setearParametros("@idVenta", idVenta);
                 datos.ejecutarLectura();
 
@@ -148,7 +148,7 @@ namespace Negocio
                         oProducto = new Producto() { Nombre = datos.Lector["Nombre"].ToString() },
                         PrecioVenta = Convert.ToDecimal(datos.Lector["PrecioVenta"].ToString()),
                         Cantidad = Convert.ToInt32(datos.Lector["Cantidad"].ToString()),
-                        MontoTotal = Convert.ToDecimal(datos.Lector["MontoTotal"].ToString()),
+                        SubTotal = Convert.ToDecimal(datos.Lector["MontoTotal"].ToString()),
                     });
                 }
 

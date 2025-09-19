@@ -41,12 +41,12 @@ namespace GestionNegocio
             Texto_HTML = Texto_HTML.Replace("@numerodocumento", txtNroDoc.Text);
 
             Texto_HTML = Texto_HTML.Replace("@docproveedor", txtDocCliente.Text);
-            Texto_HTML = Texto_HTML.Replace("@nombreproveedor", txtRazonSocial.Text);
+            Texto_HTML = Texto_HTML.Replace("@nombreproveedor", txtNombreCliente.Text);
             Texto_HTML = Texto_HTML.Replace("@fecharegistro", txtFecha.Text);
             Texto_HTML = Texto_HTML.Replace("@usuarioregistro", txtUsuario.Text);
 
             string filas = string.Empty;
-            foreach (DataGridViewRow row in dgvDetalleCompra.Rows)
+            foreach (DataGridViewRow row in dgvDetalleVenta.Rows)
             {
                 filas += "<tr>";
                 filas += "<td>" + row.Cells["Producto"].Value.ToString() + "</td>";
@@ -108,13 +108,13 @@ namespace GestionNegocio
                 txtTipoDoc.Text = oVenta.TipoDocumento;
                 txtUsuario.Text = oVenta.oUsuario.NombreCompleto;
                 txtDocCliente.Text = oVenta.DocumentoCliente;
-                txtRazonSocial.Text = oVenta.NombreCliente;
+                txtNombreCliente.Text = oVenta.NombreCliente;
 
                 oVenta.listaDetalleVenta = oDetalleVenta;
-                dgvDetalleCompra.Rows.Clear();
+                dgvDetalleVenta.Rows.Clear();
                 foreach (Detalle_Venta dv in oVenta.listaDetalleVenta)
                 {
-                    dgvDetalleCompra.Rows.Add(new object[] { dv.oProducto.Nombre, dv.PrecioVenta, dv.Cantidad, dv.SubTotal });
+                    dgvDetalleVenta.Rows.Add(new object[] { dv.oProducto.Nombre, dv.PrecioVenta, dv.Cantidad, dv.SubTotal });
                 }
                 txtMontoTotal.Text = oVenta.MontoTotal.ToString();
             }
@@ -126,9 +126,9 @@ namespace GestionNegocio
             txtTipoDoc.Text = "";
             txtUsuario.Text = "";
             txtDocCliente.Text = "";
-            txtRazonSocial.Text = "";
+            txtNombreCliente.Text = "";
 
-            dgvDetalleCompra.Rows.Clear();
+            dgvDetalleVenta.Rows.Clear();
             txtMontoTotal.Text = "0.00";
         }
     }

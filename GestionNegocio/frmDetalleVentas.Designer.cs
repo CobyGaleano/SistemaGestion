@@ -31,7 +31,7 @@
             this.txtNroDoc = new System.Windows.Forms.TextBox();
             this.lblDocumentoCliente = new System.Windows.Forms.Label();
             this.txtDocCliente = new System.Windows.Forms.TextBox();
-            this.txtRazonSocial = new System.Windows.Forms.TextBox();
+            this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.gpbInfoCompra = new System.Windows.Forms.GroupBox();
@@ -46,16 +46,17 @@
             this.btnDescargarPDF = new System.Windows.Forms.Button();
             this.lblMontoTotal = new System.Windows.Forms.Label();
             this.txtMontoTotal = new System.Windows.Forms.TextBox();
-            this.dgvDetalleCompra = new System.Windows.Forms.DataGridView();
-            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDetalleVenta = new System.Windows.Forms.DataGridView();
             this.gpbCliente = new System.Windows.Forms.GroupBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.lblContenedor = new System.Windows.Forms.Label();
+            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpbInfoCompra.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleCompra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleVenta)).BeginInit();
             this.gpbCliente.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,12 +84,12 @@
             this.txtDocCliente.Size = new System.Drawing.Size(164, 20);
             this.txtDocCliente.TabIndex = 5;
             // 
-            // txtRazonSocial
+            // txtNombreCliente
             // 
-            this.txtRazonSocial.Location = new System.Drawing.Point(197, 39);
-            this.txtRazonSocial.Name = "txtRazonSocial";
-            this.txtRazonSocial.Size = new System.Drawing.Size(209, 20);
-            this.txtRazonSocial.TabIndex = 3;
+            this.txtNombreCliente.Location = new System.Drawing.Point(197, 39);
+            this.txtNombreCliente.Name = "txtNombreCliente";
+            this.txtNombreCliente.Size = new System.Drawing.Size(209, 20);
+            this.txtNombreCliente.TabIndex = 3;
             // 
             // lblUsuario
             // 
@@ -227,42 +228,20 @@
             this.txtMontoTotal.Size = new System.Drawing.Size(159, 20);
             this.txtMontoTotal.TabIndex = 29;
             // 
-            // dgvDetalleCompra
+            // dgvDetalleVenta
             // 
-            this.dgvDetalleCompra.AllowUserToAddRows = false;
-            this.dgvDetalleCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDetalleCompra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvDetalleVenta.AllowUserToAddRows = false;
+            this.dgvDetalleVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDetalleVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Producto,
-            this.PrecioCompra,
+            this.PrecioVenta,
+            this.Stock,
             this.Cantidad,
             this.SubTotal});
-            this.dgvDetalleCompra.Location = new System.Drawing.Point(196, 248);
-            this.dgvDetalleCompra.Name = "dgvDetalleCompra";
-            this.dgvDetalleCompra.Size = new System.Drawing.Size(636, 239);
-            this.dgvDetalleCompra.TabIndex = 28;
-            // 
-            // Producto
-            // 
-            this.Producto.HeaderText = "Producto";
-            this.Producto.Name = "Producto";
-            this.Producto.Width = 200;
-            // 
-            // PrecioCompra
-            // 
-            this.PrecioCompra.HeaderText = "PrecioCompra";
-            this.PrecioCompra.Name = "PrecioCompra";
-            this.PrecioCompra.Width = 150;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            // 
-            // SubTotal
-            // 
-            this.SubTotal.HeaderText = "SubTotal";
-            this.SubTotal.Name = "SubTotal";
-            this.SubTotal.Width = 150;
+            this.dgvDetalleVenta.Location = new System.Drawing.Point(196, 248);
+            this.dgvDetalleVenta.Name = "dgvDetalleVenta";
+            this.dgvDetalleVenta.Size = new System.Drawing.Size(636, 239);
+            this.dgvDetalleVenta.TabIndex = 28;
             // 
             // gpbCliente
             // 
@@ -271,7 +250,7 @@
             this.gpbCliente.Controls.Add(this.lblDocumentoCliente);
             this.gpbCliente.Controls.Add(this.txtDocCliente);
             this.gpbCliente.Controls.Add(this.lblNombreCompleto);
-            this.gpbCliente.Controls.Add(this.txtRazonSocial);
+            this.gpbCliente.Controls.Add(this.txtNombreCliente);
             this.gpbCliente.Location = new System.Drawing.Point(196, 165);
             this.gpbCliente.Name = "gpbCliente";
             this.gpbCliente.Size = new System.Drawing.Size(636, 77);
@@ -304,6 +283,34 @@
             this.lblContenedor.TabIndex = 21;
             this.lblContenedor.Text = "Detalle Venta";
             // 
+            // Producto
+            // 
+            this.Producto.HeaderText = "Producto";
+            this.Producto.Name = "Producto";
+            this.Producto.Width = 200;
+            // 
+            // PrecioVenta
+            // 
+            this.PrecioVenta.HeaderText = "PrecioVenta";
+            this.PrecioVenta.Name = "PrecioVenta";
+            this.PrecioVenta.Width = 150;
+            // 
+            // Stock
+            // 
+            this.Stock.HeaderText = "Stock";
+            this.Stock.Name = "Stock";
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            // 
+            // SubTotal
+            // 
+            this.SubTotal.HeaderText = "SubTotal";
+            this.SubTotal.Name = "SubTotal";
+            this.SubTotal.Width = 150;
+            // 
             // frmDetalleVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -317,7 +324,7 @@
             this.Controls.Add(this.btnDescargarPDF);
             this.Controls.Add(this.lblMontoTotal);
             this.Controls.Add(this.txtMontoTotal);
-            this.Controls.Add(this.dgvDetalleCompra);
+            this.Controls.Add(this.dgvDetalleVenta);
             this.Controls.Add(this.gpbCliente);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.lblContenedor);
@@ -327,7 +334,7 @@
             this.Text = "frmDetalleVentas";
             this.gpbInfoCompra.ResumeLayout(false);
             this.gpbInfoCompra.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleCompra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleVenta)).EndInit();
             this.gpbCliente.ResumeLayout(false);
             this.gpbCliente.PerformLayout();
             this.ResumeLayout(false);
@@ -339,7 +346,7 @@
         private System.Windows.Forms.TextBox txtNroDoc;
         private System.Windows.Forms.Label lblDocumentoCliente;
         private System.Windows.Forms.TextBox txtDocCliente;
-        private System.Windows.Forms.TextBox txtRazonSocial;
+        private System.Windows.Forms.TextBox txtNombreCliente;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.GroupBox gpbInfoCompra;
@@ -354,13 +361,14 @@
         private System.Windows.Forms.Button btnDescargarPDF;
         private System.Windows.Forms.Label lblMontoTotal;
         private System.Windows.Forms.TextBox txtMontoTotal;
-        private System.Windows.Forms.DataGridView dgvDetalleCompra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioCompra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
+        private System.Windows.Forms.DataGridView dgvDetalleVenta;
         private System.Windows.Forms.GroupBox gpbCliente;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Label lblContenedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
     }
 }
