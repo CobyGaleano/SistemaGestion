@@ -46,6 +46,25 @@ namespace Negocio
             return respuesta;
         }
 
+        public bool RestarStock(int idProducto, int cantidad)
+        {
+            bool respuesta = true;
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("UPDATE PRODUCTO SET STOCK = STOCK - @cantidad WHERE idProducto = @idProducto");
+                datos.setearParametros("@cantidad", cantidad);
+                datos.setearParametros("@idProducto", idProducto);
+                respuesta = datos.ejecutarAccionResultado();
+
+            }
+            catch (Exception ex)
+            {
+                respuesta = false;
+            }
+            return respuesta;
+        }
+
         public bool RegistrarCompra(Compra obj, DataTable DetalleCompra, out string Mensaje)
         {
             bool resultado = false;
