@@ -169,14 +169,20 @@ namespace GestionNegocio.Resources
 
             if(!productoExiste)
             {
-                dgvVenta.Rows.Add(new object[]
+               
+                bool respuesta = new VentaNegocio().restarStock(Convert.ToInt32(txtIdProducto.Text),Convert.ToInt32(nudCantidad.Value.ToString()));
+
+                if (respuesta)
                 {
-                    txtIdProducto.Text,
-                    txtProducto.Text,
-                    precioVenta.ToString("0.00"),
-                    nudCantidad.Value.ToString(),
-                    (nudCantidad.Value * precioVenta).ToString("0.00")
-                });
+                    dgvVenta.Rows.Add(new object[]
+                    {
+                        txtIdProducto.Text,
+                        txtProducto.Text,
+                        precioVenta.ToString("0.00"),
+                        nudCantidad.Value.ToString(),
+                        (nudCantidad.Value * precioVenta).ToString("0.00")
+                    });
+                }
             }
             sumarTotal();
             CalcularCambio();
@@ -209,8 +215,16 @@ namespace GestionNegocio.Resources
 
                 if(indice >= 0)
                 {
-                    dgvVenta.Rows.RemoveAt(indice);
-                    sumarTotal();
+                    bool respuesta = new VentaNegocio().sumarStock(
+                        Convert.ToInt32(dgvVenta.Rows[indice].Cells["IdProducto"].Value.ToString()),
+                        Convert.ToInt32(dgvVenta.Rows[indice].Cells["Cantidad"].Value.ToString())
+                    );
+
+                    if (respuesta)
+                    {
+                        dgvVenta.Rows.RemoveAt(indice);
+                        sumarTotal();
+                    }
                 }
             }
         }
