@@ -299,6 +299,14 @@ namespace GestionNegocio.Resources
             Form fh = new frmDetalleVentas();
             fh.ShowDialog();
         }
+
+        private void txtPagaCon_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyData == Keys.Enter)
+            {
+                CalcularCambio();
+            }
+        }
     }
     
 }

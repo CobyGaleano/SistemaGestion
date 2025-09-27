@@ -444,6 +444,7 @@
             this.txtPagaCon.Size = new System.Drawing.Size(75, 20);
             this.txtPagaCon.TabIndex = 13;
             this.txtPagaCon.Text = "0";
+            this.txtPagaCon.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPagaCon_KeyDown);
             // 
             // txtCambio
             // 
