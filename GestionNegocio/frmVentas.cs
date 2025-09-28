@@ -54,7 +54,7 @@ namespace GestionNegocio.Resources
         private void CalcularCambio()
         {
             int cambio = 0;
-            cambio = Convert.ToInt32(txtTotal) - Convert.ToInt32(txtPagaCon);
+            cambio = Convert.ToInt32(txtTotal) - Convert.ToInt32(txtPagaCon); ///ERROR AL MOMENTO DE CALCULAR EL CAMBIO
             txtCambio.Text = Convert.ToString(cambio); 
         }
 
