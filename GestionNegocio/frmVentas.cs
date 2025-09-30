@@ -58,7 +58,7 @@ namespace GestionNegocio.Resources
             txtCambio.Text = Convert.ToString(cambio); 
         }
 
-        private void frmVentas_Load(object sender, EventArgs e)
+        private void frmVentas_Load(object sender, EventArgs e) //NO SE DIBUJA EN EL DGV LOS PRODUCTOS QUE AGREGAMOS
         {
             cmbTipoDocumento.Items.Add(new OpcionCombo() { Valor = "P", Texto = "Presupuesto" });
             cmbTipoDocumento.Items.Add(new OpcionCombo() { Valor = "X", Texto = "Comprobante" });
@@ -185,7 +185,7 @@ namespace GestionNegocio.Resources
                 }
             }
             sumarTotal();
-            CalcularCambio();
+            //CalcularCambio();
             limpiar();
             txtCodigoProducto.Select();
         }

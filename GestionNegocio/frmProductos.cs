@@ -84,7 +84,7 @@ namespace GestionNegocio
             }
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e) 
         {
             string mensaje = string.Empty;
             Producto objProducto = new Producto()
@@ -144,7 +144,7 @@ namespace GestionNegocio
                 }
                 else { MessageBox.Show(mensaje); }
             }
-            MessageBox.Show(mensaje);
+            MessageBox.Show(mensaje); //AL MOMENTO DE AGREGADO EXITOSO ENVIA UN MESSAGE BOX VACIO
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
