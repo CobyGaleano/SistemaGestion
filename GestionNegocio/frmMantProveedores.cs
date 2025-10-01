@@ -20,7 +20,7 @@ namespace GestionNegocio
             InitializeComponent();
         }
 
-        private void frmMantProveedores_Load(object sender, EventArgs e)
+        private void frmMantProveedores_Load(object sender, EventArgs e) //AL AGREGAR PROVEEDOR PERMITE AGREGAR LETRAS EN EL DOCUMENTO - VALIDAR PARA QUE SOLO PERMITA NUMEROS
         {
             cmbEstado.Items.Add(new OpcionCombo() { Valor = 1, Texto = "Activo" });
             cmbEstado.Items.Add(new OpcionCombo() { Valor = 2, Texto = "Inactivo" });

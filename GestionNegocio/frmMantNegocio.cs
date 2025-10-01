@@ -13,8 +13,8 @@ using System.Windows.Media.Animation;
 
 namespace GestionNegocio
 {
-    public partial class frmMantNegocio : Form
-    {
+    public partial class frmMantNegocio : Form // - EL PROGRAMA EN SU TOTALIDAD DEBE TOMAR LA INFORMACION QUE HAY ACÁ -
+    {                                         // Agregar en un futuro modificacion de colores, de moneda, etc.....
         public frmMantNegocio()
         {
             InitializeComponent();
@@ -49,7 +49,7 @@ namespace GestionNegocio
         }
 
 
-        private void btnSubir_Click(object sender, EventArgs e)
+        private void btnSubir_Click(object sender, EventArgs e) //NO ME PERMITE SUBIR UNA IMAGEN 
         {
             string mensaje = string.Empty;
             OpenFileDialog ofd = new OpenFileDialog();

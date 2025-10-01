@@ -95,7 +95,7 @@ namespace GestionNegocio
             }
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e) //NO BUSCA EL ARCHIVO O NO LO ENCUENTRA - NECESITA MENSAJES ACLARATORIOS PARA EL USUARIO
         {
             Venta oVenta = new VentaNegocio().obtenerVenta(txtDocumento.Text);
             if (oVenta.IdVenta != 0)
